@@ -1,38 +1,9 @@
-# Git Study
-- [1️⃣️ Git 기초](#1️⃣️-git-기초)
-- [2️⃣️ Git 협업](#2️⃣️-git-협업)
-- [3️⃣️ 협업 중 문제상황](#3️⃣️-협업-중-문제상황)
-- [4️⃣️ 동아리 협업](#4️⃣️-동아리-협업)
-- [🔗️ 참조](#️-참조)
+# 2️⃣️ Git 협업
+![git-collaboration](https://media.licdn.com/dms/image/C4E0DAQGYq7DdDvIr6g/learning-public-crop_288_512/0/1568669538450?e=2147483647&v=beta&t=jbk5EPqUfoeQQbGBYFVVpO6_iW_0ZMskzP2qIx4MtnQ)  
+앞서 학습한 git 커맨드를 이용해 간단한 계산기를 함께 만들어봅시다. 이 과정에서 작업내용을 되돌려보기도 하고, 충돌도 해결해보고, 자신의 브랜치를 최신 상태로 업데이트해보기도 합니다.
 
+## 시나리오
+어떤 상황들을 미리 준비해둘까요?
 
-![learn-git](https://i0.wp.com/blog.nextstacks.com/wp-content/uploads/2021/11/Reasons-to-Learn-Git-as-a-Developer-New.png?fit=1280%2C720&ssl=1)  
- 동아리 Git 스터디/워크샵을 위한 리포지토리입니다. 스터디는 실습 형식으로 총 4단계로 구성되어 있으며 2~3일에 걸쳐 진행합니다. git 커맨드라인 환경에서 진행하므로 사전에 [동아리 개발환경 설정](https://github.com/ApptiveDev/.github/blob/main/docs/Dev%20Environment%20Setup.md) 문서를 따라주시기 바랍니다. 또, 스터디를 진행하면서 부족한 부분은 계속 보완해주시기 바랍니다.
-- 개인의 선호에 따라 GUI 툴 활용 가능 (GitKraken, SourceTree, Github GUI 등)
- 
-## 1️⃣️ Git 기초
-### 🎯️ 목표
-git과 github의 차이점, git이 동작하는 과정, git 기본 명령어를 알아봅시다!
-### 📜️ 진행
-- `step-1` 브랜치로부터 자신의 브랜치를 생성합니다.
-- `README`에 주어진 키워드를 조사하고 본인의 README를 작성합니다.
-- 작성 후 `step-1` 브랜치로 Pull Request를 올립니다.
-
-## 2️⃣️ Git 협업
-### 🎯️ 목표
-앞서 익힌 git 명령어를 활용해 간단한 협업을 진행해봅니다.
-
-### 📜️ 진행
-
-## 3️⃣️ 협업 중 문제상황
-### 🎯️ 목표
-협업 중 맞닥뜨릴 수 있는 다양한 문제상황을 git 명령어로 해결해봅니다.
-### 📜️ 진행
-
-## 4️⃣️ 동아리 협업
-### 🎯️ 목표
-[동아리 브랜치 관리전략](https://github.com/ApptiveDev/.github/blob/f9a2f448b57225c3921dc774e8b7800c3289e878/docs/CONTRIBUTING.md)을 지키며 협업을 진행해봅니다.
-### 📜️ 진행
-
-## 🔗️ 참조
-- [누구나 쉽게 이해할 수 있는 Git 입문](https://backlog.com/git-tutorial/kr/)
+## 진행
+스터디를 어떻게 진행할까요?
