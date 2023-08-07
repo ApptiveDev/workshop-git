@@ -15,6 +15,4 @@
 - G. 중간에 올린 PR에 변경 요청이 들어온 경우 (rebase)
 - H. 중간에 올린 PR을 Squash Merge 할 경우 (interactive rebase)
 - I. 실수로 reset --hard 후 push까지 한 경우 (reflog)
-  - git rebase -i -> git push -f
-  - git reset --hard -> git push -f
-- J. 로컬, 원격 브랜치 모두 브랜치명을 변경하고자 할 경우
+- J. 로컬, 원격 브랜치 모두 브랜치명을 변경하고자 할 경우 (push --delete, --set-upstream)
