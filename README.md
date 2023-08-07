@@ -17,4 +17,4 @@
 - I. 실수로 reset --hard 후 push까지 한 경우 (reflog)
   - git rebase -i -> git push -f
   - git reset --hard -> git push -f
-- H. 로컬, 원격 브랜치 모두 브랜치명을 변경하고자 할 경우
+- J. 로컬, 원격 브랜치 모두 브랜치명을 변경하고자 할 경우
