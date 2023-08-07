@@ -8,7 +8,7 @@
 ## 🚨️ 문제상황
 - A. 실수로 공동 브랜치에 commit한 경우 (reset, stash, pop)
 - B. 실수로 공동 브랜치에 commit하고 push까지 한 경우 (cherry-pick, revert)
-- C. commit을 합치고자 하는 경우 (interactive rebase, squash)
+- **C. commit을 합치고자 하는 경우 (interactive rebase, squash)**
 - D. commit을 쪼개려는 경우 (interactive rebase, reset mixed)
 - E. 충돌 미리 해결하기 (rebase)
 - F. 개발 중간에 PR을 올리는 경우 (branch)
