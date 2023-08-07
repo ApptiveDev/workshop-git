@@ -3,31 +3,44 @@ Git을 사용하려면 알아야 할 기본 지식을 학습합시다. 아래 �
 
 ## Git != Github
 ![git-is-not-github](https://user-images.githubusercontent.com/51331195/160232512-3d6686ca-4ae3-4f11-a8d7-c893c0a7526a.png)  
-(git과 github는 같은 의미가 아닙니다. local, remote와 연관지어 적어주세요.)
+git과 github는 같은 의미가 아닙니다.  
+local, remote와 연관지어 적어주세요.
 
 ## Git Workflow
 ![git-workflow](https://cdn-media-1.freecodecamp.org/images/1*iL2J8k4ygQlg3xriKGimbQ.png)  
-(위는 git이 어떻게 동작하는지 나타낸 다이어그램입니다. Working Directory, Git Add, Git Commit, Git Push 등 각 항목에 대해 작성 바랍니다. Git Merge, Git Fetch는 생략해도 됩니다.)
+위는 git이 어떻게 동작하는지 나타낸 다이어그램입니다.  
+Working Directory, Git Add, Git Commit, Git Push 등 각 항목에 대해 작성 바랍니다.  
+Git Merge, Git Fetch는 생략해도 됩니다.
 
 ## Branch, HEAD
 ![branch-and-head](https://ihatetomatoes.net/wp-content/uploads/2020/04/07-head-pointer.png)  
-(git이 동작하는 기본 단위는 commit과 branch입니다. branch와 HEAD, git checkout을 포함하여 작성 바랍니다. branch 생성 및 삭제, 이동 커맨드 등 자유롭게 내용을 추가해주세요.)
+git이 동작하는 기본 단위는 commit과 branch입니다.  
+branch와 HEAD, git checkout을 포함하여 작성 바랍니다.  
+branch 생성 및 삭제, 이동 커맨드 등 자유롭게 내용을 추가해주세요.
+
+
+## clone, init, origin
+리포지토리를 로컬에 생성하는 방법은 clone, init이 있습니다. 다음을 포함하여 작성 바랍니다.
+- git clone과 git init의 차이점, 이용방법
+- origin이란 키워드는 무엇인지, 어떻게 설정하는지
 
 ## reset
 ![reset](https://user-images.githubusercontent.com/51331195/160235594-8836570b-e8bf-484a-bb92-b2bd6d873066.png)  
-(reset에는 3가지 타입이 있습니다. 각 타입에 대해 작성 바랍니다.)
+reset에는 3가지 타입이 있습니다.  
+각 타입에 대해 작성 바랍니다.
 
 ## Pull Request, Merge
 ![pull-request-merge](https://atlassianblog.wpengine.com/wp-content/uploads/bitbucket411-blog-1200x-branches2.png)  
-(Pull Request와 Merge에 대한 내용을 적어주세요. 특히 Merge의 두 타입인 Fast-Forward와 3-Way Merge를 포함해주세요.)
+Pull Request와 Merge에 대한 내용을 적어주세요.  
+특히 Merge의 두 타입인 Fast-Forward와 3-Way Merge를 포함해주세요.
 
 ## rebase
 ![rebase](https://user-images.githubusercontent.com/51331195/160234052-7fe70f85-5906-4474-b809-782adae92b3c.png)  
-(rebase는 매우 유용한 커맨드입니다. rebase란 무엇인지, 어떤 때에 유용한지, interactive rebase 등에 대해 작성 바랍니다.)
+rebase란 무엇인지, 어떤 때에 유용한지, interactive rebase 등에 대해 작성 바랍니다.
 
 ## stash
 ![stash](https://d8it4huxumps7.cloudfront.net/bites/wp-content/banners/2023/4/642a663eaff96_git_stash.png)  
-(git stash를 활용하는 방법에 대해 적어주세요.)
+git stash를 활용하는 방법에 대해 적어주세요.
 
 ## Questions
 조사/실습하면서 생긴 궁금점이 있다면 여기에 적어서 공유해주세요.
