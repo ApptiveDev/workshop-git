@@ -43,6 +43,10 @@ git과 github의 차이점, git이 동작하는 과정, git 기본 명령어를 
 ### 🎯️ 목표
 [동아리 브랜치 관리전략](https://github.com/ApptiveDev/.github/blob/f9a2f448b57225c3921dc774e8b7800c3289e878/docs/CONTRIBUTING.md)을 지키며 협업을 진행해봅니다.
 ### 📜️ 진행
-
+- 스터디원은 2인씩 팀을 이루어 리포지토리를 생성합니다.
+- 리포지토리 이슈에 할일 목록을 작성합니다.
+- 브랜치 관리 규칙에 맞추어 할일을 처리하고 PR합니다.
+- 코드리뷰를 진행하고 병합합니다. 
+  
 ## 🔗️ 참조
 - [누구나 쉽게 이해할 수 있는 Git 입문](https://backlog.com/git-tutorial/kr/)
