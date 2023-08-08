@@ -41,7 +41,7 @@ git과 github의 차이점, git이 동작하는 과정, git 기본 명령어를 
 ## 4️⃣️ 동아리 협업
 -> [step-4 브랜치](https://github.com/ApptiveDev/study-git/tree/step-4)
 ### 🎯️ 목표
-[동아리 브랜치 관리전략](https://github.com/ApptiveDev/.github/blob/f9a2f448b57225c3921dc774e8b7800c3289e878/docs/CONTRIBUTING.md)을 지키며 협업을 진행해봅니다.
+[동아리 브랜치 관리전략](https://github.com/ApptiveDev/.github/blob/main/docs/CONTRIBUTING.md)을 지키며 협업을 진행해봅니다.
 ### 📜️ 진행
 - 스터디원은 2인씩 팀을 이루어 리포지토리를 생성합니다.
 - 리포지토리 이슈에 할일 목록을 작성합니다.
