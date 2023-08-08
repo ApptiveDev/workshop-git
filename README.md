@@ -14,8 +14,8 @@ Git과 Github 사용의 첫 단계입니다.
 1. 이 리포지토리를 로컬에 clone 합니다.
 2. 이 브랜치(`step-1`)에서 본인의 브랜치를 만듭니다.
    - 브랜치명은 `step-1-<이름>`으로 생성
-3. `git-basics/README.md`를 복사하고, 빈 항목들을 조사해 채워넣습니다.
-   - 복사한 파일명은 `REAMDE-<이름>.md`로 변경
+3. `/git-basics/README.md`를 복사하고, 빈 항목들을 조사해 채워넣습니다.
+   - 복사한 파일명은 `/git-basics/REAMDE-<이름>.md`로 변경
    - 채우면서 최소 5개의 커밋 쌓기
 4. 본인 브랜치를 push하고 `step-1` 브랜치로 Pull Request를 올립니다.
 
