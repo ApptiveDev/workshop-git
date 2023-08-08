@@ -48,5 +48,9 @@ git과 github의 차이점, git이 동작하는 과정, git 기본 명령어를 
 - 브랜치 관리 규칙에 맞추어 할일을 처리하고 PR합니다.
 - 코드리뷰를 진행하고 병합합니다. 
   
-## 🔗️ 참조
+## 🔗️ 참고
+### Chrome Remote Desktop
+ 비대면 스터디 중 원격 접속을 위해 [Chrome Remote Desktop](https://remotedesktop.google.com/support)을 이용합니다.  
+ [크롬 브라우저](https://www.google.co.kr/intl/ko/chrome/) 및 [확장 프로그램](https://chrome.google.com/webstore/detail/chrome-remote-desktop/inomeogfingihgjfjlpeplalcfajhgai)을 미리 설치하시기 바랍니다.
+### 같이 보기
 - [누구나 쉽게 이해할 수 있는 Git 입문](https://backlog.com/git-tutorial/kr/)
