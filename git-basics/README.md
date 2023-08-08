@@ -46,6 +46,7 @@ git stash를 활용하는 방법에 대해 적어주세요.
 다음 주제는 더 조사해볼만한, 생각해볼만한 것들입니다. 
 - `git rebase --interactive`란?
 - branch의 upstream이란? (`git push --set-upstream`)
+- `git fetch`와 `git pull`의 차이점, fetch는 언제 쓰는지
 - `reset --hard`와 `push/pull --force`의 적절한 사용법
 - `.gitignore` 사용법
 - 브랜치 이름은 `parent/child-1`, `parent/child-2`는 가질 수 있지만 `parent`, `parent/child`는 가질 수 없다. 무슨 이유 때문인지. 
