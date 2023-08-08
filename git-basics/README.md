@@ -36,7 +36,7 @@ Pull Request와 Merge에 대한 내용을 적어주세요.
 
 ## rebase
 ![rebase](https://user-images.githubusercontent.com/51331195/160234052-7fe70f85-5906-4474-b809-782adae92b3c.png)  
-rebase란 무엇인지, 어떤 때에 유용한지, interactive rebase 등에 대해 작성 바랍니다.
+rebase란 무엇인지, 어떤 때에 유용한지 등에 대해 적어주세요.
 
 ## stash
 ![stash](https://d8it4huxumps7.cloudfront.net/bites/wp-content/banners/2023/4/642a663eaff96_git_stash.png)  
