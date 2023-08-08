@@ -44,11 +44,12 @@ git stash를 활용하는 방법에 대해 적어주세요.
 
 ## Advanced
 다음 주제는 더 조사해볼만한, 생각해볼만한 것들입니다. 
-- 리포지토리의 두 타입인 bare, non-bare
 - `git rebase --interactive`란?
 - branch의 upstream이란? (`git push --set-upstream`)
 - `reset --hard`와 `push/pull --force`의 적절한 사용법
+- `.gitignore` 사용법
 - 브랜치 이름은 `parent/child-1`, `parent/child-2`는 가질 수 있지만 `parent`, `parent/child`는 가질 수 없다. 무슨 이유 때문인지. 
+- 리포지토리의 두 타입인 bare, non-bare
 
 ## Questions
 조사/실습하면서 생긴 궁금점이 있다면 여기에 적어서 공유해주세요.
