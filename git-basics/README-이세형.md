@@ -154,6 +154,21 @@ rebase란 무엇인지, 어떤 때에 유용한지 등에 대해 적어주세요
 ![stash](https://d8it4huxumps7.cloudfront.net/bites/wp-content/banners/2023/4/642a663eaff96_git_stash.png)  
 git stash를 활용하는 방법에 대해 적어주세요.
 
+> git stash는 Git에서 제공하는 임시 저장 기능으로, Staging Area와 Working Directory에 저장된 변경 사항을 임시로 저장하고 
+> HEAD 상태로 되돌리는 기능이다. 
+> 
+> 이 기능은 특정 브랜치에서 작업하던 도중 다른 브랜치로의 전환이 필요한 경우 유용하게 쓰일 수 있다.
+> 가령 a 브랜치에서 작업하던 도중 b 브랜치에서 수정해야 할 부분이 생긴 경우, a의 변경 사항을 stash로 임시 저장하고
+> b 브랜치로 이동해서 작업할 수 있다. 작업이 끝나면 a 브랜치에서 stash를 통해 임시 저장된 내용을 복원하여 계속 작업할 수 있다.
+> 
+> git stash <save|push>: 현재의 변경 사항을 스택에 저장
+> git stash list: 저장된 stash 목록을 보기
+> git stash apply: 가장 최근에 저장된 stash의 변경 사항 적용. 적용된 stash는 스택에서 제거되지 않음
+> git stash pop: 가장 최근에 저장된 stash의 변경 사항을 적용하고 해당 stash를 스택에서 제거
+> git stash drop [stash@{n}]: 지정된 stash를 스택에서 제거
+> git stash clear: 스택에 존재하는 모든 stash 제거
+> git stash branch <branchname>: 새로운 브랜치를 생성하고 해당 브랜치에 stash의 변경 사항 적용
+
 ## Advanced
 다음 주제는 더 조사해볼만한, 생각해볼만한 것들입니다. 
 - `git rebase --interactive`란?
