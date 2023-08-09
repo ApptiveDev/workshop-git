@@ -49,6 +49,9 @@ git과 github의 차이점, git이 동작하는 과정, git 기본 명령어를 
 - 코드리뷰를 진행하고 병합합니다. 
   
 ## 🔗️ 참고
+### Github Student Developer Pack
+대학생은 [Github Student Developer Pack](https://education.github.com/pack/offers)을 무료로 누릴 수 있으니 링크에서 신청하시기 바랍니다. Github Pro 뱃지와 각종 클라우드 서비스(Azure, MongoDB, Heroku 등)에서 크레딧 등 학생용 혜택이 주어집니다.
+
 ### Chrome Remote Desktop
  비대면 스터디 중 원격 접속을 위해 [Chrome Remote Desktop](https://remotedesktop.google.com/support)을 이용합니다.  
  [크롬 브라우저](https://www.google.co.kr/intl/ko/chrome/) 및 [확장 프로그램](https://chrome.google.com/webstore/detail/chrome-remote-desktop/inomeogfingihgjfjlpeplalcfajhgai)을 미리 설치하시기 바랍니다.
