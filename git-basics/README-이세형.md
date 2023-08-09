@@ -19,7 +19,7 @@ Staging Area: commit 이전에 변경 사항을 임시로 저장하는 공간.
 Local Repo(HEAD): 사용자의 개인 컴퓨터에 위치한 git 저장소.
 Remote Repo(Master): 원격 서버에 위치한 git 저장소. 
 Git Add: Working Directory에서 변경 사항이 있는 파일들을 commit 이전에 Staging Area에 추가하는 것.
-Git Commit: Staging Area에 추가된 변경 사항을 Local Repo에 영구적으로 저장하는 것.
+Git Commit: Staging Area에 추가된 변경 사항을 Local Repo에 영구적으로 저장하는 것. 변경 사항을 저장하는 하나의 기본 단위가 된다.
 Git Push: Local Repo의 commit을 Remote Repo에 업로드하는 것.
 Git Pull: Remote Repo의 최신 commit들을 Local Repo에 불러와 변경 사항을 합치는 것.
 
@@ -28,6 +28,8 @@ Git Pull: Remote Repo의 최신 commit들을 Local Repo에 불러와 변경 사�
 git이 동작하는 기본 단위는 commit과 branch입니다.  
 branch와 HEAD, git checkout을 포함하여 작성 바랍니다.  
 branch 생성 및 삭제, 이동 커맨드 등 자유롭게 내용을 추가해주세요.
+
+commit은 프로젝트의 변경 사항을 저장하고 관리하는 기본 단위이다. branch는 코드의 특정 버전을 가리키는 
 
 
 ## clone, init, origin
