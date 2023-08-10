@@ -36,6 +36,9 @@ git checkout -b step-1-<이름>
    - 복사한 파일명은 `/git-basics/REAMDE-<이름>.md`로 변경
    - 채우면서 최소 5개의 커밋 쌓기
 ```bash
+# /git-basics/README.md 복사
+cp git-basics/README.md git-basics/README-<이름>.md
+
 # (README-<이름>.md를 채우면서)
 git add .
 git commit -m "<커밋 메시지>"
