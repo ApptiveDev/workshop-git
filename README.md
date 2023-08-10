@@ -57,3 +57,5 @@ git과 github의 차이점, git이 동작하는 과정, git 기본 명령어를 
  [크롬 브라우저](https://www.google.co.kr/intl/ko/chrome/) 및 [확장 프로그램](https://chrome.google.com/webstore/detail/chrome-remote-desktop/inomeogfingihgjfjlpeplalcfajhgai)을 미리 설치하시기 바랍니다.
 ### 같이 보기
 - [누구나 쉽게 이해할 수 있는 Git 입문](https://backlog.com/git-tutorial/kr/)
+- [Visualizing Git - 시각적인 git 연습](https://git-school.github.io/visualizing-git/)
+- [Learn Git Branching - 시각적인 git 튜토리얼](https://learngitbranching.js.org/?locale=ko)
