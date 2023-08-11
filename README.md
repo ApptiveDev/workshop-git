@@ -11,23 +11,20 @@
   - `step-3-A-<이름>`에 `playground/실수 파일.txt`가 존재한다.
 
 ## 💻 커맨드
+> 연습을 위해 주석은 최소한만 달아주세요.
 ```bash
-# step-3-A로 이동 후 브랜치 생성
 git checkout step-3-A
 git branch step-3-A-<이름>
 
 # 공동 브랜치에 실수로 쌓인 커밋 확인
-# git graph 익스텐션으로 확인하길 추천
 git checkout step-3-A-shared
-git log --oneline --graph
+git log --oneline --graph     # git graph 익스텐션으로 확인하길 추천
 
-# 커밋 되돌리기 및 자신의 브랜치로 변경사항 가져가기
 git reset HEAD~1
 git stash
 git checkout step-3-A-<이름>
 git stash pop
 
-# 변경사항 커밋하기
 git add .
 git commit -m "커밋 메시지"
 ```
