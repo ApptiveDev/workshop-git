@@ -10,6 +10,18 @@
 
 주의) 모든 작업은 git 커맨드라인으로 해야 합니다.
 
+## 커맨드
+```bash
+git checkout step-3-J
+git checkout -b step-3-J-<이름>
+git push -u origin step-3-J-<이름>
+git branch -m <새 이름>
+git branch -vv
+git push --delete origin step-3-J-<이름>
+git push -u origin <새 이름>
+git branch -vv
+```
+
 ## 🚨️ 문제상황
 - A. 실수로 공동 브랜치에 commit한 경우 (reset, stash, pop)
 - B. 실수로 공동 브랜치에 commit하고 push까지 한 경우 (cherry-pick, revert)
