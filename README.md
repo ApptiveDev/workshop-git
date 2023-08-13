@@ -6,9 +6,10 @@
 
 1. 스터디원은 `step-3-A` 브랜치에서 자신의 브랜치(`step-3-A-<이름>`)을 하나 생성합니다. (`git branch`)
 2. 스터디원은 `step-3-A-shared` 브랜치의 커밋을 없애고 자신의 브랜치로 가져갑니다.
-3. 실습 후 아래 조건을 만족하는지 검사해보세요.
-  - `step-3-A-shared`에 `playground/실수 파일.txt`이 존재하지 않는다.
-  - `step-3-A-<이름>`에 `playground/실수 파일.txt`가 존재한다.
+
+## ✅ 자가확인
+  - [ ] `step-3-A-shared`에 `playground/실수 파일.txt`이 존재하지 않는다.
+  - [ ] `step-3-A-<이름>`에 `playground/실수 파일.txt`가 존재한다.
 
 ## 💻 커맨드
 > 연습을 위해 주석은 최소한만 달아주세요.
