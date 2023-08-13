@@ -1,6 +1,12 @@
 # Git 기초
 Git을 사용하려면 알아야 할 기본 지식을 학습합시다. 아래 항목 위주로 조사하여 나름 이해한대로 채워주시기 바랍니다. 이 템플릿을 이용해도 되고, 자유 형식으로 정리하셔도 됩니다. 블로그 등에 정리한 경우 링크를 첨부해주세요.
 
+
+## Git != Github
+![git-is-not-github](https://user-images.githubusercontent.com/51331195/160232512-3d6686ca-4ae3-4f11-a8d7-c893c0a7526a.png)  
+git과 github는 같은 의미가 아닙니다.  
+local, remote와 연관지어 적어주세요.
+
 # git
 git은 본인의 코드와 그 수정내역을 기록하고 관리하도록 돕는 버전 관리 프로그램이다 로컬에서 프로젝트의 기록을 스스로
 관리할 수 있도록 해준다 git을 통해 브랜치를 생성하고 이전 브랜치로 복구, 삭제 병합이 가능하다 하지만
@@ -12,10 +18,6 @@ gihub는 git 저장소를 관리하는 클라우드 기반 호스팅 서비스�
 github같은 클라우드에 저장하는 git을 remote git이라고 부른다.
 
 
-## Git != Github
-![git-is-not-github](https://user-images.githubusercontent.com/51331195/160232512-3d6686ca-4ae3-4f11-a8d7-c893c0a7526a.png)  
-git과 github는 같은 의미가 아닙니다.  
-local, remote와 연관지어 적어주세요.
 
 ## Git Workflow
 ![git-workflow](https://cdn-media-1.freecodecamp.org/images/1*iL2J8k4ygQlg3xriKGimbQ.png)  
@@ -23,11 +25,24 @@ local, remote와 연관지어 적어주세요.
 Working Directory, Git Add, Git Commit, Git Push 등 각 항목에 대해 작성 바랍니다.  
 Git Merge, Git Fetch는 생략해도 됩니다.
 
+## git 동작
+
+working directory는 작업 공간으로 아직 git에 기록될 준비가 되지 않은 파일들이 위치하는 공간
+Staging Area는 대기 공간으로 Git에 기록될 준비가 된 파일들이 위치하는 공간
+Logal Repository는 .git폴더이다.
+Remote Repository는 원격 저장소이다 github라고 생각하면 된다.
+git add를 하면 Staging Area에 올라간다. 여기서 git commit을 하면 Local Repository에 저장된다 commit만 하면
+자신의 컴퓨터 자체에만 기록되고 Remote Repository에는 저장이 안된다
+push를 해주면 Remote Repository에 저장이 된다.
+
+
+
 ## Branch, HEAD
 ![branch-and-head](https://ihatetomatoes.net/wp-content/uploads/2020/04/07-head-pointer.png)  
 git이 동작하는 기본 단위는 commit과 branch입니다.  
 branch와 HEAD, git checkout을 포함하여 작성 바랍니다.  
 branch 생성 및 삭제, 이동 커맨드 등 자유롭게 내용을 추가해주세요.
+
 
 
 ## clone, init, origin
