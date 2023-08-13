@@ -11,6 +11,9 @@ def multiply(a, b):
 
 
 def divide(a, b):
+    if b == 0:
+        print("divide by 0")
+        return
     return a/b
 
 
