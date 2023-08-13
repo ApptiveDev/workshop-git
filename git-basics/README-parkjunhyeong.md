@@ -88,14 +88,14 @@ Pull Request와 Merge에 대한 내용을 적어주세요.
 여기서 fork는 다른 사람의 깃허브 저장소에서 내 깃허브 저장소로 그대로 복제하는 기능이다. 
 fork한 저장소는 원본 저장소와 연결되어 있다. 연결 되어 있다는 의미는 original repository에서 새로운 commit이 생기면 이는 그대로 forked된 repository로 반영할 수 있다. 이 때 fetch나 rebase의 과정이 필요하다.
 
-**Merge**란 git branch를 다른 branch로 합치는 과정이다 
-###Fast Forward Merge
+**Merge**란 git branch를 다른 branch로 합치는 과정이다. <br>
+### Fast Forward Merge
 커밋이 생기지 않고 현재 브랜치의 HEAD가 대상 브랜치의 HEAD까지로 옮기는 merge이다 
 어떤 경우에 사용 할까?
 예로 들자면 master vranch에서 새로운 브랜치 하나를 생성 한 후에 master branch는 더이상 커밋하지 않고, 생성된
 브랜치에서만 커밋을 하는경우 merge하면 master브랜치의 Head가 새로운 브랜치 Head commit 이후로 이동된다.
 
-###3 way merge
+### 3 way merge
 병합하려는 두개의 브랜치의 공통 조상을 base로 두고 base와 다른 두개를 비교하며 충돌하거나 병합 시켜준다.
 
 ![스크린샷 2023-08-13 012841](https://github.com/ApptiveDev/study-git/assets/64734115/e914759d-155a-43d8-ba54-1126b10cb266)
