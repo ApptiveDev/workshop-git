@@ -27,13 +27,12 @@ Git Merge, Git Fetch는 생략해도 됩니다.
 
 ## git 동작
 
-working directory는 작업 공간으로 아직 git에 기록될 준비가 되지 않은 파일들이 위치하는 공간
-Staging Area는 대기 공간으로 Git에 기록될 준비가 된 파일들이 위치하는 공간
-Logal Repository는 .git폴더이다.
-Remote Repository는 원격 저장소이다 github라고 생각하면 된다.
-git add를 하면 Staging Area에 올라간다. 여기서 git commit을 하면 Local Repository에 저장된다 commit만 하면
-자신의 컴퓨터 자체에만 기록되고 Remote Repository에는 저장이 안된다
-push를 해주면 Remote Repository에 저장이 된다.
+working directory는 작업 공간으로 아직 git에 기록될 준비가 되지 않은 파일들이 위치하는 공간<br>
+Staging Area는 대기 공간으로 Git에 기록될 준비가 된 파일들이 위치하는 공간 <br>
+Logal Repository는 .git폴더이다.<br>
+Remote Repository는 원격 저장소이다 github라고 생각하면 된다.<br>
+git add를 하면 Staging Area에 올라간다. 여기서 git commit을 하면 Local Repository에 저장된다 commit만 하면 자신의 컴퓨터 자체에만 기록되고 Remote Repository에는 저장이 안된다 <br>
+push를 해주면 Remote Repository에 저장이 된다. <br>
 
 
 
@@ -73,10 +72,10 @@ reset에는 3가지 타입이 있습니다.
 각 타입에 대해 작성 바랍니다.
 
 ## git reset
-**git reset**은 과거의 commit으로 돌아가고 이후의 커밋은 삭제하는 명령어 이다.
-`git reset-hard : 해당 커밋ID의 상태로 이동하고, Working Directory와 index영역 모두 초기화`
-`git reset-mixed : 해당 커밋ID의 상태로 이동하고, Index영역은 초기화되고 Working Directory는 변경되지 않음`
-`gir reset-soft : 해당 커밋ID의 상태로 이동하고 Index영역과 Working Directory 모두 변경되지 않고 commit된 파일들을 staging area로 돌려놓는다.`
+**git reset**은 과거의 commit으로 돌아가고 이후의 커밋은 삭제하는 명령어 이다.<br>
+`git reset-hard : 해당 커밋ID의 상태로 이동하고, Working Directory와 index영역 모두 초기화`<br>
+`git reset-mixed : 해당 커밋ID의 상태로 이동하고, Index영역은 초기화되고 Working Directory는 변경되지 않음`<br>
+`gir reset-soft : 해당 커밋ID의 상태로 이동하고 Index영역과 Working Directory 모두 변경되지 않고 commit된 파일들을 staging area로 돌려놓는다.`<br>
 
 ## Pull Request, Merge
 ![pull-request-merge](https://atlassianblog.wpengine.com/wp-content/uploads/bitbucket411-blog-1200x-branches2.png)  
@@ -118,14 +117,14 @@ rebase란 무엇인지, 어떤 때에 유용한지 등에 대해 적어주세요
 git stash를 활용하는 방법에 대해 적어주세요.
 
 ### stash란
-자신이 어떤 작업을 하던 중에 다른 요청이 들어와서 하던 작업이 완료되지 않앗지만 잠시 멈추고 다른 브랜치로 변경할 일이 있으면 완료되지 않은 일을 commit하기엔 껄끄러울 때 잠시 스택에 저장할 수 있도록 하는 명령어이다.
-`git stash 또는 `
-`git stash save를 하면 된다.`
-`git stash list를 하면 stash 목록을 확인할 수 있다.`
-`git stash apply를 가장 최근의 stash를 가져와 적용한다.`
-`git stash apply [stash 이름] 해당 stash를 적용한다.`
-`git stash drop 가장 최근의 stash를 제거한다.`
-`git stash drop [stash 이름] 해당 stash를 제거한다.`
+자신이 어떤 작업을 하던 중에 다른 요청이 들어와서 하던 작업이 완료되지 않앗지만 잠시 멈추고 다른 브랜치로 변경할 일이 있으면 완료되지 않은 일을 commit하기엔 껄끄러울 때 잠시 스택에 저장할 수 있도록 하는 명령어이다.<br>
+`git stash 또는 `<br>
+`git stash save를 하면 된다.`<br>
+`git stash list를 하면 stash 목록을 확인할 수 있다.` <br>
+`git stash apply를 가장 최근의 stash를 가져와 적용한다.` <br>
+`git stash apply [stash 이름] 해당 stash를 적용한다.` <br>
+`git stash drop 가장 최근의 stash를 제거한다.` <br>
+`git stash drop [stash 이름] 해당 stash를 제거한다.` <br>
 
 ## Advanced
 다음 주제는 더 조사해볼만한, 생각해볼만한 것들입니다. 
