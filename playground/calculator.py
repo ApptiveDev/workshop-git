@@ -1,20 +1,17 @@
 def add(a, b):
-    return a + b
+    pass
 
 
 def subtract(a, b):
-	return a-b
+	pass
 
 
 def multiply(a, b):
-    return a*b
+    pass
 
 
 def divide(a, b):
-    if b == 0:
-        print("divide by 0")
-        return
-    return a/b
+    pass
 
 
 def pow(a, b):
