@@ -25,10 +25,12 @@ Git을 사용하려면 알아야 할 기본 지식을 학습합시다. 아래 �
 
 ## Branch, HEAD
 ![branch-and-head](https://ihatetomatoes.net/wp-content/uploads/2020/04/07-head-pointer.png)  
-git이 동작하는 기본 단위는 commit과 branch입니다.  
-branch와 HEAD, git checkout을 포함하여 작성 바랍니다.  
-branch 생성 및 삭제, 이동 커맨드 등 자유롭게 내용을 추가해주세요.
 
+![alt text](image.png)
+- **git branch 브랜치명**으로 branch를 만들어 코드의 시점을 나눌 수 있다.
+- **git checkout** 명령어를 통해 자유롭게 브랜치들을 오갈 수 있다.
+- 이때 *HEAD*는 현재 사용자가 위치한 브랜치의 최신 커밋을 가리키는 포인터이다.
+- **git branch -d 브랜치명**으로 브랜치를 삭제할 수도 있다.
 
 ## clone, init, origin
 리포지토리를 로컬에 생성하는 방법은 clone, init이 있습니다. 다음을 포함하여 작성 바랍니다.
