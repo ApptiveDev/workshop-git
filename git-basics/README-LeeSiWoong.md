@@ -33,9 +33,11 @@ Git을 사용하려면 알아야 할 기본 지식을 학습합시다. 아래 �
 - **git branch -d 브랜치명**으로 브랜치를 삭제할 수도 있다.
 
 ## clone, init, origin
-리포지토리를 로컬에 생성하는 방법은 clone, init이 있습니다. 다음을 포함하여 작성 바랍니다.
-- git clone과 git init의 차이점, 이용방법
-- origin이란 키워드는 무엇인지, 어떻게 설정하는지
+
+- git init은 로컬의 어떤 프로젝트를 git으로 관리하게 만드는 명령어
+- git clone <주소>는 저장소로부터 프로젝트를 복제(clone..)해오는 명령어
+    - 클론해온 프로젝트엔 origin이라는 원격 저장소 디폴트명이 자동등록된다.
+    - origin은 원격저장소 URL을 내포하며 **git remote -v**로 확인 가능.
 
 ## reset
 ![reset](https://user-images.githubusercontent.com/51331195/160235594-8836570b-e8bf-484a-bb92-b2bd6d873066.png)  
