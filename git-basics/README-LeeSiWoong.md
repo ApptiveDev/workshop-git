@@ -16,9 +16,7 @@ Git을 사용하려면 알아야 할 기본 지식을 학습합시다. 아래 �
 4. 이를 통해 다른 사람들과의 협업이 수월해짐
 
 ## Git Workflow
-![git-workflow](https://cdn-media-1.freecodecamp.org/images/1*iL2J8k4ygQlg3xriKGimbQ.png)  
-위는 git이 어떻게 동작하는지 나타낸 다이어그램입니다.  
-Working Directory, Git Add, Git Commit, Git Push 등 각 항목에 대해 작성 바랍니다.  
+![git-workflow](https://cdn-media-1.freecodecamp.org/images/1*iL2J8k4ygQlg3xriKGimbQ.png)   
 - 작업 디렉토리 코드는 아직 변경사항이 기록되지 않고있는 **untracked** 상태
 - **git add** 명령어를 통해 코드를 Staging Area로 옮겨 **tracked**되게 함
 - 스테이징 영역에 있는 코드들을 **git commit** 명령어로 커밋
