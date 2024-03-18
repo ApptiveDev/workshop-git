@@ -52,9 +52,20 @@ Git을 사용하려면 알아야 할 기본 지식을 학습합시다. 아래 �
 
 ## Pull Request, Merge
 ![pull-request-merge](https://atlassianblog.wpengine.com/wp-content/uploads/bitbucket411-blog-1200x-branches2.png)  
-Pull Request와 Merge에 대한 내용을 적어주세요.  
-특히 Merge의 두 타입인 Fast-Forward와 3-Way Merge를 포함해주세요.
 
+**PR**은 내가 짠 코드를 원격 저장소 관리자에게 검토를 요청하는 기능이다.  
+
+검토 이후 승인이 난 코드가 담긴 브랜치를 원격 저장소의 브랜치에 반영해 두 코드를 합치는 것을 **merge**라 한다.
+- 2종류의 merge가 있다.
+![alt text](image-2.png)
+    1. Fast-Forward
+        - 새 브랜치 hotfix를 만들어 작업하면 hotfix는 기존 브랜치의 모든 커밋 내역을 가지고 있다.
+        - 만약 기존 브랜치가 변동이 없다면 이 경우 hotfix로의 merge는 그냥 기존 브랜치가 가리키는 HEAD가 merge되는 hotfix의 HEAD로 옮겨진다. 
+    2. 3-Way
+        - hotfix 추가 후 기존 브랜치에서 작업을 해 변동이 있고 이 작업은 hotfix의 작업영역과 충돌하지 않는 경우이다.
+        - hotfix 브랜치는 기존 브랜치의 모든 커밋을 담고 있지 않는다. 
+        - 따라서 각 브랜치의 HEAD 2개, 공통조상 커밋 1개 총 3개를 merge한 결과를 별도의 **merge commit**으로 만들어 HEAD를 여기로 옮긴다.
+        
 ## rebase
 ![rebase](https://user-images.githubusercontent.com/51331195/160234052-7fe70f85-5906-4474-b809-782adae92b3c.png)  
 rebase란 무엇인지, 어떤 때에 유용한지 등에 대해 적어주세요.
