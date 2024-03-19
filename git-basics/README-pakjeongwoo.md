@@ -45,7 +45,9 @@ orgin : Git에서 원격 리포지토리의 기본 별칭
 ![reset](https://user-images.githubusercontent.com/51331195/160235594-8836570b-e8bf-484a-bb92-b2bd6d873066.png)  
 reset에는 3가지 타입이 있습니다.  
 각 타입에 대해 작성 바랍니다.
-
+soft : 브랜치가 가리키는 커밋을 변경하지만, 스테이징 영역과 작업 디렉토리는 그대로 유지합니다.
+mixed : 옵션은 브랜치가 가리키는 커밋을 변경하고, 스테이징 영역을 해당 커밋과 동일한 상태로 만듭니다. 작업 디렉토리는 그대로 유지됩니다.
+hard : 브랜치가 가리키는 커밋을 변경하고, 스테이징 영역과 작업 디렉토리를 해당 커밋과 동일한 상태로 만듭니다.
 ## Pull Request, Merge
 ![pull-request-merge](https://atlassianblog.wpengine.com/wp-content/uploads/bitbucket411-blog-1200x-branches2.png)  
 Pull Request와 Merge에 대한 내용을 적어주세요.  
