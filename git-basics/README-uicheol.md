@@ -100,6 +100,27 @@ branch 생성 및 삭제, 이동 커맨드 등 자유롭게 내용을 추가해�
 reset에는 3가지 타입이 있습니다.  
 각 타입에 대해 작성 바랍니다.
 
+reset은 되돌아가는 것이다.
+3가지는 working directory, staging area, repo가 어디까지 되돌아가는가에 따라 다르다.
+
+1. git reset --soft
+
+- working directory: 그대로 남음
+- staging area: 그대로 남음
+- repo: 이전 상태
+
+2. git reset --mixed
+
+- working directory: 그대로 남음
+- staging area: 이전 상태
+- repo: 이전 상태
+
+3. git reset --hard
+
+- working directory: 이전 상태
+- staging area: 이전 상태
+- repo: 이전 상태
+
 ## Pull Request, Merge
 
 ![pull-request-merge](https://atlassianblog.wpengine.com/wp-content/uploads/bitbucket411-blog-1200x-branches2.png)  
