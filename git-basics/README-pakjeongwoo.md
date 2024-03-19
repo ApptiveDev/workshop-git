@@ -52,6 +52,10 @@ hard : 브랜치가 가리키는 커밋을 변경하고, 스테이징 영역과 
 ![pull-request-merge](https://atlassianblog.wpengine.com/wp-content/uploads/bitbucket411-blog-1200x-branches2.png)  
 Pull Request와 Merge에 대한 내용을 적어주세요.  
 특히 Merge의 두 타입인 Fast-Forward와 3-Way Merge를 포함해주세요.
+Pull Request : 자신의 변경 사항을 원본 리포지토리에 통합하기 위한 요청
+Merge : 두 개의 브랜치를 통합하는 과정
+Fast-Forward Merge : 브랜치의 변경 사항을 master 브랜치에 적용할 때, master 브랜치의 포인터를 브랜치의 최신 커밋으로 이동시키는 것으로 병합이 완료
+3-Way Merge : 두 브랜치의 공통 조상 커밋과 각 브랜치의 최신 커밋을 사용하여 병합이 이루어집니다.
 
 ## rebase
 ![rebase](https://user-images.githubusercontent.com/51331195/160234052-7fe70f85-5906-4474-b809-782adae92b3c.png)  
