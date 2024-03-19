@@ -68,11 +68,17 @@ Git을 사용하려면 알아야 할 기본 지식을 학습합시다. 아래 �
         
 ## rebase
 ![rebase](https://user-images.githubusercontent.com/51331195/160234052-7fe70f85-5906-4474-b809-782adae92b3c.png)  
-rebase란 무엇인지, 어떤 때에 유용한지 등에 대해 적어주세요.
+merge와 마찬가지로 브랜치를 합치는 결과를 만들어내나 중간과정이 다름.
+1. main 브랜치에서 feature 브랜치로 rebase한다.
+2. 이 말은 main 브랜치의 마지막 커밋에 feature 브랜치의 base가 달라붙는단 의미이다.
+3. 이 경우 히스토리 구조가 선형이 되기 때문에 merge와 달리 불필요한 merge 커밋을 제거해 깔끔한 유지보수가 된다.
 
 ## stash
 ![stash](https://d8it4huxumps7.cloudfront.net/bites/wp-content/banners/2023/4/642a663eaff96_git_stash.png)  
-git stash를 활용하는 방법에 대해 적어주세요.
+작업중 다른작업을 진행할 때 기존 작업을 잠시 스택공간에 치워두는 방법이다.
+1. **git stash**로 현재 적용된 커밋 이후 변경된 모든 사항들이 stash 공간으로 이동한다. -m 옵션으로 기록도 가능
+2. **git stash apply**로 했던 최근 작업을 다시 가져온다. 뒤에 이름을 붙이면 원하는 항목을 가져올 수 있다.
+3. **git stash list**로 작업목록명 확인 가능하다.  
 
 ## Advanced
 다음 주제는 더 조사해볼만한, 생각해볼만한 것들입니다. 
