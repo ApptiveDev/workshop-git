@@ -13,12 +13,23 @@ local, remote와 연관지어 적어주세요.
 위는 git이 어떻게 동작하는지 나타낸 다이어그램입니다.  
 Working Directory, Git Add, Git Commit, Git Push 등 각 항목에 대해 작성 바랍니다.  
 Git Merge, Git Fetch는 생략해도 됩니다.
+Working Directory : 개발자가 작업하는 로컬의 디렉토리
+Git Add : 작업 디렉토리에서 변경된 파일을 스테이징 영역에 추가하는 명령어
+Git Commit : 스테이징 영역에 있는 변경사항을 로컬 저장소에 기록하는 명령어
+Git Push : 로컬 저장소에 커밋된 변경사항을 원격 저장소에 업로드하는 명령어
+Git Merge : 다른 브랜치의 변경 사항을 현재 브랜치에 통합하는 명령어
+Git Fetch : 원격 저장소의 최신 변경 사항을 로컬 저장소로 가져오는 명령어
 
 ## Branch, HEAD
 ![branch-and-head](https://ihatetomatoes.net/wp-content/uploads/2020/04/07-head-pointer.png)  
 git이 동작하는 기본 단위는 commit과 branch입니다.  
 branch와 HEAD, git checkout을 포함하여 작성 바랍니다.  
 branch 생성 및 삭제, 이동 커맨드 등 자유롭게 내용을 추가해주세요.
+branch 생성 : git branch <branch-name>
+branch 삭제 : git branch -d <branch-name> 강제삭제시 -D 옵션사용
+branch 목록확인 : git branch -r하면 원격 저장소의 브랜치 목록을 알수있음
+HEAD : 현재 작업중인 브랜치를 가리키는 포인터 일반적으로 HEAD는 브랜치의 최신커밋을 가리킨다
+git checkout : 명령어는 브랜치 간 전환이나 특정 커밋으로 이동할 때 사용된다
 
 
 ## clone, init, origin
