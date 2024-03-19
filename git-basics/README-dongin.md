@@ -18,6 +18,16 @@ local, remote와 연관지어 적어주세요.
 위는 git이 어떻게 동작하는지 나타낸 다이어그램입니다.  
 Working Directory, Git Add, Git Commit, Git Push 등 각 항목에 대해 작성 바랍니다.  
 Git Merge, Git Fetch는 생략해도 됩니다.
+**Working Directory**
+- 사용자가 실제로 작업하고 있는 로컬 파일 시스템의 디렉토리. 개발자가 코드를 수정, 생성하는 곳.
+**git add**
+-  Working Directory에서 변경된 파일들을 임시저장공간(Staging Area)로 이동시키는 명령어. Git이 추적해야 할 변경 사항을 선택하는 과정으로, 사용자는 commit할 파일들을 고를 수 있다.
+**git commit**
+- Staging Area에 있는 변경 사항들을 Local Repository에 영구적으로 저장하는 명령어. 각 commit은 해당 프로젝트의 버전을 나타내며, 커밋 메시지를 통해 해당 변경 사항에 대한 설명을 추가할 수 있다.
+**git push**
+- Local Repository의 commit을 Remote Repository (ex. Github)에 업로드하는 명령어. 코드의 최신 버전을 팀원들과 공유, 백업하는 데 사용된다.
+**git fetch**
+- Remote Repository의 최신 변경 사항을 Local로 가져오는 명령어. 원격 저장소의 최신 상태를 확인하고 싶을 때 사용한다. git fetch 후, git merge나 git rebase를 사용해서 원격 변경 사항을 현재 작업 브랜치에 반영할 수 있다.
 
 ## Branch, HEAD
 ![branch-and-head](https://ihatetomatoes.net/wp-content/uploads/2020/04/07-head-pointer.png)  
