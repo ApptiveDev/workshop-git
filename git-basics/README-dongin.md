@@ -134,6 +134,17 @@ Pull Request와 Merge에 대한 내용을 적어주세요.
 ## rebase
 ![rebase](https://user-images.githubusercontent.com/51331195/160234052-7fe70f85-5906-4474-b809-782adae92b3c.png)  
 rebase란 무엇인지, 어떤 때에 유용한지 등에 대해 적어주세요.
+**rebase**
+- 한 branch의 변경 사항을 다른 branch로 가져와서 두 branch의 공용 기저(base)를 다시 설정하는 과정
+- 즉, 기저 재설정을 의미하고, 복잡한 commit 히스토리를 깨끗하게 유지할 수 있는 방법이다.
+- 장점
+    - 공유하는 branch의 최신 변경 사항을 즉각 반영
+    - commit 이력을 하나의 직선으로 관리 가능 (깔끔한 프로젝트 히스토리)
+- 사용 시점
+    - 자신의 작업 branch에 다른 branch의 최신 변경 사항을 반영하고 싶을 때
+    - 병합 충동이 예상되는 상황에서 branch 충돌을 미리 해결하고 싶을 때
+    - 단, 다른 사람과 공유하는 branch에서는 조심해서 사용
+![1928B19D-B305-4D8D-92C2-30615BFDEA56.jpg](https://prod-files-secure.s3.us-west-2.amazonaws.com/94628612-4999-4a9e-bd19-428a991f4eb4/d8d9204a-5380-463b-bf7e-c7b7df15b75a/1928B19D-B305-4D8D-92C2-30615BFDEA56.jpg)
 
 ## stash
 ![stash](https://d8it4huxumps7.cloudfront.net/bites/wp-content/banners/2023/4/642a663eaff96_git_stash.png)  
