@@ -78,6 +78,22 @@ branch 생성 및 삭제, 이동 커맨드 등 자유롭게 내용을 추가해�
 - git clone과 git init의 차이점, 이용방법
 - origin이란 키워드는 무엇인지, 어떻게 설정하는지
 
+1. git clone
+
+- remote repo(github)의 프로젝트를 local repo로 클론함.
+- 이때 origin은 remote repo의 기본 이름임.
+
+2. git init
+
+- 새로운 local repo를 생성함. 이미 존재하는 프로젝트를 git으로 관리하려거나, 새로운 프로젝트를 시작할때 로컬 디렉토리를 git 저장소로 초기화할때 사용함.
+- 현재 디렉토리를 git 저장소로 초기화하며, '.git'이라는 폴더가 생성됨.
+
+3. origin
+
+- git에서 remote repo의 기본 이름이다. git clone을 할 때 remote repo의 이름이 origin으로 자동 설정됨.
+- origin은 remote repo의 url 변수이다.
+- git remote add origin <repoitory url> 을 통해 remote repo url을 설정할 수 있다.
+
 ## reset
 
 ![reset](https://user-images.githubusercontent.com/51331195/160235594-8836570b-e8bf-484a-bb92-b2bd6d873066.png)  
