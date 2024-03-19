@@ -63,6 +63,14 @@ git branch -d (branch이름) : branch 삭제
 - git clone과 git init의 차이점, 이용방법
 - origin이란 키워드는 무엇인지, 어떻게 설정하는지
 
+git init : .git이라는 하위 폴더를 생성, git으로 관리할 수 있게 해주는 명령어
+
+git clone : 저장소로부터 프로젝트를 복제하는 것
+bare repository를 생성하거나, 저장소에 있는 project를 내 pc에 설치할때 사용
+사용법 : git clone {프로토콜} {프로젝트 주소}.git
+
+origin : 대표적으로 사용되는 원격 저장소의 별칭, 특정 원격 저장소를 식별하는 이름
+
 ## reset
 ![reset](https://user-images.githubusercontent.com/51331195/160235594-8836570b-e8bf-484a-bb92-b2bd6d873066.png)  
 reset에는 3가지 타입이 있습니다.  
