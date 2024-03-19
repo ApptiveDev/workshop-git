@@ -86,13 +86,34 @@ hard : 마찬가지로, working directory도 해당 커밋의 모습과 동일�
 Pull Request와 Merge에 대한 내용을 적어주세요.  
 특히 Merge의 두 타입인 Fast-Forward와 3-Way Merge를 포함해주세요.
 
+Pull request : 다른 사용자가 작성한 저장소에서 변경 사항을 병합하기 위한 요청
+줄여서 PR이라고 함
+Merge : 여러 브랜치를 master 브랜치에 병합하는 것
+fast-forward : master브랜치에서 분기해 나가는 지점(commit), 즉 두 브랜치가 공통으로 가지고 있는 commit을 base라 함
+fast-forward관계에 있는 브랜치를 관계에서 git merge명령을 입력하면 새로운 commit이 생기지 않는다
+뒤에 쳐진 브랜치의 참조 개체가 앞서있는 브랜치가 가리키는 개체를 참조하도록 이동하는 것
+3-way merge : 두 브랜치 모두 base에 위치하고 있지 않을 시, 두 브랜치가 분리된 commit을 참조할 때 git merge명령을 실행하면 새로운 commit이 생성된다. 이것을 3-way merge라 부른다
+
 ## rebase
 ![rebase](https://user-images.githubusercontent.com/51331195/160234052-7fe70f85-5906-4474-b809-782adae92b3c.png)  
 rebase란 무엇인지, 어떤 때에 유용한지 등에 대해 적어주세요.
 
+Rebase : base를 재설정한다는 의미로, 하나의 브랜치가 다른 브랜치에서 파생되서 나온 경우, 다른 브랜치에서 진행된 커밋을 가져와서 base를 재설정하는 것
+
+내가 작업하던 브랜치에 main 내용이 필요해서 적용시키고 싶을때 쓰면 좋음
+
 ## stash
 ![stash](https://d8it4huxumps7.cloudfront.net/bites/wp-content/banners/2023/4/642a663eaff96_git_stash.png)  
 git stash를 활용하는 방법에 대해 적어주세요.
+
+Git stash : 변경사항을 일시적으로 저장하는 기능으로, 나중에 다시 사용가능
+
+명령어 : 
+git stash / git stash save
+git stash pop {index} : 스택에 쌓은 가장 최근의 변경사항을 불러와 디렉토리에 적용하고, 해당 변경사항은 스택에서 제거됨
+git stash apply : 적용해도 스택에서 사라지지 않음
+git stash list : 목록확인
+
 
 ## Advanced
 다음 주제는 더 조사해볼만한, 생각해볼만한 것들입니다. 
