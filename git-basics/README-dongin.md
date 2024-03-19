@@ -34,7 +34,15 @@ Git Merge, Git Fetch는 생략해도 됩니다.
 git이 동작하는 기본 단위는 commit과 branch입니다.  
 branch와 HEAD, git checkout을 포함하여 작성 바랍니다.  
 branch 생성 및 삭제, 이동 커맨드 등 자유롭게 내용을 추가해주세요.
-
+**branch**
+- - 개발의 주 흐름에서 벗어나, 독립적으로 어떤 작업을 진행하기 위한 기능. 프로젝트의 한 부분에서 다른 부분으로 작업 범위를 옮길 수 있게 도와준다.
+- 생성 : git branch <생성할 branch 이름>
+- 삭제 : git branch -d <삭제할 branch 이름>
+- 이동 : git checkout <이동할 branch 이름>
+**HEAD**
+-  현재 작업 중인 branch의 가장 최신 커밋. Git이 어느 시점의 코드를 바탕으로 작업하고 있는지를 의미한다. 즉, 프로젝트의 현재 '상태'를 나타내는 포인터이다.
+**git checkout**
+- 특정 branch로 전환하거나, 과거의 어떤 시점(버전)으로 작업 디렉토리의 상태를 되돌리는 명령어. 이전 버전의 파일을 복구하거나, 다른 버전 간의 차이를 비교할 수 있게 한다.
 
 ## clone, init, origin
 리포지토리를 로컬에 생성하는 방법은 clone, init이 있습니다. 다음을 포함하여 작성 바랍니다.
