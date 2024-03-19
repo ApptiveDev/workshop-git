@@ -76,6 +76,11 @@ origin : 대표적으로 사용되는 원격 저장소의 별칭, 특정 원격 
 reset에는 3가지 타입이 있습니다.  
 각 타입에 대해 작성 바랍니다.
 
+git reset : Head의 위치를 현재 커밋에서 과거나 미래로 이동시키는 커맨드
+soft : head가 특정 커밋(과거, 미래)을 새롭게 가르키게됨
+mixed : soft처럼 새롭게 가리키지만, staging area도 해당 커밋의 모습과 동일하게 변하게 됨
+hard : 마찬가지로, working directory도 해당 커밋의 모습과 동일하게 변하게 됨
+
 ## Pull Request, Merge
 ![pull-request-merge](https://atlassianblog.wpengine.com/wp-content/uploads/bitbucket411-blog-1200x-branches2.png)  
 Pull Request와 Merge에 대한 내용을 적어주세요.  
