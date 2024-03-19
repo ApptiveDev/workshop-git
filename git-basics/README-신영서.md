@@ -146,13 +146,43 @@ Pull Request와 Merge에 대한 내용을 적어주세요.
 > 각 브랜치의 마지막 커밋 두 개와 공통 조상의 총 3개의 커밋을 이용하여 병합하는 방식  
 > 공통 조상까지 비교해야 더 명확한 변경 상태를 알 수 있음  
 > 서로 다른 브랜치가 동일 선상이 아닐 경우 사용
+>
+> 충돌이 발생하면 일반적으로 <<<<<<<, =======, >>>>>>>와 같은 마커로 표시
+
 ## rebase
 ![rebase](https://user-images.githubusercontent.com/51331195/160234052-7fe70f85-5906-4474-b809-782adae92b3c.png)  
 rebase란 무엇인지, 어떤 때에 유용한지 등에 대해 적어주세요.
+> rebase란 공통 Base를 가진 두 개의 Branch에서 한 Branch의 Base를 다른 Branch의 최신 커밋으로 Base를 옮기는 작업이다  
+> #### 장점
+> - 공유 branch의 최신 변경사항을 즉각 반영
+> - 커밋 이력이 남지 않을므로 commit history가 시간순서대로 반영되어 간단해짐
+> #### 유용한 경우
+> - 내가 작업하던 브랜치에 main 브랜치 내용이 필요해서 적용시키고 싶을 때 사용
+
 
 ## stash
 ![stash](https://d8it4huxumps7.cloudfront.net/bites/wp-content/banners/2023/4/642a663eaff96_git_stash.png)  
 git stash를 활용하는 방법에 대해 적어주세요.
+> git stash란 변경사항을 일시적으로 저장하는 기능  
+> 커밋하기엔 이른 경우, 다른 브랜치로 체크아웃하는데 변경사항을 유지하고 싶을 경우 사용
+>
+>  ``` git stash ```  
+> 현재 작업 중인 변경 사항을 일시적으로 저장하고 스택에 쌓음  
+> 작업 디렉토리를 깨끗한 상태로 만듦  
+>
+> ``` git stash apply ```  
+> 스택에 쌓인 가장 최근의 변경 사항을 불러와 작업 디렉토리에 적용, 스택에 남아있음
+>
+> ```git stash drop ```  
+> ```git stash drop [stash 이름] ```  
+> 스택에 남아있는 stash 제거
+>
+> ``` git stash pop ```  
+> ``` git stash pop {index 번호} ```  
+> 스택에 쌓인 가장 최근의 변경 사항을 불러와 작업 디렉토리에 적용, 스택에서 제거
+>
+> ``` git stash list ```  
+> 현재 stash들의 목록
 
 ## Advanced
 다음 주제는 더 조사해볼만한, 생각해볼만한 것들입니다. 
