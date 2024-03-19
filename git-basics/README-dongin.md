@@ -184,5 +184,7 @@ git stash clear
 - 브랜치 이름은 슬래시를 통해 계층적으로 가질 수 있다. 단, `parent/child-1`, `parent/child-2`는 동시에 가질 수 있지만 `parent/child/grandchild`, `parent/child`는 그러지 못한다. 무슨 이유 때문인지. 
 - detached HEAD란 어떤 상태인지, 이 상태에서 커밋을 하게 되면 어떻게 되는지, detached HEAD는 어떤 상황에서 발생할 수 있는지
 
+> [git 연습 사이트 공유](https://learngitbranching.js.org/?locale=ko, "git 연습 사이트")
+
 ## Questions
 조사/실습하면서 생긴 궁금점이 있다면 여기에 적어서 공유해주세요.
