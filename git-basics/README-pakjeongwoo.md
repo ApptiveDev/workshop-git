@@ -60,11 +60,14 @@ Fast-Forward Merge : 브랜치의 변경 사항을 master 브랜치에 적용할
 ## rebase
 ![rebase](https://user-images.githubusercontent.com/51331195/160234052-7fe70f85-5906-4474-b809-782adae92b3c.png)  
 rebase란 무엇인지, 어떤 때에 유용한지 등에 대해 적어주세요.
+rebase : 브랜치의 베이스를 다른 커밋으로 변경하는 과정
+커밋 이력을 수정하고 싶을 때, 브랜치를 최신 상태로 유지하고 싶을 때, 원격 저장소에 푸시하기 전에 로컬 브랜치를 정리하고 싶을 때
 
 ## stash
 ![stash](https://d8it4huxumps7.cloudfront.net/bites/wp-content/banners/2023/4/642a663eaff96_git_stash.png)  
 git stash를 활용하는 방법에 대해 적어주세요.
-
+git stash : 현재 작업 중인 변경 사항을 임시로 저장할 수 있는 명령어
+변경 사항 임시 저장하기, 저장된 변경 사항 확인하기, 저장된 변경 사항 적용하기
 ## Advanced
 다음 주제는 더 조사해볼만한, 생각해볼만한 것들입니다. 
 - `git rebase --interactive`란?
