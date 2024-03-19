@@ -6,10 +6,6 @@ Git을 사용하려면 알아야 할 기본 지식을 학습합시다. 아래 �
 git과 github는 같은 의미가 아닙니다.  
 local, remote와 연관지어 적어주세요.
 
-git : 로컬 저장소의 모든 변경사항을 기록하여 파일 버전관리
-git hub : git을 사용하는 웹 호스팅 서비스
-로컬 저장소의 코드를 업로드하고, 공유 할 수 있음
-
 ## Git Workflow
 ![git-workflow](https://cdn-media-1.freecodecamp.org/images/1*iL2J8k4ygQlg3xriKGimbQ.png)  
 위는 git이 어떻게 동작하는지 나타낸 다이어그램입니다.  
