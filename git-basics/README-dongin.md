@@ -77,6 +77,20 @@ git remote remove <별칭>
 ![reset](https://user-images.githubusercontent.com/51331195/160235594-8836570b-e8bf-484a-bb92-b2bd6d873066.png)  
 reset에는 3가지 타입이 있습니다.  
 각 타입에 대해 작성 바랍니다.
+**git reset**
+- 주로 잘못된 commit을 취소하거나, 변경할 때 사용하는 명령어. 3가지 옵션을 통해 commit의 상태를 조절할 수 있다.
+1. `--soft`
+    - 지정한 커밋으로 돌아간다. Staging Area(임시저장공간)의 상태는 유지한다.
+    - 커밋만 취소하고, 변경된 파일들을 다시 커밋할 때 사용
+    - 즉, 가장 최근에 커밋된 내용이 사라지고, 변경 사항이 Staging Area에 남아 있어서 다시 커밋할 수 있다.
+2. `--mixed`
+    - 기본옵션으로, 지정한 커밋으로 돌아가면서 Staging Area의 변경 사항도 취소한다. 작업 디렉토리의 파일 내용은 그대로 유지된다.
+    - 커밋을 취소하고, 변경 사항을 수정한 후, 다시 Staging 하고 싶을 때 사용
+    - 즉, 지정한 커밋으로 되돌리는 동시에, Stage에 올라가 있던 변경 사항들이 작업 디렉토리에 남게 되어 수정 후 다시 Staging 가능하다.
+3. `--hard`
+    - 지정한 커밋으로 돌아가고, Staging Area 및 작업 디렉토리의 변경 사항 모두를 취소한다.
+    - 잘못된 커밋을 완전히 취소하고, 이전 상태로 완벽하게 돌아가고 싶을 때 사용
+    - 즉, 작업 디렉토리의 내용까지 완전히 되돌린다. 다시 되돌릴 수 없으므로, 사용에 주의해야 한다.
 
 ## Pull Request, Merge
 ![pull-request-merge](https://atlassianblog.wpengine.com/wp-content/uploads/bitbucket411-blog-1200x-branches2.png)  
