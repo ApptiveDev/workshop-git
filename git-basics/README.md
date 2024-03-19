@@ -16,6 +16,22 @@ git hub : git을 사용하는 웹 호스팅 서비스
 Working Directory, Git Add, Git Commit, Git Push 등 각 항목에 대해 작성 바랍니다.  
 Git Merge, Git Fetch는 생략해도 됩니다.
 
+Working directory : 로컬 저장소에 접근할 수 있으며, 실제로 파일을 생성하고 수정하는 공간, 현재 작업중인 공간
+
+Staging area : 곧 commit할 파일에 대한 정보를 저장하는 곳
+
+local repository : 내 컴퓨터 안에 있는 저장소, 네트워크 필요 X
+
+remote repository : 원격 서버에 있는 저장소, 네트워크 필요(github, gitlab...)
+
+Git add : 작업 위치(Working directory 이하 WD)폴도에 작업한 파일이 있을 경우, add를 통해서 staging Area로 옮길 수 있음
+
+Git commit : staging area에 저장되어있는 변경 사항들을 로컬저장소에 등록
+
+Git push : 원격 저장소에 commit된 파일들을 모두 업로드
+
+Git pull : 원격 리포지토리에서 로컬로 변경 내용을 가져와 병합
+
 ## Branch, HEAD
 ![branch-and-head](https://ihatetomatoes.net/wp-content/uploads/2020/04/07-head-pointer.png)  
 git이 동작하는 기본 단위는 commit과 branch입니다.  
