@@ -36,7 +36,11 @@ git checkout : 명령어는 브랜치 간 전환이나 특정 커밋으로 이�
 리포지토리를 로컬에 생성하는 방법은 clone, init이 있습니다. 다음을 포함하여 작성 바랍니다.
 - git clone과 git init의 차이점, 이용방법
 - origin이란 키워드는 무엇인지, 어떻게 설정하는지
-
+git clone : 이미 존재하는 원격 리포지토리를 로컬 컴퓨터에 복제할 때 사용
+git init : 로컬 컴퓨터에 새로운 Git 리포지토리를 초기화할 때 사용
+orgin : Git에서 원격 리포지토리의 기본 별칭
+설정방법 : git init으로 초기화한 로컬 리포지토리에서는 git remote add origin <repository-url>
+차이점 : git clone은 원격 리포지토리를 복제하여 로컬에 생성하는 반면, git init은 로컬에 새로운 리포지토리를 초기화합니다
 ## reset
 ![reset](https://user-images.githubusercontent.com/51331195/160235594-8836570b-e8bf-484a-bb92-b2bd6d873066.png)  
 reset에는 3가지 타입이 있습니다.  
