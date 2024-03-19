@@ -58,6 +58,19 @@ git이 동작하는 기본 단위는 commit과 branch입니다.
 branch와 HEAD, git checkout을 포함하여 작성 바랍니다.  
 branch 생성 및 삭제, 이동 커맨드 등 자유롭게 내용을 추가해주세요.
 
+1. branch
+
+- 코드의 분기를 나타내는 개념, 작업을 독립적으로 진행시키기 위해 브랜치를 생성한다.
+- 브랜치는 만들거나 삭제, 이동이 가능함.
+- 생성: git branch <branch name>
+- 삭제: git branch -d <branch name>
+- 이동: git checkout <branch name>
+- 생성 및 이동: git checkout -b <branch name>
+
+2. HEAD
+
+- 현재 작업중인 커밋의 상태를 가리키며, 변경사항을 추가하거나 커밋할 때 사용됨.
+
 ## clone, init, origin
 
 리포지토리를 로컬에 생성하는 방법은 clone, init이 있습니다. 다음을 포함하여 작성 바랍니다.
