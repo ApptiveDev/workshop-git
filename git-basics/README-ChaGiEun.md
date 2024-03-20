@@ -91,10 +91,20 @@ git reset은 HEAD의 위치를 현재 커밋에서
 ![pull-request-merge](https://atlassianblog.wpengine.com/wp-content/uploads/bitbucket411-blog-1200x-branches2.png)  
 Pull Request와 Merge에 대한 내용을 적어주세요.  
 특히 Merge의 두 타입인 Fast-Forward와 3-Way Merge를 포함해주세요.
+<br/><br/>
+- Pull Request : '코드를 수정했는데 당신도 코드를 수정했다면 제 수정한 내용도 적용시켜 주세요'라는 의미입니다.
+- Merge : git branch를 다른 branch로 합치는 과정을 merge라 합니다. merge의 기본 단위는 브랜치이며, git merge 명령어로는 커밋 단위로 합치기가 불가능합니다.
+    - Fast-Forward : 현재 브랜치의 HEAD가 대상 브랜치의 HEAD까지로 옮기는 merge입니다. 대신 중간에 변경이 없을 때만 동작합니다. 
+    - 3-Way Merge : 두 브랜치가 동일 선상이 아닐 때 3-way Merge가 발생합니다. 서로 다른 브랜치에 공통되는 base branch를 기점으로 충돌을 최소화 시키는 방법입니다.
 
 ## rebase
 ![rebase](https://user-images.githubusercontent.com/51331195/160234052-7fe70f85-5906-4474-b809-782adae92b3c.png)  
 rebase란 무엇인지, 어떤 때에 유용한지 등에 대해 적어주세요.
+<br/><br/>
+두개의 공통 Base를 가진 Branch에서 한 Branch의 Base를 다른 Branch의 최신 커밋으로 branch의 base를 옮기는 작업입니다. 용어 그대로 베이스를 다시 설정하는 작업입니다.<br/>
+Git에서 한 브랜치에서 다른 브랜치로 합치는 방법은 Merge와 Rebase입니다. Merge와 Rebase의 실행결과는 같지만 커밋 히스토리가 달라집니다. Merge는 쉽고 안전하지만 커밋 히스토리가 지저분할 수 있는 반면, Rebase는 잘 모르고 사용할 경우 위험할 수 있어 까다롭지만 커밋히스토리를 깔끔하게 관리할 수 있습니다.
+<br/>
+공유 branch에 대한 최신 commit을 반영하면서 작업을 해야할 때 git rebase를 사용한다면 작업 branch에서 항상 최신 변경사항을 적용한 commit을 유지할 수 있습니다.
 
 ## stash
 ![stash](https://d8it4huxumps7.cloudfront.net/bites/wp-content/banners/2023/4/642a663eaff96_git_stash.png)  
