@@ -6,43 +6,27 @@ Git을 사용하려면 알아야 할 기본 지식을 학습합시다. 아래 �
 git과 github는 같은 의미가 아닙니다.  
 local, remote와 연관지어 적어주세요.
 
-### Git
-- 소스코드를 효과적으로 관리하기 위해 개발된 분산형 버전 관리 시스템이다.
+### Git과 GitHub의 의미
+- **Git**: local에서 소스 코드의 변경 사항을 추적하고, 버전을 관리하는데 사용되는 도구이다.
   
-- Git에서는 소스 코드가 변경된 이력을 쉽게 확인할 수 있고, 특정 시점에 저장된 버전과 비교하거나 특정 시점으로 되돌아갈 수도 있다.
-  
-- 컴퓨터의 변경사항을 추적하고 여려 명의 사용자들 간에 해당 파일들의 작업을 조율하기 위해 사용한다.
-
-- Git은 Remote Repository(원격 저장소)와 Local Repository(로컬 저장소) 두 종류의 저장소를 제공한다.
-
-  - **Remote Repository(원격 저장소)**: 파일이 원격 저장소 전용 서버에서 관리되며 여러 사람과 함께 공유하기 위한 저장소이다.
-  
-  - **Local Repository(로컬 저장소)**: 내 PC에 파일이 저장되는 개인 전용 저장소이다.
-
-- 평소에는 내 PC의 로컬 저장소에서 작업하다가 소스를 공개하고 싶을 때 원격 저장소에 업로드 할 수 있다.
-- 또한 원격 저장소에서 다른 사람이 작업한 파일을 로컬 저장소로 가져올 수도 있다.
-
-### GitHub 
-- 클라우드 방식으로 관리되는 버전 관리 시스템(VCS)으로 **원격저장소를 제공** 한다.
-  
-- Git에 원격 저장소 호스팅을 지원하는 웹 서비스이며 GitHub를 통해 Git에 저장된 파일 버전을 웹 상의 저장소에 업로드 하여 다른 이들과 공유할 수 있다.
-  
-- 개발자들간의 협업이 가능한 서비스이다.
-
-### 정리
-- Git은 소스 코드의 버전 관리를 위한 도구이고, GitHub은 Git 저장소를 호스팅하고 프로젝트 관리를 위한 서비스이다.
-
--  Git을 사용하여 로컬에서 작업한 변경 사항을 추적하고 관리하고, GitHub을 사용하여 프로젝트를 온라인으로 공유하고 협업할 수 있다.
+- **GitHub**: Git 저장소를 클라우드(원격 서버)에 호스팅하고, 여러 사용자가 협업할 수 있게 하는 서비스이다. GitHub를 사용하면 로컬 시스템뿐만 아니라 원격 서버에도 Git 저장소를 보유할 수 있다.
 
 ## Git Workflow
 ![git-workflow](https://cdn-media-1.freecodecamp.org/images/1*iL2J8k4ygQlg3xriKGimbQ.png)  
 위는 git이 어떻게 동작하는지 나타낸 다이어그램입니다.  
 Working Directory, Git Add, Git Commit, Git Push 등 각 항목에 대해 작성 바랍니다.  
 Git Merge, Git Fetch는 생략해도 됩니다.
-- Working Directory
-- Git Add
-- Git Commit
-- Git Push
+- **Working Directory**: 현재 개발자가 작업하는 공간으로 현재 프로젝트의 소스코드 및 파일이 저장되어 있는 로컬 시스템의 디렉토리이다. Git은 여기에 있는 파일들의 변경사항을 추적하고 관리한다.
+  
+- **Git Add**: Working Directory에 있는 변경 사항 중 일부를 Staging Area에 추가하는 명령이다. 이는 Git에게 해당 변경 사항을 다음 Commit에 포함하는 것임을 알려준다.
+  
+- **Git Commit**: Staging Area의 변경 사항을 로컬 저장소에 저장하는 명령어이다. 이는 변경 사항을 영구적으로 기록하고, Commit 메시지와 함께 변경 사항의 스냅샷을 생성한다.
+  
+- **Git Push**: 로컬 저장소에 있는 Commit을 원격 저장소(예: GitHub)로 전송하는 명령이다. 이는 다른 개발자들과 변경 사항을 공유하거나, 백업을 위해 사용된다.
+  
+- **Git Merge**: 두 개의 다른 branch를 병합하는 명령어이다. branch는 개발의 흐름을 나누어 관리하기 위한 독립적인 작업 공간으로 사용되는데, 두 branch의 변경 사항을 합치는 작업을 수행한다.
+  
+- **Git Fetch**: 원격 저장소에서 최신 변경사항을 가져오는 명령어이다. 이는 로컬 저장소에는 변경 사항을 적용하지 않고, 단순히 원격 저장소의 상태를 확인하는 역할이다. 이후에 필요에 따라 Git Merge나 Git Pull과 함께 사용하여 로컬 저장소에 변경 사항을 반영할 수 있다.
   
 ## Branch, HEAD
 ![branch-and-head](https://ihatetomatoes.net/wp-content/uploads/2020/04/07-head-pointer.png)  
