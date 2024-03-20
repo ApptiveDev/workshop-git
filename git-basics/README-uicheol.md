@@ -62,10 +62,12 @@ branch 생성 및 삭제, 이동 커맨드 등 자유롭게 내용을 추가해�
 
 - 코드의 분기를 나타내는 개념, 작업을 독립적으로 진행시키기 위해 브랜치를 생성한다.
 - 브랜치는 만들거나 삭제, 이동이 가능함.
-- 생성: git branch <branch name>
-- 삭제: git branch -d <branch name>
-- 이동: git checkout <branch name>
-- 생성 및 이동: git checkout -b <branch name>
+  '''
+  생성: git branch <branch name>
+  삭제: git branch -d <branch name>
+  이동: git checkout <branch name>
+  생성 및 이동: git checkout -b <branch name>
+  '''
 
 2. HEAD
 
@@ -146,6 +148,19 @@ merge
 
 ![rebase](https://user-images.githubusercontent.com/51331195/160234052-7fe70f85-5906-4474-b809-782adae92b3c.png)  
 rebase란 무엇인지, 어떤 때에 유용한지 등에 대해 적어주세요.
+
+rebase
+
+- git에서 branch의 위치를 재정렬 하는 것을 말함.
+- branch를 깔끔하게 정리하는데 좋다.
+- rebase 후 fast-forward merge를 해서 branch를 정리한다.
+- 아래 명령어로 branch를 main으로 rebase 후 fast-forward merge 할 수 있다.
+  '''
+  git checkout <branch name>
+  git rebase main
+  git checkout main
+  git merge <branch name>
+  '''
 
 ## stash
 
