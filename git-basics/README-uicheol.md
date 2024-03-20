@@ -167,6 +167,38 @@ rebase
 ![stash](https://d8it4huxumps7.cloudfront.net/bites/wp-content/banners/2023/4/642a663eaff96_git_stash.png)  
 git stash를 활용하는 방법에 대해 적어주세요.
 
+1. 임시로 변경사항을 저장하고 다른 작업 수행
+
+- 현재 작업중인데 다른 branch로 이동해야하는 경우, 변경사항을 commit하지 않고 다른 branch로 이동가능.
+- 'git stash'를 이용해 변경사항을 임시로 저장한 후 다른 branch로 이동하고, 작업 수행 후 stash에 있는 변경사항을 다시 가져올 수 있다.
+
+2. 작업중인 변경사항을 정리하고 임시로 저장
+
+- 여러개의 파일을 수정하고 있을 때, 일부 변경사항을 commit 하기전 다른 변경사항을 진행해야하는 경우, 변경사항을 'git stash'를 사용해 작업중인 파일을 임시로 저장할 수 있다.
+
+3. 변경사항을 임시로 저장하고 충돌 해결
+
+- merge나 rebase를 수행하는 동안 conflict가 발생하는 경우, 충돌을 해결하기 전 변경사항을 'git stash'로 임시로 저장할 수 있다.
+- 충돌을 해결한 후 변경사항을 다시 적용할 수 있다.
+
+`git stash`
+: 현재 작업 중인 변경사항을 스택에 임시로 저장
+
+`git stash list`
+: stash list 확인
+
+`git stash pop`
+: 가장 최근 stash를 pop해 적용함
+
+`git stash apply <stash_id>`
+: 특정 stash를 적용
+
+`git stash drop <stash_id>`
+: 특정 stash 삭제
+
+`git stash clear`
+: 모든 stash 삭제
+
 ## Advanced
 
 다음 주제는 더 조사해볼만한, 생각해볼만한 것들입니다.
