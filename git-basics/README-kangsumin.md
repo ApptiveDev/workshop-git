@@ -99,7 +99,7 @@ branch 생성 및 삭제, 이동 커맨드 등 자유롭게 내용을 추가해�
 - **origin**: Git에서 원격 저장소를 가리키는 별칭이다. 원격 저장소의 URL을 `origin`이라는 이름으로 참조할 수 있다.
 
 - **origin 설정 방법**
-  - `git clone` 명령을 사용하여 원격 저장소를 복자하면 Git은 자동으로 `origin`이라는 이름의 원격 저장소를 설정한다. 따라서 별도의 설정이 필요없다.
+  - `git clone` 명령을 사용하여 원격 저장소를 복사하면 Git은 자동으로 `origin`이라는 이름의 원격 저장소를 설정한다. 따라서 별도의 설정이 필요없다.
 
   - `git remote add` 명령으로 원격 저장소를 직접 추가한다면 아래의 명령어를 사용하여 `origin`이라는 이름의 원격 저장소를 설정할 수 있다.
     ```bash
@@ -138,8 +138,20 @@ reset에는 3가지 타입이 있습니다.
 ![pull-request-merge](https://atlassianblog.wpengine.com/wp-content/uploads/bitbucket411-blog-1200x-branches2.png)  
 Pull Request와 Merge에 대한 내용을 적어주세요.  
 특히 Merge의 두 타입인 Fast-Forward와 3-Way Merge를 포함해주세요.
-- Pull Request:
-- Merge:
+- **Pull Request**: 한 브랜치에서 작업한 코드를 메인 프로젝트에 병합(Merge)하기 위해 레포지토리 관리자나 다른 팀원에게 요청하는 과정이다.
+  
+  - 시나리오 
+    - branch 생성 및 작업
+    - 변경 사항 commit 및 push
+    - pull request 생성
+    - 팀원들과 토론 및 수정
+    
+- **Merge**: Pull Request를 통해 검토된 변경 사항을 실제로 적용하여 branch를 병합하는 것이다.
+  - 종류
+    - Fast-Forward: main branch에 신규 커밋이 없는 경우, 최신 커밋이 있는 branch를 main branch로 하는 것이다.
+    [fast-forward-merge](https://codingapple.com/wp-content/uploads/2022/06/%EA%B7%B8%EB%A6%BC3-4.png) 
+    - 3-Way Merge: branch마다 신규 커밋이 하나 이상 있는 경우, 새로운 커밋을 생성하면서 합쳐주는 것이다.
+    [3-Way-merge](https://codingapple.com/wp-content/uploads/2022/06/merge1.png) 
 
 ## rebase
 ![rebase](https://user-images.githubusercontent.com/51331195/160234052-7fe70f85-5906-4474-b809-782adae92b3c.png)  
