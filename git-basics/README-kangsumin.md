@@ -110,14 +110,36 @@ branch 생성 및 삭제, 이동 커맨드 등 자유롭게 내용을 추가해�
 ![reset](https://user-images.githubusercontent.com/51331195/160235594-8836570b-e8bf-484a-bb92-b2bd6d873066.png)  
 reset에는 3가지 타입이 있습니다.  
 각 타입에 대해 작성 바랍니다.
-reset:
+
+### git reset
+- reset 명령어는 대표적으로 commit을 `취소`하는 명령어이다. 또한 Staging 취소가 가능하다. 옵션에 따라 디테일한 설정이 가능하다.
+
+- 옵션
+  - `--soft`: commit 취소, Staging 상태 유지
+  - `--mixed`: commit 취소, Staging 취소, local은 변경 상태로 유지(옵션이 없을 시 default로 설정된다)
+  - `--hard`: commit 취소, Staging 취소, local 변경 상태 취소
+- HEAD의 옵션 (위의 3가지 옵션 뒤에 사용한다)
+  - `HEAD^`: 최신 커밋 취소
+  - `HEAD~(수량)`: 수량에 숫자를 적으면 최근 커밋부터 해당 숫자까지 커밋 취소
+- 사용 예시
+    ```bash
+    # 소프트 리셋
+    git reset --soft HEAD^
+
+    # 믹스드 리셋
+    git reset HEAD^
+    git reset --mixed HEAD^
+
+    # 하드 리셋
+    git reset --hard HEAD^
+    ```
 
 ## Pull Request, Merge
 ![pull-request-merge](https://atlassianblog.wpengine.com/wp-content/uploads/bitbucket411-blog-1200x-branches2.png)  
 Pull Request와 Merge에 대한 내용을 적어주세요.  
 특히 Merge의 두 타입인 Fast-Forward와 3-Way Merge를 포함해주세요.
-Pull Request:
-Merge:
+- Pull Request:
+- Merge:
 
 ## rebase
 ![rebase](https://user-images.githubusercontent.com/51331195/160234052-7fe70f85-5906-4474-b809-782adae92b3c.png)  
