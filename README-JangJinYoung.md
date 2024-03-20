@@ -123,7 +123,11 @@ git stash
 ## Advanced
 다음 주제는 더 조사해볼만한, 생각해볼만한 것들입니다. 
 - `git rebase --interactive`란?
+  - git rebase 명령어를 대화형으로 실행
+  
 - branch의 upstream이란? (`git push --set-upstream`)
+  - 다른 사람의 저장소를 Fork 한 경우 나는 origin이 되고 fork 한 저장소가 upstream이 된다.
+
 - PR은 브랜치 뿐만 아니라 Fork한 리포지토리에서도 가능하다. fork은 언제 유용한지. 
 - `git fetch`와 `git pull`의 차이점, fetch는 언제 쓰는지
 - `reset --hard`와 `push --force`의 적절한 사용법
