@@ -18,11 +18,11 @@ Working Directory, Git Add, Git Commit, Git Push 등 각 항목에 대해 작성
 Git Merge, Git Fetch는 생략해도 됩니다.
 - **Working Directory**: 현재 개발자가 작업하는 공간으로 현재 프로젝트의 소스코드 및 파일이 저장되어 있는 로컬 시스템의 디렉토리이다. Git은 여기에 있는 파일들의 변경사항을 추적하고 관리한다.
   
-- **Git Add**: Working Directory에 있는 변경 사항 중 일부를 Staging Area에 추가하는 명령이다. 이는 Git에게 해당 변경 사항을 다음 Commit에 포함하는 것임을 알려준다.
+- **Git Add**: Working Directory에 있는 변경 사항 중 일부를 Staging Area에 추가하는 명령이다. 이는 Git에게 해당 변경 사항을 다음 commit에 포함하는 것임을 알려준다.
   
-- **Git Commit**: Staging Area의 변경 사항을 로컬 저장소에 저장하는 명령어이다. 이는 변경 사항을 영구적으로 기록하고, Commit 메시지와 함께 변경 사항의 스냅샷을 생성한다.
+- **Git Commit**: Staging Area의 변경 사항을 로컬 저장소에 저장하는 명령어이다. 이는 변경 사항을 영구적으로 기록하고, commit 메시지와 함께 변경 사항의 스냅샷을 생성한다.
   
-- **Git Push**: 로컬 저장소에 있는 Commit을 원격 저장소(예: GitHub)로 전송하는 명령이다. 이는 다른 개발자들과 변경 사항을 공유하거나, 백업을 위해 사용된다.
+- **Git Push**: 로컬 저장소에 있는 commit을 원격 저장소(예: GitHub)로 전송하는 명령이다. 이는 다른 개발자들과 변경 사항을 공유하거나, 백업을 위해 사용된다.
   
 - **Git Merge**: 두 개의 다른 branch를 병합하는 명령어이다. branch는 개발의 흐름을 나누어 관리하기 위한 독립적인 작업 공간으로 사용되는데, 두 branch의 변경 사항을 합치는 작업을 수행한다.
   
@@ -34,6 +34,48 @@ git이 동작하는 기본 단위는 commit과 branch입니다.
 branch와 HEAD, git checkout을 포함하여 작성 바랍니다.  
 branch 생성 및 삭제, 이동 커맨드 등 자유롭게 내용을 추가해주세요.
 
+- **commit**: Git에서 변경 사항을 영구적으로 기록하는 작업이다. 각 commit은 파일의 변경 사항을 스냅샷으로 기록하고, 해당 지점의 상태를 저장한다. commit을 통해 이전 상태로 rollback하거나 변경 이력을 추정할 수 있다.
+  
+- **branch**: Git에서 병렬적인 작업을 수행하기 위한 개념이다. 각 branch는 독립적인 작업 경로를 나타내며, 개발자는 여러 branch를 생성하여 동시에 여러 기능을 개발할 수 있다.
+  
+- **HEAD**: 현재 작업 중인 branch의 가장 최근 commit을 가리키는 포인터이다.
+   
+- **Git checkout**: Working directory의 HEAD와 branch 간의 이동을 담당하는 명령어이다.
+
+### branch 관련 명령어
+
+- **branch 생성**:
+    ```bash
+    # 새로운 브랜치 생성
+    git branch <branch_name>
+
+    # 새로운 브랜치 생성 후 해당 브랜치로 이동
+    git checkout -b <branch_name>
+    ```
+
+- **branch 삭제**:
+    ```bash
+    # 브랜치 삭제
+    git branch -d <branch_name>
+
+    # 강제로 브랜치 삭제 (변경 사항이 포함되지 않은 경우)
+    git branch -D <branch_name>
+    ```
+
+- **branch 이동**:
+    ```bash
+    # 특정 브랜치로 이동
+    git checkout <branch_name>
+
+    # 새로운 브랜치 생성 후 해당 브랜치로 이동
+    git checkout -b <branch_name>
+    ```
+
+- **branch 목록 보기**:
+    ```bash
+    # 브랜치 목록 보기
+    git branch
+    ```
 
 ## clone, init, origin
 리포지토리를 로컬에 생성하는 방법은 clone, init이 있습니다. 다음을 포함하여 작성 바랍니다.
