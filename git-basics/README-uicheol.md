@@ -127,6 +127,21 @@ reset은 되돌아가는 것이다.
 Pull Request와 Merge에 대한 내용을 적어주세요.  
 특히 Merge의 두 타입인 Fast-Forward와 3-Way Merge를 포함해주세요.
 
+pull request
+
+- 다른 branch에서 작업한 내용들을 기존 코드에 병합하기 전 리뷰와 토론을 요청하는 기능.
+- 변경사항에 대해 검토가 완료되면, 병합될 수 있다.
+
+merge
+
+1. fast-forward merge
+
+- main branch에 신규 커밋이 없는 경우, branch의 최신 커밋을 main branch으로만 바꿔주면 간단하게 merge를 진행할 수 있다.
+
+2. 3-way merge
+
+- main branch와 나의 branch에 각각 신규 커밋이 있을 때, main에 새로운 commit을 생성하면서 각 branch의 신규 커밋들을 합쳐준다.
+
 ## rebase
 
 ![rebase](https://user-images.githubusercontent.com/51331195/160234052-7fe70f85-5906-4474-b809-782adae92b3c.png)  
