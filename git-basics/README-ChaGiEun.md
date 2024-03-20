@@ -109,6 +109,15 @@ Git에서 한 브랜치에서 다른 브랜치로 합치는 방법은 Merge와 R
 ## stash
 ![stash](https://d8it4huxumps7.cloudfront.net/bites/wp-content/banners/2023/4/642a663eaff96_git_stash.png)  
 git stash를 활용하는 방법에 대해 적어주세요.
+<br/><br/>
+작업 중에 갑작스럽게 다른 작업을 진행해야 할 때, 작업중인 사항을 잠시 치워두는 방법입니다. stash를 사용해서 잠시 코드를 다른 곳에 보관한 후에, 내가 원하는 branch에 적용할 수 있습니다. 
+- git stash : 현재 적용된 ccommit 이후로 변경된 모든 사항들이 stash 공간으로 이동됩니다.
+- git stash pop : 다른 브랜치의 commit에 stash로 따로 저장해둔 코드들을 적용합니다.
+- git stash -p : hunk를 기준으로 변경사항을 하나씩 확인하며 원하는 변화만 stash에 담을 수 있습니다.
+*hunk : 깃에서 하나의 변경사항이 담긴 단위입니다.
+- git stash -m "다음 스태시하는 이유" : 어떤 이유로 stash했느지를 메시지로 남기고 stash 할 수 있습니다.
+- git stash list : 리스트상의 번호로 apply, drop, pop을 적용할 수 있습니다. (ex) git stash apply stash@{1})
+- git stash branch "브랜치명" : 새로운 브랜치를 만들어서 pop(적용 및 삭제)를 진행합니다. 기존 작업 내용과 stash한 내용이 충돌할 가능성을 염두해 두고 새로운 branch를 만들어서 테스트해볼 수 있습니다.
 
 ## Advanced
 다음 주제는 더 조사해볼만한, 생각해볼만한 것들입니다. 
