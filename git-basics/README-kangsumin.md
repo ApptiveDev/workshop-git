@@ -184,8 +184,44 @@ rebase란 무엇인지, 어떤 때에 유용한지 등에 대해 적어주세요
 ## stash
 ![stash](https://d8it4huxumps7.cloudfront.net/bites/wp-content/banners/2023/4/642a663eaff96_git_stash.png)  
 git stash를 활용하는 방법에 대해 적어주세요.
-- **git stash**:
+- **stash**: 현재 작업 중인 변경 사항을 일시적으로 저장하는 Git의 기능이다. 작업 중인 변경 사항을 commit하지 않고 보관할 수 있어서 다른 작업을 할 대 유리하다.
 
+- **관련 명령어**
+  - 현재 작업 중인 변경 사항을 일시적으로 저장
+  ```bash
+  git stash
+
+  # staging 된 것이든 안된 것이든 추적중인 파일은 다 이동된다.
+  # 파일들이 최근 commit 상태로 되돌아 간다.
+  ```
+
+  - 현재 stash 되어있는 코드 목록 출력
+  ```bash
+  git stash list
+  ```
+
+  - 보관했던 코드 다시 불러오기
+  ```bash
+  git stash pop
+  
+  # git stash 했던 코드가 여러개 있으면 가장 최근에 보관했던 코드부터 불러온다.
+  ```
+
+  - stash 삭제
+  ```bash
+  # 특정 stash 삭제
+  git stash drop 삭제할_id
+
+  # 모든 stash 삭제
+  git stash clear
+  ```
+
+  - 일부 코드만 git stash 하기
+  ```bash
+  git stash -p
+  
+  # 파일을 훑어주면서 stash 할 지 의견을 물어보는데 y/n으로 잘 대답하면 된다.
+  ```
 ## Advanced
 다음 주제는 더 조사해볼만한, 생각해볼만한 것들입니다. 
 - `git rebase --interactive`란?
@@ -199,3 +235,4 @@ git stash를 활용하는 방법에 대해 적어주세요.
 
 ## Questions
 조사/실습하면서 생긴 궁금점이 있다면 여기에 적어서 공유해주세요.
+- pull request는 레포지토리를 fork한 상태에서만 가능할까? 레포지토리를 clone만 한 상태에는 pull request가 불가능할까?
