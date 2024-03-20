@@ -54,11 +54,37 @@ branch 생성 및 삭제, 이동 커맨드 등 자유롭게 내용을 추가해�
 리포지토리를 로컬에 생성하는 방법은 clone, init이 있습니다. 다음을 포함하여 작성 바랍니다.
 - git clone과 git init의 차이점, 이용방법
 - origin이란 키워드는 무엇인지, 어떻게 설정하는지
+<br/><br/>
+- **git init과 git clone의 차이**
+    - git init : 빈 git 저장소를 만들거나 기존 저장소를 다시 초기화하는 명령어
+    - git clone : git clone에 해당하는 저장소를 복제해 새 디렉터리로 가져오는 명령어<br/>
+-> git init은 프로젝트 자체를 처음부터 시작하는것이고, git clone은 프로젝트 내에 중간 투입이 가능하며 clone 시 inti을 다시 해줄 필요가 없습니다.
+- **이용방법**
+    - git init
+    - git clone
+- **origin**
+    - remote 저장소를 가리키는 별칭입니다.
+    - 새로운 프로젝트를 clone할 때 : git clone <원격 저장소 URL> <디렉토리 이름>
+    - 기존 저장소에 새로운 원격 저장소를 추가할 때 : git remote add origin <원격 저장소 URL>
 
 ## reset
 ![reset](https://user-images.githubusercontent.com/51331195/160235594-8836570b-e8bf-484a-bb92-b2bd6d873066.png)  
 reset에는 3가지 타입이 있습니다.  
 각 타입에 대해 작성 바랍니다.
+<br/><br/>
+git reset은 HEAD의 위치를 현재 커밋에서
+1. 과거의 커밋으로 이동시킬 수도 있고
+2. 미래의 커밋으로 이동시킬 수도 있습니다.
+
+- **--soft--**
+    HEAD가 특정 커밋을 새롭게 가리키게 됩니다. 대신 현재 작업 중인 working directory와 staging area는 아무런 영향을 받지 않습니다.
+- **--mixed--**
+    HEAD가 특정 커밋을 새롭게 가리키게 됩니다. 그리고 staging area도 해당 커밋의 모습과 동일하게 변합니다. 하지만 현재 작업 중인 working directory는 아무런 영향을 받지 않습니다.
+- **--hard--** 
+    HEAD가 특정 커밋을 새롭게 가리키게 됩니다. 그리고 staging area와 현재 작업중인 working directory도 해당 커밋의 모습과 동일하게 변합니다.
+
+*staging Area : 커밋을 하기 위해 $git add 명령어로 추가한 파일들이 모여있는 공간<br/>
+**working directory** --$git add--> **staging area** -- $git commit --> **repository**
 
 
 ## Pull Request, Merge
