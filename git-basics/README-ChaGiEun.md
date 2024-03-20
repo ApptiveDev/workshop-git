@@ -44,6 +44,11 @@ Git Merge, Git Fetch는 생략해도 됩니다.
 git이 동작하는 기본 단위는 commit과 branch입니다.  
 branch와 HEAD, git checkout을 포함하여 작성 바랍니다.  
 branch 생성 및 삭제, 이동 커맨드 등 자유롭게 내용을 추가해주세요.
+<br/><br/>
+- commit은 Git 저장소(원격 저장소)에 우리의 디렉토리(로컬 저장소)에 있는 모든 파일에 대한 스냅삿을 기록하는 것입니다.
+- branch는 그저 commit 노드를 참조하는 것입니다. 
+- HEAD란 현재 checkout된 브랜치의 마지막 commit에 대한 포인터입니다.
+- git checkout은 branch 혹은 commit을 전환하거나, 내용을 되돌리는 기능을 합니다.
 
 ## clone, init, origin
 리포지토리를 로컬에 생성하는 방법은 clone, init이 있습니다. 다음을 포함하여 작성 바랍니다.
