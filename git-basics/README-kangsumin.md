@@ -149,19 +149,42 @@ Pull Request와 Merge에 대한 내용을 적어주세요.
 - **Merge**: Pull Request를 통해 검토된 변경 사항을 실제로 적용하여 branch를 병합하는 것이다.
   - 종류
     - Fast-Forward: main branch에 신규 커밋이 없는 경우, 최신 커밋이 있는 branch를 main branch로 하는 것이다.
-    [fast-forward-merge](https://codingapple.com/wp-content/uploads/2022/06/%EA%B7%B8%EB%A6%BC3-4.png) 
-    - 3-Way Merge: branch마다 신규 커밋이 하나 이상 있는 경우, 새로운 커밋을 생성하면서 합쳐주는 것이다.
-    [3-Way-merge](https://codingapple.com/wp-content/uploads/2022/06/merge1.png) 
+    ![fast-forward-merge](https://codingapple.com/wp-content/uploads/2022/06/%EA%B7%B8%EB%A6%BC3-4.png)
+
+    - 3-Way Merge: branch마다 신규 commit이 1회 이상 있는 경우, merge 명령을 내리면 두 브랜치의 코드를 합쳐서 새로운 commit을 생성한다.
+    ![3-Way-merge](https://codingapple.com/wp-content/uploads/2022/06/merge1.png) 
 
 ## rebase
 ![rebase](https://user-images.githubusercontent.com/51331195/160234052-7fe70f85-5906-4474-b809-782adae92b3c.png)  
 rebase란 무엇인지, 어떤 때에 유용한지 등에 대해 적어주세요.
-rebase:
+- **rebase**: 신규 branch의 시작점을 main branch의 최근 commit으로 옮긴 다음 fast-forward merge를 하는 것이다.
+![rebase](https://codingapple.com/wp-content/uploads/2022/06/merge3.png)
+
+- **유용한 때**
+  - branch가 너무 많을 때, 간단한 branch들을 rebase하면 commit history를 훨씬 깔끔하게 정리할 수 있다.
+  
+- **rebase & merge 방법**
+  - 새로운 브랜치로 이동한다.
+  - `git rebase main`을 한다.
+  - 그러면 branch가 main branch 끝으로 이동하는 데 그것을 fast-forward merge 하면 된다.
+  ```bash
+    # 새로운 브랜치로 이동
+    git switch 새로운_브랜치
+    
+    # main으로 rebase
+    git rebase main
+
+    # main branch로 이동
+    git switch main
+
+    # fast-forward merge 적용 (신규 커밋이 있는 branch를 main branch로 적용)
+    git merge 새로운브랜치
+  ```
 
 ## stash
 ![stash](https://d8it4huxumps7.cloudfront.net/bites/wp-content/banners/2023/4/642a663eaff96_git_stash.png)  
 git stash를 활용하는 방법에 대해 적어주세요.
-git stash:
+- **git stash**:
 
 ## Advanced
 다음 주제는 더 조사해볼만한, 생각해볼만한 것들입니다. 
