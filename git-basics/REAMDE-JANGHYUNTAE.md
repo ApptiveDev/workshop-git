@@ -94,3 +94,52 @@ HEAD는 일반적으로 최신 커밋을 가리키며, 작업 디렉토리에 �
 bash
 Copy code
 git clone <repository_URL>
+
+★git reset --mixed 
+- <commit> 명령어를 사용합니다. (기본값)
+이 명령어는 HEAD를 특정 커밋으로 이동시키고, 해당 커밋 이후의 변경 사항을 스테이징 영역에 유지하지 않습니다.
+변경 사항은 작업 디렉토리에 유지되며, 스테이징 영역에서 삭제됩니다. 
+이후에 변경 사항을 스테이징하고 다시 커밋할 수 있습니다.
+
+
+★git reset --hard 
+-  <commit> 명령어를 사용합니다.
+이 명령어는 HEAD를 특정 커밋으로 이동시키고, 해당 커밋 이후의 변경 사항을 모두 삭제합니다.
+스테이징 영역과 작업 디렉토리의 변경 사항이 모두 제거되므로 주의해야 합니다. 
+ 다시 되돌릴 수 없는 변경 사항을 삭제할 때 사용합니다.
+
+
+## Pull Request, Merge
+![pull-request-merge](https://atlassianblog.wpengine.com/wp-content/uploads/bitbucket411-blog-1200x-branches2.png)  
+Pull Request와 Merge에 대한 내용을 적어주세요.  
+특히 Merge의 두 타입인 Fast-Forward와 3-Way Merge를 포함해주세요.
+★Pull Request (풀 리퀘스트):
+
+- Pull Request는 코드 변경 사항을 다른 개발자들과 검토하고 병합하기 위해 사용됩니다.
+일반적으로 Pull Request는 원격 저장소(예: GitHub, GitLab)에서 생성되며, 코드 변경 사항을 포함한 특정 브랜치를 기준으로 다른 브랜치로 병합하고자 할 때 사용됩니다.
+Pull Request를 생성하면 다른 개발자들이 변경 사항을 검토하고 논의할 수 있으며, 코드 변경 사항에 대한 피드백을 주고 받을 수 있습니다.
+
+Merge (병합):
+
+- Merge는 두 개의 다른 브랜치를 하나로 합치는 과정을 의미합니다.
+Git에서는 주로 두 가지 타입의 Merge가 사용됩니다: 
+
+★Fast-Forward Merge와 3-Way Merge.
+
+★Fast-Forward Merge:
+
+- Fast-Forward Merge는 브랜치 간의 차이가 없는 경우에만 발생합니다.
+예를 들어, 특정 브랜치에서 작업한 변경 사항을 모두 커밋하고, 해당 브랜치가 기준 브랜치의 최신 커밋을 가리키게 될 때 Fast-Forward Merge가 발생합니다.
+이 경우 Git은 단순히 브랜치 포인터를 앞으로 이동시켜 기준 브랜치의 최신 커밋을 가리키게 합니다.
+
+★3-Way Merge:
+
+- 3-Way Merge는 두 브랜치 간에 충돌이 발생할 때 사용됩니다.
+예를 들어, 두 개의 브랜치에서 동일한 파일의 동일한 부분을 동시에 수정한 경우에 충돌이 발생합니다.\
+Git은 두 브랜치의 공통 조상 커밋을 찾아내고, 각 변경 사항을 비교하여 충돌을 해결합니다.\
+충돌이 발생한 파일에 대해 개발자가 직접 수정하고 충돌을 해결한 후,  
+수정 사항을 다시 커밋하여 Merge를 완료할 수 있습니다.
+\
+Pull Request와 Merge를 통해 팀원들 간의 협업을 원활하게 할 수 있으며, 코드 변경 사항을 효율적으로 검토하고 병합할 수 있습니다. Fast-Forward Merge는 단순한 상황에서 사용되며, 3-Way Merge는 충돌이 발생한 경우에 사용됩니다.
+
+
