@@ -6,6 +6,10 @@ Git을 사용하려면 알아야 할 기본 지식을 학습합시다. 아래 �
 git과 github는 같은 의미가 아닙니다.
 local, remote와 연관지어 적어주세요.
 
+⸰ Git은 개인 컴퓨터에서 돌아가는 Version Control System이다. 반면에 GitHub은 Github라 불리는 회사에서 서비스하고 있는 서버에 올라간 Git이다.
+⸰ 즉 개인 컴퓨터에서 사용하는 Git을 Local Git이라 부르고, Github이나 Gitlab과 같은 클라우드에 저장하는 Git을 Remote Git이라 부른다.
+⸰ 출처 : https://kotlinworld.com/265
+
 ## Git Workflow
 ![git-workflow](https://cdn-media-1.freecodecamp.org/images/1*iL2J8k4ygQlg3xriKGimbQ.png)  
 위는 git이 어떻게 동작하는지 나타낸 다이어그램입니다.  
