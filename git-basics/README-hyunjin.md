@@ -44,8 +44,17 @@ git이 동작하는 기본 단위는 commit과 branch입니다.
 
 ## clone, init, origin
 리포지토리를 로컬에 생성하는 방법은 clone, init이 있습니다. 다음을 포함하여 작성 바랍니다.
-- git clone과 git init의 차이점, 이용방법
-- origin이란 키워드는 무엇인지, 어떻게 설정하는지
+
+
+⸰ git init : 빈 git 저장소를 만들거나 기존 저장소를 다시 초기화하는 명령어이다.
+
+⸰ git clone : git clone <url> 과 같이 사용하며, url에 해당하는 저장소를 복제해 새 directory로 가져오는 명령어이다.
+
+⸰ origin : 대표적으로 사용되는 원격 저장소의 별칭을 의미한다. 
+  별칭이란? - 로컬 저장소를 원격 저장소에 등록하기 위해서는 (git push) git 호스팅사 서버의 URL이 필요하다. github나 gitlab같은 호스팅사로 이용할 경우, 이 연결 URL은 프로토콜과 호스팅사 도메인으로 이루어진다. 즉 URL 주소가 길어진다. 그렇기 때문에 이 URL을 간략하게 특정 문자로 지정하는 것을 별칭이라고 한다. (별칭은 중복사용 불가능하다.)
+  별칭은 git remote <별칭> <URL>로 지정하고 git remote rename <변경전> <변경후>로 바꿀수있다. 삭제는 git remote rm <별칭>으로 한다
+
+⸰ 출처 : https://yoongrammer.tistory.com/21 , https://m.blog.naver.com/rinjyu/222180087428
 
 ## reset
 ![reset](https://user-images.githubusercontent.com/51331195/160235594-8836570b-e8bf-484a-bb92-b2bd6d873066.png)  
