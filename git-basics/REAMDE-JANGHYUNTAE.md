@@ -143,3 +143,59 @@ Git은 두 브랜치의 공통 조상 커밋을 찾아내고, 각 변경 사항�
 Pull Request와 Merge를 통해 팀원들 간의 협업을 원활하게 할 수 있으며, 코드 변경 사항을 효율적으로 검토하고 병합할 수 있습니다. Fast-Forward Merge는 단순한 상황에서 사용되며, 3-Way Merge는 충돌이 발생한 경우에 사용됩니다.
 
 
+
+## rebase
+![rebase](https://user-images.githubusercontent.com/51331195/160234052-7fe70f85-5906-4474-b809-782adae92b3c.png)  
+rebase란 무엇인지, 어떤 때에 유용한지 등에 대해 적어주세요.
+
+★Rebase
+- Git에서의 Rebase(리베이스)는 브랜치의 커밋 히스토리를 재정렬하거나 변경하는 작업을 의미합니다. 기본적으로 Rebase는 두 브랜치를 합치는 Merge 작업과 유사하지만,커밋 히스토리를 보다 깔끔하게 유지할 수 있도록 도와줍니다.
+
+★Rebase를 사용하는 경우에는 보통 다음과 같은 상황에서 유용합니다:
+
+★커밋 히스토리 정리:
+
+- 여러 개의 작은 커밋을 하나의 큰 커밋으로 합치거나, 불필요한 중간 커밋을 삭제할 때 Rebase를 사용할 수 있습니다.
+이를 통해 브랜치의 커밋 히스토리를 보다 깔끔하고 의미 있게 관리할 수 있습니다.
+
+★베이스 변경:
+
+- 현재 브랜치가 다른 브랜치의 최신 상태를 반영해야 할 때 Rebase를 사용할 수 있습니다.
+예를 들어, 기능 브랜치를 개발하는 동안 메인 브랜치가 업데이트된 경우, 기능 브랜치를 메인 브랜치의 최신 상태로 리베이스하여 충돌을 최소화하고 통합할 수 있습니다.
+
+★병합 충돌 최소화:
+
+- Rebase를 사용하면 Merge와 달리 두 브랜치의 공통 조상부터 변경 사항을 적용하기 때문에, 충돌이 발생할 가능성이 낮아집니다.
+따라서 Rebase를 사용하여 병합 충돌을 최소화하고, 코드를 더 빠르고 쉽게 통합할 수 있습니다.
+
+## stash
+![stash](https://d8it4huxumps7.cloudfront.net/bites/wp-content/banners/2023/4/642a663eaff96_git_stash.png)  
+git stash를 활용하는 방법에 대해 적어주세요.
+
+★Stash 
+- 현재 작업 중인 변경 사항을 임시로 저장하고, 작업 디렉토리를 깨끗한 상태로 만들어주는 Git의 유용한 기능입니다.  변경 사항을 나중에 다시 적용하고 싶을 때 사용됩니다. 
+
+★ 명령어 모음 
+- $git stash 
+// git stash (변경 내용 임시저장하기)
+
+- $git stash list
+(내가 stash 했던 내용 보기)
+
+- $git stash apply
+(가장 최근 stash 가지고 오기)
+- $git stash drop (가장 최근 stash 지우기)
+
+## Advanced
+다음 주제는 더 조사해볼만한, 생각해볼만한 것들입니다. 
+- `git rebase --interactive`란?
+- branch의 upstream이란? (`git push --set-upstream`)
+- PR은 브랜치 뿐만 아니라 Fork한 리포지토리에서도 가능하다. fork은 언제 유용한지. 
+- `git fetch`와 `git pull`의 차이점, fetch는 언제 쓰는지
+- `reset --hard`와 `push --force`의 적절한 사용법
+- `.gitignore` 사용법
+- 브랜치 이름은 슬래시를 통해 계층적으로 가질 수 있다. 단, `parent/child-1`, `parent/child-2`는 동시에 가질 수 있지만 `parent/child/grandchild`, `parent/child`는 그러지 못한다. 무슨 이유 때문인지. 
+- detached HEAD란 어떤 상태인지, 이 상태에서 커밋을 하게 되면 어떻게 되는지, detached HEAD는 어떤 상황에서 발생할 수 있는지
+
+## Questions
+조사/실습하면서 생긴 궁금점이 있다면 여기에 적어서 공유해주세요.

@@ -15,7 +15,7 @@ Git과 Github 사용의 첫 단계입니다.
 ```bash
 # 적당한 폴더 생성 및 이동 (linux의 경우 ~/repositories 추천)
 mkdir ~/repositories
-cd ~/repositories 
+cd ~/repositories  
 
 # 현재 리포의 우측 상단에서 git clone URL 복사 후 붙여넣기
 git clone <study-git github URL>
