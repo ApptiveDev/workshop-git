@@ -92,9 +92,26 @@ git이 동작하는 기본 단위는 commit과 branch입니다.
 * Rebase를 위처럼 두 브랜치를 병합하는데 사용할 수도 있지만, 단일 브랜치 내에서 rebase를 사용하여 커밋 히스토리를 정리할 수도 있다.
 즉, rebase를 이용하면 작업 도중 커밋 히스토리를 수정해야 하는 상황에서 유용하게 사용할 수 있다.
 
+⸰출처 : https://wonyong-jang.github.io/git/2021/02/05/Github-Rebase.html
+
+
 ## stash
 ![stash](https://d8it4huxumps7.cloudfront.net/bites/wp-content/banners/2023/4/642a663eaff96_git_stash.png)  
-git stash를 활용하는 방법에 대해 적어주세요.
+
+⸰ Stash : stash(git stash 명령어)는 작업중인 변경사항을 일시적으로 저장하고 branch전환, 또는 코드 commit 시점을 유연하게 다룰 수 있게 해준다.
+변경사항을 commit하기에 이른 경우, 임시저장, 다른 branch로 체크아웃할때 변경사항을 유지하고 싶은 경우에 사용한다.
+
+git stash(git stash save) - 현재 작업 중인 변경 사항을 일시적으로 저장하고, 작업 디렉토리를 깨끗한 상태로 만든다. 이 때, 저장한 변경 사항은 스택에 쌓이게 된다.
+
+git stash pop(git stash pop <index 번호>) - 스택에 쌓인 가장 최근의 변경 사항을 불러와 작업 디렉토리에 적용된다. 이 때, 스택에서 해당 변경 사항은 제거됨.
+
+git stash apply - stash를 적용한 후에도 stash가 적용되어 있는 상태를 유지한다. 임시 저장공간에서 삭제되지 않는다. 이에 대해 추가 작업을 수행하려면 다시 git stash 명령어를 실행해야 함.
+만약 branch마다 적용을 하고싶다면 git stash apply를 활용하면 된다.
+
+git stash list - 현재 stash들의 목록을 확인할 수 있다.
+
+⸰ 출처 : https://velog.io/@fkszm3/Git-stash-%EB%9E%80-%EC%96%B8%EC%A0%9C-%EC%82%AC%EC%9A%A9%ED%95%A0%EA%B9%8C
+
 
 ## Advanced
 다음 주제는 더 조사해볼만한, 생각해볼만한 것들입니다. 
