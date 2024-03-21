@@ -11,7 +11,7 @@ def multiply(a, b):
 
 
 def divide(a, b):
-    pass
+    return a/b
 
 
 def pow(a, b):
