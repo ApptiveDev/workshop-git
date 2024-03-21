@@ -72,6 +72,17 @@ reset에는 3가지 타입이 있습니다.
 Pull Request와 Merge에 대한 내용을 적어주세요.  
 특히 Merge의 두 타입인 Fast-Forward와 3-Way Merge를 포함해주세요.
 
+- Pull Request
+  사용자가 원격 저장소에 Push하여 새로운 사항이 적용됬을 경우, 다른 사용자에게 푸쉬된 상황을 알리는 것
+- Merge
+  서로 다른 브랜치에서 작업한 내용을 합쳐야 하는 경우 사용
+  - Fast-Forward방시
+    branch간의 병합을 진행할 때 커밋이 생기지 앟고 merge 명령어를 실행하는
+    branch의 Head Commit이 병합되는 branch의 Head Commit으로 이동
+  - 3-Way Merge
+    각 브랜치의 마지막 커밋 두 개와 공통 조상의 총 3개의 커밋을 이용하여 병합하는 방식
+    서로 다른 브랜치가 동일 선상이 아닐 경우 사용
+
 ## rebase
 
 ![rebase](https://user-images.githubusercontent.com/51331195/160234052-7fe70f85-5906-4474-b809-782adae92b3c.png)  
