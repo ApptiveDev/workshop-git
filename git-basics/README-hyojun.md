@@ -43,6 +43,11 @@ checkout - 브런치 간의 switch를 하기 위한 명령어
 - git clone과 git init의 차이점, 이용방법
 - origin이란 키워드는 무엇인지, 어떻게 설정하는지
 
+- git init : 빈 git 저장소를 만들거나 기존 저장소를 다시 초기화하는 명령어
+  > git init
+- git clone : git 저장소를 복제해 새 디렉터리로 가져오는 명령어
+  > git clone <원격 저장소 url>
+
 ## reset
 
 ![reset](https://user-images.githubusercontent.com/51331195/160235594-8836570b-e8bf-484a-bb92-b2bd6d873066.png)  
