@@ -7,7 +7,9 @@ git과 github는 같은 의미가 아닙니다.
 local, remote와 연관지어 적어주세요.
 
 ⸰ Git은 개인 컴퓨터에서 돌아가는 Version Control System이다. 반면에 GitHub은 Github라 불리는 회사에서 서비스하고 있는 서버에 올라간 Git이다.
+
 ⸰ 즉 개인 컴퓨터에서 사용하는 Git을 Local Git이라 부르고, Github이나 Gitlab과 같은 클라우드에 저장하는 Git을 Remote Git이라 부른다.
+
 ⸰ 출처 : https://kotlinworld.com/265
 
 ## Git Workflow
@@ -15,6 +17,18 @@ local, remote와 연관지어 적어주세요.
 위는 git이 어떻게 동작하는지 나타낸 다이어그램입니다.  
 Working Directory, Git Add, Git Commit, Git Push 등 각 항목에 대해 작성 바랍니다.  
 Git Merge, Git Fetch는 생략해도 됩니다.
+
+⸰ Working Directory : 사용자의 작업 공간으로서, 로컬 저장소에 접근할수 있으며 실제 파일을 수정하거나 생성하는 공간이다.작업 폴더에서 .git 디렉토리를  제외한 나머지 부분. 파일들을 추적(tracked)/비추적(untracked) 상태로 구분한다.
+
+⸰ Staging area : commit이 가능한 영역으로, commit하기 전 파일을 담아두는 상자라고 볼 수 있다.
+
+⸰ Local repository : 본인의 컴퓨터에 저장된 로컬 버전의 프로젝트 저장소.
+
+⸰ Remote repository : Local repo와는 반대로 내 컴퓨터가 아닌 (일반적으로 원격 서버) 버전의 프로젝트 저장소.
+
+⸰ Working directory에 있는 작업물을 git add 명령어를 통해 staging area로 보내고, git commit 명령어를 통해서 간단한 코멘트를 남겨 라벨링 후, Local repo로 보낸다. 최종적으로 git push를 통해서 Local repo에 있는 파일을 Remote repo(github)로 보낸다.
+
+⸰ 출처 : https://m31phy.tistory.com/146 , https://ittrue.tistory.com/94 , https://dev-jacob.tistory.com/entry/Git-Repository%EB%9E%80
 
 ## Branch, HEAD
 ![branch-and-head](https://ihatetomatoes.net/wp-content/uploads/2020/04/07-head-pointer.png)  
