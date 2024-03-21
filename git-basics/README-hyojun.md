@@ -54,6 +54,18 @@ checkout - 브런치 간의 switch를 하기 위한 명령어
 reset에는 3가지 타입이 있습니다.  
 각 타입에 대해 작성 바랍니다.
 
+- --soft 옵션
+  커밋 취소
+  Staging 상태 유지(add)
+- --mixed 옵션
+  커밋 취소
+  Staging 취소
+  local은 변경 상태로 유지
+- --hard 옵션
+  커밋 취소
+  Staging 취소
+  local 변경 상태 취소
+
 ## Pull Request, Merge
 
 ![pull-request-merge](https://atlassianblog.wpengine.com/wp-content/uploads/bitbucket411-blog-1200x-branches2.png)  
