@@ -88,6 +88,11 @@ Pull Request와 Merge에 대한 내용을 적어주세요.
 ![rebase](https://user-images.githubusercontent.com/51331195/160234052-7fe70f85-5906-4474-b809-782adae92b3c.png)  
 rebase란 무엇인지, 어떤 때에 유용한지 등에 대해 적어주세요.
 
+- rebase
+  공통 Base를 가진 두 개의 Branch에서 한 Branch의 Base를 다른 Branch의 최신 커밋으로 Base를 옮기는 작업
+- 유용한지
+  내가 작업하던 브랜치에 main 브랜치 내용이 필요해서 적용시키고 싶을 때 사용
+
 ## stash
 
 ![stash](https://d8it4huxumps7.cloudfront.net/bites/wp-content/banners/2023/4/642a663eaff96_git_stash.png)  
