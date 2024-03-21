@@ -98,6 +98,16 @@ rebase란 무엇인지, 어떤 때에 유용한지 등에 대해 적어주세요
 ![stash](https://d8it4huxumps7.cloudfront.net/bites/wp-content/banners/2023/4/642a663eaff96_git_stash.png)  
 git stash를 활용하는 방법에 대해 적어주세요.
 
+- stash
+  작업중에 갑작스럽게 다른 작업을 진행해야 할 떄, 작업중인 사항을 잠시 치워두는 방법
+  - git stash
+    현재 적용된 commit 이후로 변경된 모든 사항들이 stash 공간으로 이동
+  - git stash pop
+    다른 브랜치의 commit에 stash로 따로 저장해둔 코드들을 적용
+  - git stash -p
+    -p 옵션을 통해서 hunk 기준으로 변경사항을 하나씩 확인하며 원하는 변홤나 stash에 담을 수 있음
+  -
+
 ## Advanced
 
 다음 주제는 더 조사해볼만한, 생각해볼만한 것들입니다.
