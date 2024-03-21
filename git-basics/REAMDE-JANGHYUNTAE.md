@@ -67,3 +67,30 @@ branch 생성 및 삭제, 이동 커맨드 등 자유롭게 내용을 추가해�
 
 - HEAD는 현재 작업 중인 브랜치를 가리키는 포인터입니다.
 HEAD는 일반적으로 최신 커밋을 가리키며, 작업 디렉토리에 반영되는 변경 사항은 HEAD가 가리키는 커밋에 따라 결정됩니다.
+★git checkout:
+
+- git checkout 명령어는 브랜치를 변경하거나 특정 커밋으로부터 파일을 되돌리는 데 사용됩니다.\
+브랜치를 변경할 때는 새로운 브랜치를 만들거나 기존의 브랜치로 전환할 수 있습니다.\
+특정 커밋으로부터 파일을 되돌릴 때는 해당 커밋의 상태로 작업 디렉토리를 복원합니다.
+
+브랜치 생성, 삭제, 이동
+-
+브랜치 생성: git branch <branch_name>
+
+브랜치 삭제: git branch -d <branch_name>
+
+브랜치 이동: git checkout <branch_name>
+
+
+## clone, init, origin
+리포지토리를 로컬에 생성하는 방법은 clone, init이 있습니다. 다음을 포함하여 작성 바랍니다.
+- git clone과 git init의 차이점, 이용방법
+- origin이란 키워드는 무엇인지, 어떻게 설정하는지
+
+★git clone vs git init★
+
+★git clone: 
+- 이미 존재하는 원격 저장소의 내용을 로컬로 복제합니다. 원격 저장소에서 모든 히스토리와 브랜치를 가져옵니다.
+bash
+Copy code
+git clone <repository_URL>
