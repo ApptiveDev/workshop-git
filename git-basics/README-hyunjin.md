@@ -43,23 +43,30 @@ git이 동작하는 기본 단위는 commit과 branch입니다.
 
 
 ## clone, init, origin
-리포지토리를 로컬에 생성하는 방법은 clone, init이 있습니다. 다음을 포함하여 작성 바랍니다.
-
 
 ⸰ git init : 빈 git 저장소를 만들거나 기존 저장소를 다시 초기화하는 명령어이다.
 
 ⸰ git clone : git clone <url> 과 같이 사용하며, url에 해당하는 저장소를 복제해 새 directory로 가져오는 명령어이다.
 
 ⸰ origin : 대표적으로 사용되는 원격 저장소의 별칭을 의미한다. 
-  별칭이란? - 로컬 저장소를 원격 저장소에 등록하기 위해서는 (git push) git 호스팅사 서버의 URL이 필요하다. github나 gitlab같은 호스팅사로 이용할 경우, 이 연결 URL은 프로토콜과 호스팅사 도메인으로 이루어진다. 즉 URL 주소가 길어진다. 그렇기 때문에 이 URL을 간략하게 특정 문자로 지정하는 것을 별칭이라고 한다. (별칭은 중복사용 불가능하다.)
-  별칭은 git remote <별칭> <URL>로 지정하고 git remote rename <변경전> <변경후>로 바꿀수있다. 삭제는 git remote rm <별칭>으로 한다
+
+별칭이란? - 로컬 저장소를 원격 저장소에 등록하기 위해서는 (git push) git 호스팅사 서버의 URL이 필요하다. github나 gitlab같은 호스팅사로 이용할 경우, 이 연결 URL은 프로토콜과 호스팅사 도메인으로 이루어진다. 즉 URL 주소가 길어진다. 그렇기 때문에 이 URL을 간략하게 특정 문자로 지정하는 것을 별칭이라고 한다. (별칭은 중복사용 불가능하다.)
+별칭은 git remote <별칭> <URL>로 지정하고 git remote rename <변경전> <변경후>로 바꿀수있다. 삭제는 git remote rm <별칭>으로 한다
 
 ⸰ 출처 : https://yoongrammer.tistory.com/21 , https://m.blog.naver.com/rinjyu/222180087428
 
 ## reset
 ![reset](https://user-images.githubusercontent.com/51331195/160235594-8836570b-e8bf-484a-bb92-b2bd6d873066.png)  
-reset에는 3가지 타입이 있습니다.  
-각 타입에 대해 작성 바랍니다.
+
+⸰ reset : 총 3단계에 걸쳐서 이루어진다. (git reset 명령어)
+
+    1. HEAD 이동 : reset 명령이 하는 첫 번째 일은 HEAD 브랜치를 이동시키는 것이다. checkout 명령처럼 HEAD가 가리키는 브랜치를 바꾸지는 않는다. HEAD는 계속 현재 브랜치를 가리키고 있고, 현재 브랜치가 가리키는 커밋을 바꾼다. (--soft 옵션을 주면 여기까지 진행.)
+
+    2. Index(staging area) 업데이트 : Index를 현재 HEAD가 가리키는 스냅샷으로 업데이트 한다. 즉 git commit과 git add명령을 되돌리는 것이다.(--mixed 옵션을 주면 여기까지 진행. default는 --mixed 옵션)
+
+    3. working directory 업데이트 : working directory까지 업데이트 한다. 다시 말해 working directory파일을 강제로 덮어쓴다. 이 단계는 되돌리기가 불가능하기 떄문에 위험하다. (--hard 옵션을 주면 여기까지 진행)
+
+⸰ 출처 : https://git-scm.com/book/ko/v2/Git-%EB%8F%84%EA%B5%AC-Reset-%EB%AA%85%ED%99%95%ED%9E%88-%EC%95%8C%EA%B3%A0-%EA%B0%80%EA%B8%B0
 
 ## Pull Request, Merge
 ![pull-request-merge](https://atlassianblog.wpengine.com/wp-content/uploads/bitbucket411-blog-1200x-branches2.png)  
