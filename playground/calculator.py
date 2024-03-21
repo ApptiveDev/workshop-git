@@ -11,7 +11,10 @@ def multiply(a, b):
 
 
 def divide(a, b):
-    pass
+    if b==0:
+         return "Error: Cannot divide by zero!"
+    else:
+        return a/b
 
 
 def pow(a, b):
