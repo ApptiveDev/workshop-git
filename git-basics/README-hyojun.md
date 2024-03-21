@@ -7,10 +7,13 @@ Git을 사용하려면 알아야 할 기본 지식을 학습합시다. 아래 �
 ![git-is-not-github](https://user-images.githubusercontent.com/51331195/160232512-3d6686ca-4ae3-4f11-a8d7-c893c0a7526a.png)  
 git과 github는 같은 의미가 아닙니다.  
 local, remote와 연관지어 적어주세요.
-git-버전관리 소프트웨어
-개인의 컴퓨에서 돌아간다.
-github-git 소프트웨어를 지원하는 일종의 클라우드 서비스
-원격의 서버에 올라간다.
+
+- git
+  버전관리 소프트웨어
+  개인의 컴퓨에서 돌아간다.
+- github
+  git 소프트웨어를 지원하는 일종의 클라우드 서비스
+  원격의 서버에 올라간다.
 
 ## Git Workflow
 
@@ -18,12 +21,17 @@ github-git 소프트웨어를 지원하는 일종의 클라우드 서비스
 위는 git이 어떻게 동작하는지 나타낸 다이어그램입니다.  
 Working Directory, Git Add, Git Commit, Git Push 등 각 항목에 대해 작성 바랍니다.  
 Git Merge, Git Fetch는 생략해도 됩니다.
-Working Directory - 현재 작업하고 있는 영역, 작업을 하고 있는 프로젝트 디렉토리
-아직 추적(track)하고 있지 않은 상태
-Git Add - working directory상의 변경 내용을 staging area 추가하기 위해서 사용하는 git명령어
-Git Commit - 의미있는 변경 작업들을 저장소에 기록하는 동작
-코드 변경 시점을 저장했다가 잘못된 동작을 할 경우 돌아갈 수 있게함
-Git push - 원격 저장소(remote repository)에 코드 변경분을 업로드하기 위해서 사용하는 git 명령어
+
+- Working Directory
+  현재 작업하고 있는 영역, 작업을 하고 있는 프로젝트 디렉토리
+  아직 추적(track)하고 있지 않은 상태
+- Git Add
+  working directory상의 변경 내용을 staging area 추가하기 위해서 사용하는 git명령어
+- Git Commit
+  의미있는 변경 작업들을 저장소에 기록하는 동작
+  코드 변경 시점을 저장했다가 잘못된 동작을 할 경우 돌아갈 수 있게함
+- Git push
+  원격 저장소(remote repository)에 코드 변경분을 업로드하기 위해서 사용하는 git 명령어
 
 ## Branch, HEAD
 
@@ -31,10 +39,14 @@ Git push - 원격 저장소(remote repository)에 코드 변경분을 업로드�
 git이 동작하는 기본 단위는 commit과 branch입니다.  
 branch와 HEAD, git checkout을 포함하여 작성 바랍니다.  
 branch 생성 및 삭제, 이동 커맨드 등 자유롭게 내용을 추가해주세요.
-branch - 독립적으로 어떤 작업을 진행하기 위한 개념
-각각의 브랜치는 다른 브랜치의 영향을 받지 않기 때문에, 여러 작업을 동시에 진행
-HEAD - 현재 체크아웃된 브랜치의 가장 최신 커밋
-checkout - 브런치 간의 switch를 하기 위한 명령어
+
+- branch
+  독립적으로 어떤 작업을 진행하기 위한 개념
+  각각의 브랜치는 다른 브랜치의 영향을 받지 않기 때문에, 여러 작업을 동시에 진행
+- HEAD
+  현재 체크아웃된 브랜치의 가장 최신 커밋
+- checkout
+  브런치 간의 switch를 하기 위한 명령어
 
 ## clone, init, origin
 
