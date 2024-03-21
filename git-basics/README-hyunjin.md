@@ -3,8 +3,7 @@ Git을 사용하려면 알아야 할 기본 지식을 학습합시다. 아래 �
 
 ## Git != Github
 ![git-is-not-github](https://user-images.githubusercontent.com/51331195/160232512-3d6686ca-4ae3-4f11-a8d7-c893c0a7526a.png)  
-git과 github는 같은 의미가 아닙니다.
-local, remote와 연관지어 적어주세요.
+
 
 ⸰ Git은 개인 컴퓨터에서 돌아가는 Version Control System이다. 반면에 GitHub은 Github라 불리는 회사에서 서비스하고 있는 서버에 올라간 Git이다.
 
@@ -15,8 +14,7 @@ local, remote와 연관지어 적어주세요.
 ## Git Workflow
 ![git-workflow](https://cdn-media-1.freecodecamp.org/images/1*iL2J8k4ygQlg3xriKGimbQ.png)  
 위는 git이 어떻게 동작하는지 나타낸 다이어그램입니다.  
-Working Directory, Git Add, Git Commit, Git Push 등 각 항목에 대해 작성 바랍니다.  
-Git Merge, Git Fetch는 생략해도 됩니다.
+
 
 ⸰ Working Directory : 사용자의 작업 공간으로서, 로컬 저장소에 접근할수 있으며 실제 파일을 수정하거나 생성하는 공간이다.작업 폴더에서 .git 디렉토리를  제외한 나머지 부분. 파일들을 추적(tracked)/비추적(untracked) 상태로 구분한다.
 
@@ -33,8 +31,15 @@ Git Merge, Git Fetch는 생략해도 됩니다.
 ## Branch, HEAD
 ![branch-and-head](https://ihatetomatoes.net/wp-content/uploads/2020/04/07-head-pointer.png)  
 git이 동작하는 기본 단위는 commit과 branch입니다.  
-branch와 HEAD, git checkout을 포함하여 작성 바랍니다.  
-branch 생성 및 삭제, 이동 커맨드 등 자유롭게 내용을 추가해주세요.
+
+
+⸰ branch : 커밋사이를 가볍게 이동할 수 있는 포인터이다. 기본적으로 Git은 master 브랜치를 만든다. 처음 커밋하면 이 master 브랜치가 생성된 커밋을 가리킨다. 이후 커밋을 만들면 master 브랜치는 자동으로 가장 마지막 커밋을 가리킨다. git branch <브랜치이름> 명령어를 통해서 생성가능하다.
+
+⸰ HEAD : 현재 작업하는 로컬 브랜치를 가리킨다.
+
+⸰ git checkout : 다른 브랜치로 이동할 수 있는 명령어이다. 즉 HEAD가 가리키는 브랜치를 옮긴다.
+
+⸰ 출처 : https://git-scm.com/book/ko/v2/Git-%EB%B8%8C%EB%9E%9C%EC%B9%98-%EB%B8%8C%EB%9E%9C%EC%B9%98%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80
 
 
 ## clone, init, origin
