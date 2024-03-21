@@ -19,7 +19,7 @@ def pow(a, b):
 
 
 def abs(a):
-    pass
+    return abs(a)
 
 
 def mod(a, b):
