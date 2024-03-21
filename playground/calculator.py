@@ -1,5 +1,5 @@
 def add(a, b):
-    return a+b
+    pass
 
 
 def subtract(a, b):
@@ -15,7 +15,7 @@ def divide(a, b):
 
 
 def pow(a, b):
-    pass
+    return a**b
 
 
 def abs(a):
