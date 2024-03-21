@@ -84,7 +84,13 @@ git이 동작하는 기본 단위는 commit과 branch입니다.
 
 ## rebase
 ![rebase](https://user-images.githubusercontent.com/51331195/160234052-7fe70f85-5906-4474-b809-782adae92b3c.png)  
-rebase란 무엇인지, 어떤 때에 유용한지 등에 대해 적어주세요.
+
+⸰ Rebase : 두 branch를 합치는 방법으로, Merge와는 다르게 이름 그대로 branch의 공통 조상이 되는 base를 다른 branch의 commit 지점으로 바꾸는 것이다. 
+
+기본 전략 - 먼저 Rebase 하려는 브랜치 커밋들의 변경사항을 Patch라는 것으로 만든 다음에 임시저장소에 저장해 둔다. 그리고 이를 master 브랜치에 하나씩 적용시켜 새로운 커밋을 만든다. (git checkout feature, git rebase master, git checkout master, git merge feature를 이용한다.)
+
+* Rebase를 위처럼 두 브랜치를 병합하는데 사용할 수도 있지만, 단일 브랜치 내에서 rebase를 사용하여 커밋 히스토리를 정리할 수도 있다.
+즉, rebase를 이용하면 작업 도중 커밋 히스토리를 수정해야 하는 상황에서 유용하게 사용할 수 있다.
 
 ## stash
 ![stash](https://d8it4huxumps7.cloudfront.net/bites/wp-content/banners/2023/4/642a663eaff96_git_stash.png)  
