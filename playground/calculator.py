@@ -11,7 +11,7 @@ def multiply(a, b):
 
 
 def divide(a, b):
-    pass
+    return a / b
 
 
 def pow(a, b):
@@ -28,4 +28,4 @@ def mod(a, b):
 
 if __name__ == "__main__":
     # 간단한 테스트 코드
-    pass
+    print(divide(1,2))
