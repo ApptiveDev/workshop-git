@@ -40,7 +40,7 @@ git clone [GitHub 저장소 URL]
 cd simple-calculator
 
 # 브랜치 생성 및 이동
-git checkout -b feature-[구현할 기능명]
+git checkout -b [팀명]-feature-[구현할 기능명]
 
 # 커밋 및 Push
 git add calculator.py
