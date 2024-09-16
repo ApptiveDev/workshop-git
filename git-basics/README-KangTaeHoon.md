@@ -37,9 +37,7 @@ Git Pull: 원격 저장소의 변경 사항을 가져오고 자동으로 로컬 
 (git pull Origin *branchname*)
 
 ## Branch, HEAD
-![branch-and-head](https://ihatetomatoes.net/wp-content/uploads/2
-
-020/04/07-head-pointer.png)  
+![branch-and-head](https://ihatetomatoes.net/wp-content/uploads/2020/04/07-head-pointer.png)  
 git이 동작하는 기본 단위는 commit과 branch입니다.  
 branch와 HEAD, git checkout을 포함하여 작성 바랍니다.  
 branch 생성 및 삭제, 이동 커맨드 등 자유롭게 내용을 추가해주세요.
@@ -56,16 +54,37 @@ reset에는 3가지 타입이 있습니다.
 
 ## Pull Request, Merge
 ![pull-request-merge](https://atlassianblog.wpengine.com/wp-content/uploads/bitbucket411-blog-1200x-branches2.png)  
-Pull Request와 Merge에 대한 내용을 적어주세요.  
+Pull Request와 Merge에 대한 내용을 적어주세요.
 특히 Merge의 두 타입인 Fast-Forward와 3-Way Merge를 포함해주세요.
+
+Pull Request(PR)은 코드 변경사항을 검토받기 위해 팀원들에게 제안하는 협업 도구입니다.
+팀원들의 검토, 피드백 이후 수정을 통해 병합을 승인하면 반영됩니다.
+Merge는 두 브랜치의 변경 사항을 하나로 통합하는 명령어입니다.
+(git checkout main \n git merge feature)
+Merge의 두 타입 중 Fast-Forward는 새로운 브랜치에만 Commit이 있고 기준이 되는 브랜치에 신규 Commit이 없을때 새로운 브랜치를 main으로 만드는 것입니다.
+이때, 중간에 변경이 없을때만 동작하며 다른 커밋이 끼여있다면 Conflict가 발생하여 동작하지 않게 됩니다.
+3-Way Merge는 merge의 기본 작동방식으로 
 
 ## rebase
 ![rebase](https://user-images.githubusercontent.com/51331195/160234052-7fe70f85-5906-4474-b809-782adae92b3c.png)  
 rebase란 무엇인지, 어떤 때에 유용한지 등에 대해 적어주세요.
 
+git rebase는 한 브랜치의 커밋 기록을 다른 브랜치 위로 옮겨놓습니다. 이를 통해 브랜치 기록이 직선형으로 유지되어 관리가 용이해집니다.
+여러 브랜치의 작업을 통합하는데 유용하게 사용됩니다. 
+git merge는 병합 Commit을 만들어 두 브랜치를 합쳐 기록이 모두 남지만 git rebase는 커밋 기록이 직선형으로 재구성됩니다.
+
 ## stash
 ![stash](https://d8it4huxumps7.cloudfront.net/bites/wp-content/banners/2023/4/642a663eaff96_git_stash.png)  
 git stash를 활용하는 방법에 대해 적어주세요.
+
+git stash는 Working Directory와 Staging Area에 있는 변경 사항을 임시로 저장하고 Working Directory를 깨끗하게 만듭니다.
+긴급 수정이 필요하거나, 실험 코드를 임시로 저장할때 변경 사항을 임시로 저장하고 다른 작업을 할 수 있게 만듭니다.
+(git stash //변경 사항을 임시 저장)
+(git stash apply //저장된 변경 사항 불러오기)
+(git stash pop //저장된 변경 사항 불러오기 + 삭제)
+(git stash list //stash 목록 확인)
+(git stash drop stash@{0} //특정 stash 삭제)
+(git stash clear //모든 stash 삭제)
 
 ## Advanced
 다음 주제는 더 조사해볼만한, 생각해볼만한 것들입니다. 
