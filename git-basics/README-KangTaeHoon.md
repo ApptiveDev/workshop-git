@@ -42,10 +42,26 @@ git이 동작하는 기본 단위는 commit과 branch입니다.
 branch와 HEAD, git checkout을 포함하여 작성 바랍니다.  
 branch 생성 및 삭제, 이동 커맨드 등 자유롭게 내용을 추가해주세요.
 
+Commit은 Git의 변경 사항을 저장하는 단위입니다. git commit -m *Comment*을 통해 변경 사항을 Commit할 수 있습니다.
+Branch는 Commit들의 집합으로 프로젝트의 흐름을 만듭니다. 
+git branch *feature*을 통해 branch를 생성할 수 있으며, git checkout *feature*을 통해 다른 브랜치로 전환할 수 있습니다.
+git branch -d *Branchname*을 통해 Local에 있는 Branch를 삭제할 수 있으며, git push origin --delete *BranchName*을 통해 원격 Branch를 삭제할 수 있습니다.
+HEAD는 현재 작업 중인 브랜치의 가장 최신 커밋을 가리킵니다. 
+
 ## clone, init, origin
 리포지토리를 로컬에 생성하는 방법은 clone, init이 있습니다. 다음을 포함하여 작성 바랍니다.
 - git clone과 git init의 차이점, 이용방법
 - origin이란 키워드는 무엇인지, 어떻게 설정하는지
+
+git init은 새로운 로컬 Git 저장소를 초기화하는데 사용됩니다. 따라서 빈 Git 저장소가 생성되어 히스토리 없는 새로운 저장소가 생성됩니다.
+새로운 프로젝트를 시작하려 하거나 기존에 진행중인 프로젝트를 Git으로 관리하려 할 때 씁니다.
+
+git clone은 원격 저장소를 Local Repo로 복제하는데 사용됩니다. Git, Branch 등도 함께 복제됩니다.
+기존에 Git을 통해 진행중인 프로젝트를 Local Repo에서 작업하고자 하는데 씁니다.
+
+origin은 Clone된 원격 저장소의 기본 이름으로 설정됩니다. Clone 명령어를 사용하면 자동으로 origin이 설정됩니다.
+(git clone *URL*)
+
 
 ## reset
 ![reset](https://user-images.githubusercontent.com/51331195/160235594-8836570b-e8bf-484a-bb92-b2bd6d873066.png)  
