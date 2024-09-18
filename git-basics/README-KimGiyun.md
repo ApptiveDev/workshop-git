@@ -36,7 +36,14 @@ Git Merge, Git Fetch는 생략해도 됩니다.
         + 추적되지 않는 상태의 파일들을 별도로 명령어 ($git add file name)를 이용해 추적(tracked) 상태로 변경하여 관리.
         + tracked 상태의 파일은 Git에서 코드 변경 이력을 추적함.
 
-### 1-1. Git AddM텐츠를 직접 갖고 있는 것이 아닌, commit하려는 파일의 track 상태 정보만 기록함.
+### 1-1. Git Add
+- git add 명령어는 다음 변경(commit)을 기록할 때까지 변경분을 모아놓기 위해서 사용함.
+- git commit 전까지는, git add 명령어를 실행해도 Git 저장소의 변경 이력에 어떤 영향도 주지 않음
+
+### 2. Staging Area
+ - Working Directory에서 제출된 tracked 파일을 임시 저장 및 관리하는 공간.
+ - Working Directory와 실제 저장 공간(Repository) 사이에 있는 영역.
+    + 파일 컨텐츠를 직접 갖고 있는 것이 아닌, commit하려는 파일의 track 상태 정보만 기록함.
 - commit을 빠르게 하기 위해 사용.
 - stage / unstage 상태 개념
     + stage 내 파일은 위 두 상태로 구분.
@@ -48,6 +55,8 @@ Git Merge, Git Fetch는 생략해도 됩니다.
     2. unstage 상태
         + 파일 내 변경 이력이 있을 시, 해당 파일은 unstage 상태. (Working Directory 내 파일 =/= stage 내 파일일 시)
 
+sdadkajdiajdiad
+
 ### 3. Local repository
 - 파일이 저장되는 개인 전용 저장소이며, 주로 개인이 소유한 PC 등이 local repository
     - 내 PC에서 작업 == local에서 작업.
@@ -58,14 +67,14 @@ Git Merge, Git Fetch는 생략해도 됩니다.
 
 ### 4. Remote repository
 - 파일이 저장되는 원격 저장소이며, 주로 Github 등의 클라우드 서버.
-- local에서 작업한 파일을 remote repository에 push하여 코드를 공유 및 협업 할 수 있음.
+- local에서 작업한 파일을 remote repository에 push하여 코드를 공유 및 협업 가능.
 
 
 ## Branch, HEAD
 ![branch-and-head](https://ihatetomatoes.net/wp-content/uploads/2020/04/07-head-pointer.png)  
 git이 동작하는 기본 단위는 commit과 branch입니다.  
 branch와 HEAD, git checkout을 포함하여 작성 바랍니다.  
-branch 생성 및 삭제, 이동 커맨드 등 자유롭게 내용을 추가해주세요
+branch 생성 및 삭제, 이동 커맨드 등 자유롭게 내용을 추가해주세요.
 
 
 ## clone, init, origin
