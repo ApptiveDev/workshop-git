@@ -347,6 +347,7 @@ Git Stash 활용 상황
 ## Advanced
 다음 주제는 더 조사해볼만한, 생각해볼만한 것들입니다. 
 - `git rebase --interactive`란?
+git rebase --interactive(또는 git rebase -i)는 커밋 히스토리를 세밀하게 관리하고 편집할 수 있게 해주는 Git 명령어입니다. 이 명령어를 사용하면 커밋을 재정렬, 수정, 결합, 삭제할 수 있으며, 이를 통해 깔끔하고 의미 있는 커밋 히스토리를 만들 수 있습니다. 특히, 협업 프로젝트에서 Pull Request(PR)를 제출하기 전에 커밋 이력을 정리하는 데 유용합니다.
 - branch의 upstream이란? (`git push --set-upstream`)
 - PR은 브랜치 뿐만 아니라 Fork한 리포지토리에서도 가능하다. fork은 언제 유용한지. 
 - `git fetch`와 `git pull`의 차이점, fetch는 언제 쓰는지
