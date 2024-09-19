@@ -97,7 +97,13 @@ reset에는 3가지 타입이 있습니다.
 ## Pull Request, Merge
 ![pull-request-merge](https://atlassianblog.wpengine.com/wp-content/uploads/bitbucket411-blog-1200x-branches2.png)  
 Pull Request와 Merge에 대한 내용을 적어주세요.  
-특히 Merge의 두 타입인 Fast-Forward와 3-Way Merge를 포함해주세요.
+<!-- 특히 Merge의 두 타입인 Fast-Forward와 3-Way Merge를 포함해주세요. -->
+- `Pull Request` : GitHub에서 새로운 브랜치에서 작업한 내용을 다른 브랜치로 병합하기 전에 코드 리뷰를 요청하는 절차
+- `Merge` : 브랜치를 병합하는 작업
+    - `Fast-Foward` : 다른 브랜치와 커밋 히스토리가 이어질 때, 단순히 HEAD만 앞으로 이동하는 방식
+    - `3-Way Merge` : 두 브랜치가 다른 커밋 히스토리를 가질 때, 공통 조상 커밋을 기준으로 세 개의 커밋을 비교하여 병합한다.
+
+
 
 ## rebase
 ![rebase](https://user-images.githubusercontent.com/51331195/160234052-7fe70f85-5906-4474-b809-782adae92b3c.png)  
