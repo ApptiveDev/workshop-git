@@ -8,3 +8,9 @@ git add를 하면 working directory에서 수정된 파일들이 staging area로
 local repo는 git이 버전 관리를 하는 저장소로, commit 이력이 저장되는 곳이다. git commit을 하면 staging area에 있는 파일들이 local repo로 이동하게 된다.
 remote repo는 GitHub 같이 원격 서버에 저장된 git 저장소이다. 팀원들이 코드를 공유하고 협업할 수 있도록 해준다. git push를 하면 local repo의 commit된 부분을 remote repo로 전송하여 팀원들이 변경 사항을 확인하고 공유할 수 있도록 한다.
 git pull은 remote repo의 변경 사항을 working directory에 병합하는 명령어로, 변경된 사항을 내 브랜치에 적용시킬 때 사용한다.
+
+3.
+Commit은 파일의 특정 상태를 저장한 스냅샷이다. 
+Branch는 commit의 포인터이며. 독립적으로 작업할 수 있는 경로이다. 즉, 특정 commit을 가리키는 것이다.
+HEAD는 현재 체크아웃된 branch를 가리키는 포인터, 즉 현재 작업 중인 branch 혹은 commit을 가리킨다. branch는 commit을 가리키는 포인터이므로, HEAD는 branch를 통해 간접적으로 commit을 가리키고 있는 것.
+checkout은 다른 branch로 이동하거나 특정 commit으로 이동하는데 사용된다.
