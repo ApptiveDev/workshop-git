@@ -22,9 +22,9 @@ Working Directory, Git Add, Git Commit, Git Push 등 각 항목에 대해 작성
 Git Merge, Git Fetch는 생략해도 됩니다.
 
 - Working Directory (작업 디렉토리)
-  - 사용자가 실제로 파일을 생성, 수정, 삭제하며 작업하는 로컬 환경입니다.
+  - 사용자가 파일을 생성, 수정, 삭제하며 작업하는 로컬 환경입니다.
 - Git Add
-  - working dir에서 변경된 파일들을 staging area로 이동시킵니다.
+  - Working Directory에서 변경된 파일들을 Staging Area로 이동시킵니다.
 - Staging Area
   - 커밋한 파일이 임시로 저장되는 단계입니다.
 - Git Commit
@@ -43,14 +43,31 @@ git이 동작하는 기본 단위는 commit과 branch입니다.
 branch와 HEAD, git checkout을 포함하여 작성 바랍니다.  
 branch 생성 및 삭제, 이동 커맨드 등 자유롭게 내용을 추가해주세요.
 
--
+- Commit
+  - git에서 코드 변경 사항을 기록하는 단위
+- Branch
+  - 작업 흐름을 관리하는 기능, 저장소에 각자의 버전을 생성 가능
+  - 하나의 저장소에서 다른 개발자들과 함께 작업할 때 브랜치를 통해 새로운 commit line을 만들어서 다른 작업 가능
+    - 생성과 동시에 이동 : git checkout -b <new-branch>
+    - 작업 완료 후 브랜치 삭제 : git checkout -b <new-branch>
+  - HEAD : 현재 체크아웃된 브랜치를 나타냄, 가장 최근의 커밋을 가리킴
+    - 커밋과 브랜치를 잇는 역할, 현재 작업 위치를 알려줌
+  - Git Checkout : 특정 브랜치나 커밋으로 이동하여 해당 시점의 파일 상태를 확인하거나 작업 가능
+    - 브랜치로 이동 : git checkout <브랜치이름>
+    - 커밋 체크아웃 : git checkout <커밋해시>
 
 ## clone, init, origin
 
 리포지토리를 로컬에 생성하는 방법은 clone, init이 있습니다. 다음을 포함하여 작성 바랍니다.
 
 - git clone과 git init의 차이점, 이용방법
+  - git clone <원격 저장소 URL>: 원격 저장소를 복제하여 로컬에 동일한 저장소를 생성, 원격에 있는 프로젝트를 그대로 가져와서 로컬에서 작업
+  - git init : 빈 로컬 디렉토리에 git 저장소를 초기화, 로컬에서 새로운 프로젝트를 시작하거나 기존 프로젝트를 git으로 관리하고자 할 때 사용
+  - 차이점
+    - clone : 이미 존재하는 원격 저장소를 로컬에 복제
+    - init : 새로운 프로젝트 시작하거나 기존 프로젝트를 git으로 관리를 시작하고자 할 때
 - origin이란 키워드는 무엇인지, 어떻게 설정하는지
+  -
 
 ## reset
 
