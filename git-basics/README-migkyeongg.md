@@ -77,6 +77,12 @@ rebase란 무엇인지, 어떤 때에 유용한지 등에 대해 적어주세요
 ![stash](https://d8it4huxumps7.cloudfront.net/bites/wp-content/banners/2023/4/642a663eaff96_git_stash.png)  
 git stash를 활용하는 방법에 대해 적어주세요.
 
+`stush` 는 안전하게 저장하다. 라는 사전적 의미를 가지고 있다. 작업 내용을 별도의 공간에 임시 저장, 추출 할 수 있다.
+
+만약 내가 어떤 작업을 하던 중 아직 완료가 되지 않아 commit을 하지 못하는 상황에서 pull이 필요할 때 사용한다. 
+
+- git stush 명령은 modified 파일에 대해서만 적용된다. 만약 새로 추가한 파일도 임시 저장하고 싶다면 `-u` 옵션을 사용하면 된다.
+
 ## Advanced
 다음 주제는 더 조사해볼만한, 생각해볼만한 것들입니다. 
 - `git rebase --interactive`란?
