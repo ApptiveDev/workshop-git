@@ -21,12 +21,29 @@ local, remote와 연관지어 적어주세요.
 Working Directory, Git Add, Git Commit, Git Push 등 각 항목에 대해 작성 바랍니다.  
 Git Merge, Git Fetch는 생략해도 됩니다.
 
+- Working Directory (작업 디렉토리)
+  - 사용자가 실제로 파일을 생성, 수정, 삭제하며 작업하는 로컬 환경입니다.
+- Git Add
+  - working dir에서 변경된 파일들을 staging area로 이동시킵니다.
+- Staging Area
+  - 커밋한 파일이 임시로 저장되는 단계입니다.
+- Git Commit
+  - Staging Area의 변경 사항을 로컬에 저장합니다.
+- Local Repo (HEAD)
+  - 사용자의 컴퓨터에 저장된 Git 저장소로, 커밋된 모든 변경 이력을 저장합니다.
+- Git Push
+  - 로컬 저장소에서 커밋된 변경 사항을 Remote Repo에 업로드합니다.
+- Remote Repo (MASTER)
+  - GitHub와 같은 원격 서버에 위치한 저장소로, 팀원들이 접근할 수 있는 공간입니다.
+
 ## Branch, HEAD
 
 ![branch-and-head](https://ihatetomatoes.net/wp-content/uploads/2020/04/07-head-pointer.png)  
 git이 동작하는 기본 단위는 commit과 branch입니다.  
 branch와 HEAD, git checkout을 포함하여 작성 바랍니다.  
 branch 생성 및 삭제, 이동 커맨드 등 자유롭게 내용을 추가해주세요.
+
+-
 
 ## clone, init, origin
 
