@@ -3,14 +3,50 @@ Git을 사용하려면 알아야 할 기본 지식을 학습합시다. 아래 �
 
 ## Git != Github
 ![git-is-not-github](https://user-images.githubusercontent.com/51331195/160232512-3d6686ca-4ae3-4f11-a8d7-c893c0a7526a.png)  
-git과 github는 같은 의미가 아닙니다.  
-local, remote와 연관지어 적어주세요.
+<!-- git과 github는 같은 의미가 아닙니다.  
+local, remote와 연관지어 적어주세요. -->
+
+- Git
+    - 로컬에서 코드를 버전 관리하는 시스템
+    - 개발자가 자신의 컴퓨터에서 코드의 이력을 관리하고 협업할 수 있는 도구
+
+- GitHub
+    - 원격 저장소를 제공하는 서비스
+    - Git을 사용하는 프로젝트들을 온라인에서 관리하고 공유한다.
+
+
+- Local
+    - 내 컴퓨터에서 실행되는 Git 저장소
+    - 로컬에서 코드 변경 사항을 추적하고 버전 관리를 한다.
+
+- Remote
+    - Github와 같은 원격 서버에 있는 저장소
+    - 로컬에서 작업한 내용을 업로드하거나 다른 사람의 변경 사항을 받아올 때 사용된다.
+
+
+
+
 
 ## Git Workflow
 ![git-workflow](https://cdn-media-1.freecodecamp.org/images/1*iL2J8k4ygQlg3xriKGimbQ.png)  
 위는 git이 어떻게 동작하는지 나타낸 다이어그램입니다.  
-Working Directory, Git Add, Git Commit, Git Push 등 각 항목에 대해 작성 바랍니다.  
-Git Merge, Git Fetch는 생략해도 됩니다.
+<!-- Working Directory, Git Add, Git Commit, Git Push 등 각 항목에 대해 작성 바랍니다.  
+Git Merge, Git Fetch는 생략해도 됩니다. -->
+
+- Git Merge 
+    - 실제로 파일을 작업하는 디렉토리
+
+- Git Add 
+    - 작업 디렉토리에서 변경된 파일을 Git의 stage에 올리는 작업
+    - `git add` 명령어로 특정 파일 또는 전체 파일을 스테이징할 수 있다.
+
+- Git Commit
+    - 스테이징된 파일을 로컬 저장소에 저장하는 과정
+
+- Git Push
+    - 로컬 저장소의 변경 사항을 원격 저장소에 업로드하는 작업
+
+
 
 ## Branch, HEAD
 ![branch-and-head](https://ihatetomatoes.net/wp-content/uploads/2020/04/07-head-pointer.png)  
