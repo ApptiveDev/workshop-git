@@ -30,6 +30,15 @@ git이 동작하는 기본 단위는 commit과 branch입니다.
 branch와 HEAD, git checkout을 포함하여 작성 바랍니다.  
 branch 생성 및 삭제, 이동 커맨드 등 자유롭게 내용을 추가해주세요.
 
+- `branch` : 저장소 내의 존재하는 독립적인 작업관리 영역, 저장소 안에서 브랜치는 여러 개 생성될 수 있으며 각 브랜치는 다른 브랜치의 영향을 받지 않는다.
+	- `git branch` : 브랜치 목록 표시
+	- `git branch [브랜치명]` : 해당 브랜치 명으로 브랜치 생성
+	- `git checkout [브랜치명]` : 해당 브랜치로 전환
+	- `git checkout –b [브랜치명]` : 브랜치 생성과 동시에 전환
+	- g`it branch -m [브랜치명] [새로운 브랜치명]` : 브랜치명 변경
+	- `git branch –d [브랜치명]` : 해당 브랜치 삭제
+- `HEAD` : 어떤 commit을 가리키는 개체, HEAD가 이전 commit을 참조하면 Working directory의 내용이 이전 commit의 내용으로 변경된다.
+
 
 ## clone, init, origin
 리포지토리를 로컬에 생성하는 방법은 clone, init이 있습니다. 다음을 포함하여 작성 바랍니다.
