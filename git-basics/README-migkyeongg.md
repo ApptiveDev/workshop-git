@@ -29,6 +29,12 @@ branch 생성 및 삭제, 이동 커맨드 등 자유롭게 내용을 추가해�
 reset에는 3가지 타입이 있습니다.  
 각 타입에 대해 작성 바랍니다.
 
+### git reset 옵션
+- 공통 : 커밋 취소
+1. --soft : staging 상태 유지 (git add 상태)
+2. --mixed : staging 취소, local 변경 상태 취소
+3. --hard : staging 취소, local 변경 상태 취소
+
 ## Pull Request, Merge
 ![pull-request-merge](https://atlassianblog.wpengine.com/wp-content/uploads/bitbucket411-blog-1200x-branches2.png)  
 Pull Request와 Merge에 대한 내용을 적어주세요.  
