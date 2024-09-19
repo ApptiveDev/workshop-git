@@ -45,6 +45,26 @@ branch 생성 및 삭제, 이동 커맨드 등 자유롭게 내용을 추가해�
 - git clone과 git init의 차이점, 이용방법
 - origin이란 키워드는 무엇인지, 어떻게 설정하는지
 
+### git clone과 git init의 차이점, 이용방법
+- `git clone [url]` : 저장소로부터 프로젝트를 복제하는 것
+- `git init` : 해당 폴더를 git으로 관리할 수 있게 해주는 명령어
+
+git init 은 프로젝트를 처음부터 시작할 때, git clone은 이미 있는 프로젝트를 가져올 때 사용한다.
+
+### origin이란 키워드는 무엇인지, 어떻게 설정하는지
+
+- 리모트 저장소 : 인터넷이나 네트워크 어딘가에 있는 저장소(원격 저장소)
+	- 로컬 시스템에 위치할 수도 있음
+- `git remote` 명령으로 현재 프로젝트에 등록된 리모트 저장소를 확인할 수 있다. 저장소를 clone하면 origin이라는 리모트 저장소가 자동으로 등록되기 때문에 origin이라는 이름을 볼 수 있다.
+- `git remote add [단축이름] [url]` : 기존 Working directory에 새 리모트 저장소를 추가할 수 있는 명령어
+	- 이렇게 저장소를 여러 개 등록하면 다른 사람이 기여한 내용을 쉽게 가져올 수 있다.
+	- `git fetch [remote 저장소]` : 로컬에는 없지만, 리모트 저장소에 있는 데이터를 모두 가져온다.
+- `git remote rename` : 리모트 저장소의 이름을 변경할 수 있다.
+
+요약 : origin 은 대표적으로 사용되는 리모트 저장소를 의미한다. git clone 시 기본적으로 만들어지며 git init 후 `git remote add origin [url]` 명령어를 통해서도 설정 가능하다.
+
+
+
 ## reset
 ![reset](https://user-images.githubusercontent.com/51331195/160235594-8836570b-e8bf-484a-bb92-b2bd6d873066.png)  
 reset에는 3가지 타입이 있습니다.  
