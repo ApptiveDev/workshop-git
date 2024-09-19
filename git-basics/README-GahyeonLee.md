@@ -107,11 +107,18 @@ Pull Request와 Merge에 대한 내용을 적어주세요.
 
 ## rebase
 ![rebase](https://user-images.githubusercontent.com/51331195/160234052-7fe70f85-5906-4474-b809-782adae92b3c.png)  
-rebase란 무엇인지, 어떤 때에 유용한지 등에 대해 적어주세요.
+<!-- rebase란 무엇인지, 어떤 때에 유용한지 등에 대해 적어주세요. -->
+
+- 한 브랜치의 변경 사항을 다른 브랜치의 최신 커밋 위로 옮기는 작업
+- 히스토리가 깔끔해져서 병합 후 커밋 히스토리가 직선으로 정리된다.
+
 
 ## stash
 ![stash](https://d8it4huxumps7.cloudfront.net/bites/wp-content/banners/2023/4/642a663eaff96_git_stash.png)  
-git stash를 활용하는 방법에 대해 적어주세요.
+<!-- git stash를 활용하는 방법에 대해 적어주세요. -->
+- 현재 작업 중인 내용을 임시로 저장하고, 나중에 복원할 수 있는 기능
+- `git stash` 명령어로 현재 작업을 저장하고 다른 작업을 할 수 있으며, `git stash apply`로 저장한 작업을 다시 가져온다.
+
 
 ## Advanced
 다음 주제는 더 조사해볼만한, 생각해볼만한 것들입니다. 
