@@ -6,6 +6,9 @@ Git을 사용하려면 알아야 할 기본 지식을 학습합시다. 아래 �
 git과 github는 같은 의미가 아닙니다.  
 local, remote와 연관지어 적어주세요.
 
+`Git` 은 버전관리 소프트웨어다. 로컬 저장소(내 컴퓨터)의 모든 변경사항을 기록하여 파일의 버전관리가 용이하다.
+`Github` 는 Git을 사용하는 프로젝트를 지원하는 웹 호스팅 서비스다. Git은 로컬 저장소에서 작동하기에 다른 개발자와 협업하기 어렵다. 이 때 Github를 사용하여 리모트 저장소(원격 저장소)에 로컬 저장소의 코드를 업로드하고 공유할 수 있다. 
+
 ## Git Workflow
 ![git-workflow](https://cdn-media-1.freecodecamp.org/images/1*iL2J8k4ygQlg3xriKGimbQ.png)  
 위는 git이 어떻게 동작하는지 나타낸 다이어그램입니다.  
