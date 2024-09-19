@@ -124,6 +124,15 @@ git stash를 활용하는 방법에 대해 적어주세요.
 
 - git stush 명령은 modified 파일에 대해서만 적용된다. 만약 새로 추가한 파일도 임시 저장하고 싶다면 `-u` 옵션을 사용하면 된다.
 
+---
+## 참고
+https://git-scm.com/book/ko/v2
+https://wikidocs.net/book/7060
+https://docs.github.com/ko/get-started/learning-about-github/
+https://makemeshin.tistory.com/entry/git-%EB%AA%85%EB%A0%B9%EC%96%B4%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%A0-%EB%95%8C-origin%EC%9D%B4%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%BC%EA%B9%8C%EC%9A%94
+
+---
+
 ## Advanced
 다음 주제는 더 조사해볼만한, 생각해볼만한 것들입니다. 
 - `git rebase --interactive`란?
