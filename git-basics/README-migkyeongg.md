@@ -15,6 +15,15 @@ local, remote와 연관지어 적어주세요.
 Working Directory, Git Add, Git Commit, Git Push 등 각 항목에 대해 작성 바랍니다.  
 Git Merge, Git Fetch는 생략해도 됩니다.
 
+- `Working directory` : 이력관리 대상 파일들이 위치하는 영역, 작업된 파일이나 코드가 저장되는 공간
+- `Staging area` : commit 할 대상 파일들이 위치하는 영역
+- `Local repo` : 내 컴퓨터 안에 있는 저장소
+- `Remote repo` : 서버에 있는 원격 저장소
+- `Git Add` : Working directory 내에 수정사항이 있는 파일들을 Staging area에 올린다.
+- `Git Commit` : 이력 저장
+- `Git Push` : Local repo 의 변경 사항을 Remote repo로 업로드한다.
+- `Git Pull` : Remote repo의 내용을 Local repo로 복원한다.
+
 ## Branch, HEAD
 ![branch-and-head](https://ihatetomatoes.net/wp-content/uploads/2020/04/07-head-pointer.png)  
 git이 동작하는 기본 단위는 commit과 branch입니다.  
