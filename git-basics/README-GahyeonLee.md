@@ -51,8 +51,21 @@ Git Merge, Git Fetch는 생략해도 됩니다. -->
 ## Branch, HEAD
 ![branch-and-head](https://ihatetomatoes.net/wp-content/uploads/2020/04/07-head-pointer.png)  
 git이 동작하는 기본 단위는 commit과 branch입니다.  
-branch와 HEAD, git checkout을 포함하여 작성 바랍니다.  
-branch 생성 및 삭제, 이동 커맨드 등 자유롭게 내용을 추가해주세요.
+<!-- branch와 HEAD, git checkout을 포함하여 작성 바랍니다.  
+branch 생성 및 삭제, 이동 커맨드 등 자유롭게 내용을 추가해주세요. -->
+
+- Branch 
+    - 서로 다른 작업 흐름을 나누기 위한 git의 기능
+    - 여러 작업을 독립적으로 진행할 수 있으며, 각 브랜치에서 작업한 내용은 나중에 합칠 수 있다.
+    - `git branch <브랜치명>` : 브랜치 생성
+    - `git checkout <브랜치명>` : 브랜치 이동
+    - `git branch -d <브랜치명>` : 브랜치 삭제
+
+
+- Head
+    - 현재 작업 중인 브랜치나 커밋을 가리키는 포인터
+    - `git checkout` 명령어로 HEAD를 다른 브랜치나 커밋으로 이동시킬 수 있다.
+
 
 
 ## clone, init, origin
