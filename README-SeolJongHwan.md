@@ -14,3 +14,8 @@ Commit은 파일의 특정 상태를 저장한 스냅샷이다.
 Branch는 commit의 포인터이며. 독립적으로 작업할 수 있는 경로이다. 즉, 특정 commit을 가리키는 것이다.
 HEAD는 현재 체크아웃된 branch를 가리키는 포인터, 즉 현재 작업 중인 branch 혹은 commit을 가리킨다. branch는 commit을 가리키는 포인터이므로, HEAD는 branch를 통해 간접적으로 commit을 가리키고 있는 것.
 checkout은 다른 branch로 이동하거나 특정 commit으로 이동하는데 사용된다.
+
+4.
+git clone은 remote repo의 전체 내용을 복사하여 local repo를 생성하는 명령어이다.
+git init은 새로운 빈 repo를 생성하는 명령어이다. 현재 디렉토리가 git repo로 초기화 하며 새로운 프로젝트를 시작할 때 주로 사용한다.
+origin은 remote repo의 기본 이름을 의미하며 git clone을 통해 저장소를 복제할 때 기본적으로 설정된다.
