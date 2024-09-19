@@ -49,13 +49,13 @@ Pull Request와 Merge에 대한 내용을 적어주세요.
 - merge는 한 분기 (동일 저장소 또는 fork한 저장소)에서 변경 내용을 가져와서 다른 분기로 적용한다.
 - PR 또는 명령줄을 통해 발생한다.
 
-https://wikidocs.net/images/page/153693/05.03.01.jpg
-![fast-forward](image-1.png)
+![image](https://github.com/user-attachments/assets/dff857c3-dd8a-4722-8bdd-6856d9031f9e)
+![image-1](https://github.com/user-attachments/assets/682e983f-e719-4a24-9913-7c121cee27bf)
 - `fast-forward` : 가장 기본적인 merge, 기준이 되는 브랜치에는 신규 커밋이 존재하지 않고 다른 브랜치에만 커밋이 존재할 때 브랜치 병합을 하는 경우
 	- 새로운 커밋이 생기지 않고 HEAD의 위치만 변한다.
 
-![alt text](image-2.png)
-![alt text](image-3.png)
+![image-2](https://github.com/user-attachments/assets/37c76559-af6d-400c-93dc-84da12ccb472)
+![image-3](https://github.com/user-attachments/assets/536e45ab-4d4f-4548-9d55-632793d47115)
 - `3-way merge`: 두 브랜치 보두 base에서 commit을 진행해서 분기해 나간 상태가 되었을 때
 	- 새로운 commit이 생성된다.
 	- merge 명령은 base를 기준으로 변경사항이 있는 파일들을 merge commit에 반영한다. 만약 두 commit 모두에서 변경 사항이 발생한 파일에 대해서는 충돌이 발생하며 해당 파일의 충돌을 해결 한 후 commit 하면 된다.
@@ -67,6 +67,11 @@ https://wikidocs.net/images/page/153693/05.03.01.jpg
 ## rebase
 ![rebase](https://user-images.githubusercontent.com/51331195/160234052-7fe70f85-5906-4474-b809-782adae92b3c.png)  
 rebase란 무엇인지, 어떤 때에 유용한지 등에 대해 적어주세요.
+
+`git rebase`를 통해 브랜치의 base를 조정할 수 있다.
+- 여러 개의 브랜치를 생성하여 작업한 후 main 또는 master 브랜치에 병합하는 방법 중 작업 종류가 유사한 브랜치끼리 한 줄기로 표시되도록 정리하는 방법
+- rebase 과정에서 branch 간 내용을 자동으로 merge 한다. 만약 자동으로 merge를 할 수 없다면, 충돌 메시지를 발생시키고 이 때는 수동으로 코드를 정리해야 한다.
+- 일을 병렬로 동시에 진행해도 rebase를 하고 나면 모든 작업이 차례대로 수행된 것 처럼 보인다. 리모트 브랜치에 커밋을 깔끔하게 적용하고 싶을 때 유용하다.
 
 ## stash
 ![stash](https://d8it4huxumps7.cloudfront.net/bites/wp-content/banners/2023/4/642a663eaff96_git_stash.png)  
