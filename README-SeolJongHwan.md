@@ -19,3 +19,8 @@ checkout은 다른 branch로 이동하거나 특정 commit으로 이동하는데
 git clone은 remote repo의 전체 내용을 복사하여 local repo를 생성하는 명령어이다.
 git init은 새로운 빈 repo를 생성하는 명령어이다. 현재 디렉토리가 git repo로 초기화 하며 새로운 프로젝트를 시작할 때 주로 사용한다.
 origin은 remote repo의 기본 이름을 의미하며 git clone을 통해 저장소를 복제할 때 기본적으로 설정된다.
+
+5.
+soft reset은 커밋을 되돌리면서 변경 사항은 staging area에 그대로 남아있게 한다.
+mixed reset은 커밋을 되돌리면서 변경 사항을 staging area에서 제거하지만, working directory에 남아있게 되어 수정할 수 있게 한다.
+hard reset은 staging area와 working directory 모두에서 변경 사항이 삭제되며 해당 commit 상태로 되돌린다.
