@@ -40,6 +40,30 @@ reset에는 3가지 타입이 있습니다.
 Pull Request와 Merge에 대한 내용을 적어주세요.  
 특히 Merge의 두 타입인 Fast-Forward와 3-Way Merge를 포함해주세요.
 
+### Pull Request
+- 한 분기의 변경 내용 집합을 다른 분기에 병합하라는 제안
+- 변경 내용을 기본 코드베이스에 통합하기 전에 제안된 변경 내용 집합을 검토하고 논의할 수 있다.
+- 원본 콘텐츠와 대상 브랜치간의 차이점을 표시한다.
+
+### Merge
+- merge는 한 분기 (동일 저장소 또는 fork한 저장소)에서 변경 내용을 가져와서 다른 분기로 적용한다.
+- PR 또는 명령줄을 통해 발생한다.
+
+https://wikidocs.net/images/page/153693/05.03.01.jpg
+![fast-forward](image-1.png)
+- `fast-forward` : 가장 기본적인 merge, 기준이 되는 브랜치에는 신규 커밋이 존재하지 않고 다른 브랜치에만 커밋이 존재할 때 브랜치 병합을 하는 경우
+	- 새로운 커밋이 생기지 않고 HEAD의 위치만 변한다.
+
+![alt text](image-2.png)
+![alt text](image-3.png)
+- `3-way merge`: 두 브랜치 보두 base에서 commit을 진행해서 분기해 나간 상태가 되었을 때
+	- 새로운 commit이 생성된다.
+	- merge 명령은 base를 기준으로 변경사항이 있는 파일들을 merge commit에 반영한다. 만약 두 commit 모두에서 변경 사항이 발생한 파일에 대해서는 충돌이 발생하며 해당 파일의 충돌을 해결 한 후 commit 하면 된다.
+
+참고 : https://wikidocs.net/153693
+
+
+
 ## rebase
 ![rebase](https://user-images.githubusercontent.com/51331195/160234052-7fe70f85-5906-4474-b809-782adae92b3c.png)  
 rebase란 무엇인지, 어떤 때에 유용한지 등에 대해 적어주세요.
