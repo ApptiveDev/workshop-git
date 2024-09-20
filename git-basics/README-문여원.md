@@ -8,11 +8,21 @@ Git을 사용하려면 알아야 할 기본 지식을 학습합시다. 아래 �
 git과 github는 같은 의미가 아닙니다.
 local, remote와 연관지어 적어주세요.
 
-- git은 버전 관리 시스템이고 github는 git으로 관리하는 프로젝트를 올려둘 수 있는 사이트입니다.
-- git은 로컬 저장소에서 소스 코드의 변경 사항을 추적하고 관리, 버전을 기록, 변경 사항 되돌리기, 다른 사람의 소스 코드와 합칠 수 있는 기능을 제공하는 도구입니다.
-- github는 git을 사용해 로컬에서 관리한 코드르 인터넷 상에서 호스팅하여 다른 개발자와 공유하고 협업할 수 있게 합니다.
-- local (로컬) : 사용자의 컴퓨터에 설치된 git 환경으로 로컬에서 코드를 작성하고, 변경 사항을 커밋하고 브랜치를 관리할 수 있습니다.
-- remote (원격) : github는 프로젝트의 원격 저장소 역할을 하는데 git을 통해 원격 저장소와 로컬 저장소를 동기화할 수 있습니다. 로컬에서 작업한 내용을 원격 저장소에 푸시하면 다른 사람들의 변경 사항을 공유할 수 있습니다. 다른 사람의 작업을 나의 로컬로 가져오기 위해서는 원격 저장소에서 pull을 실행하면 됩니다.
+### Git
+
+- 버전 관리 시스템
+- local(로컬 저장소, 사용자의 컴퓨터에 설치된 git 환경)에서 소스 코드의 변경 사항을 추적하고 관리, 버전을 기록, 변경 사항 되돌리기, 다른 사람의 소스 코드와 합칠 수 있는 기능을 제공하는 도구
+
+### Github
+
+- git을 사용해 로컬에서 관리한 코드를 인터넷 상에서 호스팅
+- 프로젝트의 remote(원격 저장소) 역할
+
+### Git과 Github
+
+- git을 통해 local(로컬 저장소)와 remote(원격 저장소)를 동기화
+- local에서 작업한 내용을 remote에 push하면 변경 사항을 공유 가능
+- 다른 사람의 작업을 나의 local로 가져오기 위해서는 원격 remote에서 pull 실행
 
 ## Git Workflow
 
@@ -21,20 +31,15 @@ local, remote와 연관지어 적어주세요.
 Working Directory, Git Add, Git Commit, Git Push 등 각 항목에 대해 작성 바랍니다.  
 Git Merge, Git Fetch는 생략해도 됩니다.
 
-- Working Directory (작업 디렉토리)
-  - 사용자가 파일을 생성, 수정, 삭제하며 작업하는 로컬 환경입니다.
-- Git Add
-  - Working Directory에서 변경된 파일들을 Staging Area로 이동시킵니다.
-- Staging Area
-  - 커밋한 파일이 임시로 저장되는 단계입니다.
-- Git Commit
-  - Staging Area의 변경 사항을 로컬에 저장합니다.
-- Local Repo (HEAD)
-  - 사용자의 컴퓨터에 저장된 Git 저장소로, 커밋된 모든 변경 이력을 저장합니다.
-- Git Push
-  - 로컬 저장소에서 커밋된 변경 사항을 Remote Repo에 업로드합니다.
-- Remote Repo (MASTER)
-  - GitHub와 같은 원격 서버에 위치한 저장소로, 팀원들이 접근할 수 있는 공간입니다.
+- **Working Directory** (작업 디렉토리)
+  : 사용자가 파일을 생성, 수정, 삭제하며 작업하는 로컬 환경
+- **Git Add**
+  : Working Directory에서 변경된 파일들을 Staging Area로 이동
+- **Staging Area** : 커밋한 파일이 임시로 저장되는 단계
+- **Git Commit** : Staging Area의 변경 사항을 로컬에 저장
+- **Local Repo (HEAD)** : 사용자의 컴퓨터에 저장된 Git 저장소로, 커밋된 모든 변경 이력을 저장
+- **Git Push** : 로컬 저장소에서 커밋된 변경 사항을 Remote Repo에 업로드
+- **Remote Repo (MASTER)** : GitHub와 같은 원격 서버에 위치한 저장소
 
 ## Branch, HEAD
 
@@ -43,32 +48,42 @@ git이 동작하는 기본 단위는 commit과 branch입니다.
 branch와 HEAD, git checkout을 포함하여 작성 바랍니다.  
 branch 생성 및 삭제, 이동 커맨드 등 자유롭게 내용을 추가해주세요.
 
-- Commit
-  - git에서 코드 변경 사항을 기록하는 단위
-- Branch
-  - 작업 흐름을 관리하는 기능, 저장소에 각자의 버전을 생성 가능
-  - 하나의 저장소에서 다른 개발자들과 함께 작업할 때 브랜치를 통해 새로운 commit line을 만들어서 다른 작업 가능
-    - 생성과 동시에 이동 : git checkout -b <new-branch>
-    - 작업 완료 후 브랜치 삭제 : git checkout -b <new-branch>
-  - HEAD : 현재 체크아웃된 브랜치를 나타냄, 가장 최근의 커밋을 가리킴
-    - 커밋과 브랜치를 잇는 역할, 현재 작업 위치를 알려줌
-  - Git Checkout : 특정 브랜치나 커밋으로 이동하여 해당 시점의 파일 상태를 확인하거나 작업 가능
-    - 브랜치로 이동 : git checkout <브랜치이름>
-    - 커밋 체크아웃 : git checkout <커밋해시>
+### Commit
+
+- 코드 변경 사항을 기록하는 단위
+
+### Branch
+
+- git 저장소 내에서 작업 흐름을 *분리*하여 관리할 수 있는 가상의 포인터(각 브랜치는 특정 commit를 가리킴)
+- 브랜치를 사용하면 메인 코드에 영향을 주지 않고 안전하게 기능 개발, 테스트, 버그 수정 진행 가능
+- 특정 branch나 commit으로 이동하여 해당 시점의 파일 상태를 확인하거나 작업 가능
+- 명령어
+  - 생성 : `git branch <branch>`
+  - 특정 브랜치로 이동 : `git checkout <branch>`
+  - 생성과 동시에 이동 : `git checkout -b <branch>`
+  - 작업 완료 후 브랜치 삭제 : `git checkout -d <branch>`
+  - **HEAD** :현재 체크아웃된 브랜치
 
 ## clone, init, origin
 
 리포지토리를 로컬에 생성하는 방법은 clone, init이 있습니다. 다음을 포함하여 작성 바랍니다.
+origin이란 키워드는 무엇인지, 어떻게 설정하는지
 
-- git clone과 git init의 차이점, 이용방법
-  - git clone <원격 저장소 URL>: 원격 저장소를 복제하여 로컬에 동일한 저장소를 생성, 원격에 있는 프로젝트를 그대로 가져와서 로컬에서 작업
-  - git init : 빈 로컬 디렉토리에 git 저장소를 초기화, 로컬에서 새로운 프로젝트를 시작하거나 기존 프로젝트를 git으로 관리하고자 할 때 사용
-  - 차이점
-    - clone : 이미 존재하는 원격 저장소를 로컬에 복제
-    - init : 새로운 프로젝트 시작하거나 기존 프로젝트를 git으로 관리를 시작하고자 할 때
-- origin이란 키워드는 무엇인지, 어떻게 설정하는지
-  - git에서 원격 저장소의 이름을 지정하는 기본 별칭
+### git clone <원격 저장소 URL>
+
+- 원격 저장소를 복제하여 로컬에 동일한 저장소를 생성
+- **origin** : git에서 원격 저장소의 이름을 지정하는 기본 별칭
   - git clone을 할 때 원격 저장소의 url를 origin이라는 이름으로 설정
+
+### git init
+
+- 현재 로컬 디렉토리에 git 저장소를 생성
+- 로컬에서 새로운 프로젝트를 시작하거나 로컬에 있는 기존 프로젝트를 git으로 관리하고자 할 때
+
+### clone vs init
+
+- clone : 이미 존재하는 원격 저장소를 로컬에 복제
+- init : 새로운 프로젝트 시작하거나 기존 프로젝트를 git으로 관리를 시작하고자 할 때
 
 ## reset
 
@@ -76,7 +91,19 @@ branch 생성 및 삭제, 이동 커맨드 등 자유롭게 내용을 추가해�
 reset에는 3가지 타입이 있습니다.  
 각 타입에 대해 작성 바랍니다.
 
-git reset
+### git reset
+
+지정한 커밋으로 이동
+
+1. --soft
+2. --mixed(default)
+3. --hard
+
+| Git 명령어 및 상태    | Commit (커밋)                   | Staging Area (스테이징 영역) | Working Directory (작업 디렉토리) |
+| --------------------- | ------------------------------- | ---------------------------- | --------------------------------- |
+| **git reset --soft**  | 이전 커밋으로 이동, 커밋만 취소 | 변경 사항 유지               | 변경된 파일이 남아 있음           |
+| **git reset --mixed** | 이전 커밋으로 이동, 커밋 취소   | 스테이징 영역 초기화         | 변경된 파일이 남아 있음           |
+| **git reset --hard**  | 이전 커밋으로 이동, 커밋 취소   | 스테이징 영역 초기화         | 변경 사항이 모두 삭제됨           |
 
 1. --soft
 
@@ -104,15 +131,25 @@ git reset
 Pull Request와 Merge에 대한 내용을 적어주세요.  
 특히 Merge의 두 타입인 Fast-Forward와 3-Way Merge를 포함해주세요.
 
+- Pull Request(PR) :
+  - 원격 저장소 서비스에서 사용하는 기능,
+  - 특정 브랜치의 변경 사항을 다른 브랜치에 반영하도록 요청
+  -
+- Merge
+
 ## rebase
 
 ![rebase](https://user-images.githubusercontent.com/51331195/160234052-7fe70f85-5906-4474-b809-782adae92b3c.png)  
 rebase란 무엇인지, 어떤 때에 유용한지 등에 대해 적어주세요.
 
+-Rebase
+
 ## stash
 
 ![stash](https://d8it4huxumps7.cloudfront.net/bites/wp-content/banners/2023/4/642a663eaff96_git_stash.png)  
 git stash를 활용하는 방법에 대해 적어주세요.
+
+- stash
 
 ## Advanced
 
