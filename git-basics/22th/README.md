@@ -53,7 +53,3 @@ git push --set-upstream origin step-1-<이름>
 # 첫 push 이후에는 git push만 사용하면 됨
 git push
 ```
-
-## ➕️ 추가 목표
-이제 Markdown 문서를 작성할 수 있게 되었으니, 본인의 Github 프로필을 꾸며봅시다. 아래 참고 블로그나 잘 꾸며진 프로필을 보면서 본인의 프로필을 만들어보세요. 연습을 위해 로컬 git에서 작업하시기 바랍니다.
-- **참고**: [(노션) 깃허브 프로필 꾸미기!](https://80000coding.oopy.io/865f4b2a-5198-49e8-a173-0f893a4fed45)  
