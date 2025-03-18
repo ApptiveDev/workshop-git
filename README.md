@@ -18,10 +18,10 @@ mkdir ~/repositories
 cd ~/repositories 
 
 # 현재 리포의 우측 상단에서 git clone URL 복사 후 붙여넣기
-git clone <study-git github URL>
+git clone <workshop-git github URL>
 
 # 클론된 폴더로 이동
-cd study-git
+cd workshop-git
 ```
 2. 이 브랜치(`step-1`)에서 본인의 브랜치를 만듭니다.
    - 브랜치명은 `step-1-<이름>`으로 생성
@@ -33,11 +33,16 @@ git checkout step-1
 git checkout -b step-1-<이름> 
 ```
 3. `/git-basics/README.md`를 복사하고, 빈 항목들을 조사해 채워넣습니다.
-   - 복사한 파일명은 `/git-basics/REAMDE-<이름>.md`로 변경
-   - 채우면서 최소 5개의 커밋 쌓기
+   - 복사한 파일명은 `/git-basics/<기수>/REAMDE-<이름>.md`로 변경
+        - ex) `git-basics/22rd/README-WONSEOK.md`
+   - 채우면서 최소 3개의 커밋 쌓기
 ```bash
+# <기수> 폴더 생성하기 (없다면)
+# 1은 뒤에 st, 2는 rd로 붙이기 (ex - 21st, 22rd, 23th, 24th, ...)
+mkdir git-basics/<기수>
+
 # /git-basics/README.md 복사
-cp git-basics/README.md git-basics/README-<이름>.md
+cp git-basics/README.md git-basics/<기수>/README-<이름>.md
 
 # (README-<이름>.md를 채우면서)
 git add .
