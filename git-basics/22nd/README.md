@@ -4,7 +4,6 @@ Git과 Github 사용의 첫 단계입니다.
 
 ## 🎯️ 목표
 - [ ] git의 동작 과정 이해
-- [ ] rebase와 reset 이해
 - [ ] Github 저장소 clone 하기
 - [ ] 브랜치를 만들고 커밋 쌓기
 - [ ] Pull Request와 Merge
@@ -34,19 +33,21 @@ git checkout step-1
 git checkout -b step-1-이름
 ```
 3. `/git-basics/README.md`를 복사하고, 빈 항목들을 조사해 채워넣습니다.
-    - 복사한 파일명은 `/git-basics/REAMDE-<이름>.md`로 설정합니다.
+    - 복사한 파일명은 `REAMDE-이름.md`로 설정합니다.
       - ex) README-kimgiyun.md
-    - 해당 파일을 메모장, VSCode 등으로 연 뒤 내용을 조사해 채우면서, 최소 3개의 commit을 쌓아봅시다.
 ```bash
 # /git-basics/README.md 복사
 cp git-basics/README.md git-basics/22nd/README-이름.md
+```
 
+4. git bash를 켜두고서 해당 파일을 메모장, VSCode 등으로 연 뒤 내용을 조사해 채우면서, 최소 3개의 commit을 쌓아봅시다.
+```bash
 # (README-<이름>.md를 꾸준히 채우면서)
 git add .
 git commit -m "<커밋 메시지>"
 ```
 
-4. 본인 브랜치를 APPTIVE 원격 저장소로 push한 뒤, `step-1` 브랜치로 Pull Request를 올립니다.
+5. 본인 브랜치를 APPTIVE 원격 저장소로 push한 뒤, `step-1` 브랜치로 Pull Request를 올립니다.
 ```bash
 # 브랜치를 처음 push하는 경우 원격 브랜치 등록
 # 현재 브랜치를 origin의 step-1-<이름> 브랜치와 연동한다.
