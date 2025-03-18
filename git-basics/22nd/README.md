@@ -34,10 +34,11 @@ git checkout -b step-1-이름
 ```
 3. `/git-basics/README.md`를 복사하고, 빈 항목들을 조사해 채워넣습니다.
     - 복사한 파일명은 `/git-basics/REAMDE-<이름>.md`로 변경
-    - 채우면서 최소 5개의 커밋 쌓기
+      - ex) README-kimgiyun.md
+    - 채우면서, 한 챕터 당 1개의 commit 쌓아보기
 ```bash
 # /git-basics/README.md 복사
-cp git-basics/22nd/README.md git-basics/22nd/README-이름.md
+cp git-basics/README.md git-basics/22nd/README-이름.md
 
 # (README-<이름>.md를 꾸준히 채우면서)
 git add .
