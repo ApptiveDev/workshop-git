@@ -14,69 +14,28 @@
 ## 진행
 ![github-flow](./images/github-flow.png)  
 
-### 1. 브랜치 생성 및 작업 시작
+### 1. ISSUE
 
-- 각 참가자는 자신의 기능에 맞는 브랜치를 생성하고, 해당 브랜치에서 기능을 완성합니다.
+- 각 참가자는 calculator.py의 한 함수를 맡아 이슈를 생성합니다.
+- [Issues] -> [New Issue] -> [할일 목록]
+- 제목은 'Calculator - <함수> 꾸현'으로 적습니다.
+- Assignee에 자기 자신을 붙입니다.
 
-### 2. 커밋 및 Push
+### 2. BRANCH & PUSh
 
-- 모든 참가자들은 완성된 기능 혹은 오류를 포함한 코드를 커밋하고, Push 합니다.
-
-### 3. Pull Request 생성
-
-- `step-2`로 PR을 생성하고, 다른 참가자들은 해당 PR을 리뷰하고 피드백을 제공합니다.
-
-### 4. 머지
-
-- 리뷰가 완료되면 PR이 머지됩니다. 오류나 문제가 발견되면, 이슈를 생성합니다.
+- 모든 참가자는 `step-2/이름/함수명`으로 브랜치를 생성합니다.
+- 로컬에서 구현 후 add, commit, push합니다.
 
 
-## 상세
+### 3. PULL REQUEST
 
-### 기능 구현 (4명)
-```
-# 저장소 클론
-git clone [GitHub 저장소 URL]
-# 디렉토리 이동
-cd simple-calculator
+- 구현한 함수에 대해 Pull Request를 올립니다.
+- PR 본문에 'close #이슈번호'를 달아 Merge와 동시에 이슈를 닫도록 합니다.
 
-# 브랜치 생성 및 이동
-git checkout -b [팀명]-feature-[구현할 기능명]
+### 4. MERGE
 
-# 커밋 및 Push
-git add calculator.py
-git commit -m "Feature [구현한 기능명]"
-git push origin [자신의 브랜치명]
+- 조장은 PR을 리뷰한 후 머지합니다.
 
-# GitHub에서 PR 생성
-# PR 명명 전략 참조
-```
+### 5. PULL
+- 모든 참가자는 최신 레포지토리를 로컬로 불러와(PULL) 변경내역을 확인합니다.
 
-### 코드 리뷰 및 merge
-
-스터디장은 GitHub에서 개발자 A와 B의 PR을 확인하고 리뷰합니다.
-
-오류가 존재한다면 PR에서 이를 comment로 남깁니다.
-
-### 이슈 생성
-
-GitHub의 'Issues' 탭에서 새로운 이슈 생성:
-
-**제목 예시**: "나눗셈 기능 구현에서 분모 0으로 나누는 문제 발생"  
-**내용 예시**: "0으로 나누었을 시에는 오류 메세지가 출력되도록 변경 요청 드립니다."
-
-### 이슈 해결
-
-```
-# 오류가 발생한 브랜치로 이동
-git checkout [브랜치명]
-
-# 코드 수정 (IDE로 작성하셔도 됩니다!)
-echo "코드" >> calculator.py
-
-# 커밋 및 Push
-git add calculator.py
-git commit -m "Fix 나눗셈 분모 0으로 나누는 이슈. Fixes #1"
-#하고 숫자들 제목에 작성하게 된다면 이슈번호 1을 해결한다는 내용이 포함된다.
-git push origin [브랜치명]
-```
