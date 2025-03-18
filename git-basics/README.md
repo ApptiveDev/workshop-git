@@ -44,6 +44,7 @@ git stash를 활용하는 방법에 대해 적어주세요.
 
 ## Advanced
 다음 주제는 더 조사해볼만한, 생각해볼만한 것들입니다. 
+- 브랜치관리전략에 대표적으로 Github Flow, Git Flow가 있습니다. 두 방식에서는 리포지토리를 어떻게 관리할까요?
 - `git rebase --interactive`란?
 - branch의 upstream이란? (`git push --set-upstream`)
 - PR은 브랜치 뿐만 아니라 Fork한 리포지토리에서도 가능하다. fork은 언제 유용한지. 
