@@ -22,13 +22,13 @@ Git Merge, Git Fetch는 생략해도 됩니다.
 >* Working Directory: 현재 작업을 하고 있는 디렉토리 
 >    * 이 디렉토리 안 모든 파일은 tracked(프로젝트 디렉토리에 존재하는 경우)/untracked(이 프로젝트 디렉토리에 없는 경우)로 나뉨
 >   * tracked는 또 수정/커밋 유무에 따라 상태가 변화
-* Git Add: working directory의 변경 사항을 staging area에 추가(add)하는 것
-    * 절대/상대 경로를 사용하여 파일,디렉토리를 추가할 수 있다.
-* staging area: git add를 통해 추가된 파일/디렉토리의 영역 
-* Git Commit: git add를 통해 staging area로 올린 작업물들을 commit하여 local repository에 변경사항을 반영
-* local repository: git commit을 통해 변경이 확정되면 변경사항을 반영하고 버전을 매긴다.
-* Git push: git commit을 통해 변경사항을 반영한 작업물들을 remote storage에 저장되어있는 작업물들도 변경사항이 반영되도록 하는 작업
-* Git pull: 다른 개발자가 github의 remote storage에 변경사항을 반영하였고 나의 local storage에는 변경사항이 반영되지 않은 경우, git pull을 사용하여 나의 local storage를 최신 버전으로 업데이트가 가능
+>* Git Add: working directory의 변경 사항을 staging area에 추가(add)하는 것
+>    * 절대/상대 경로를 사용하여 파일,디렉토리를 추가할 수 있다.
+>* staging area: git add를 통해 추가된 파일/디렉토리의 영역 
+>* Git Commit: git add를 통해 staging area로 올린 작업물들을 commit하여 local repository에 변경사항을 반영
+>* local repository: git commit을 통해 변경이 확정되면 변경사항을 반영하고 버전을 매긴다.
+>* Git push: git commit을 통해 변경사항을 반영한 작업물들을 remote storage에 저장되어있는 작업물들도 변경사항이 반영되도록 하는 작업
+>* Git pull: 다른 개발자가 github의 remote storage에 변경사항을 반영하였고 나의 local storage에는 변경사항이 반영되지 않은 경우, git pull을 사용하여 나의 local storage를 최신 버전으로 업데이트가 가능
  
 [참고자료1](https://iseunghan.tistory.com/322)
 [참고자료2](https://anerim.tistory.com/203)
@@ -40,9 +40,9 @@ branch와 HEAD, git checkout을 포함하여 작성 바랍니다.
 branch 생성 및 삭제, 이동 커맨드 등 자유롭게 내용을 추가해주세요.
 
 >* git의 HEAD와 branch는 포인터 
-* HEAD는 branch를 통해 직접적으로 commit을 가리키고 있음
-    * commit을 할 때마다 가장 최근 commit을 가리키러 HEAD가 가리키고 있는 branch가 이동한다. 
-* branch를 새로 생성하면, 이 branch는 마찬가지로 HEAD가 가리키고 있는 commit을 가리킨다. 
+>* HEAD는 branch를 통해 직접적으로 commit을 가리키고 있음
+>    * commit을 할 때마다 가장 최근 commit을 가리키러 HEAD가 가리키고 있는 branch가 이동한다. 
+>* branch를 새로 생성하면, 이 branch는 마찬가지로 HEAD가 가리키고 있는 commit을 가리킨다. 
 
 [참고자료](https://charles098.tistory.com/24)
 
@@ -88,11 +88,11 @@ reset에는 3가지 타입이 있습니다.
 각 타입에 대해 작성 바랍니다.
 
 > * git reset은 soft,mixed,hard가 존재
-* git reset --soft : 되돌아갈 commit의 hash값을 적으면 HEAD가 가리키는 branch가 가리키는 commit이 사용자가 되돌아가려고 하는 commit을 가리킴 (commit 취소)
-* git reset --mixed : soft 작업에서 staging area까지 비우는 작업을 수행 (commit 취소, add 취소)
-* git reset -- hard : mixed작업에서 이번엔 working directory에서 변경했던 데이터까지 되돌림 
-    * 로컬에 저장된 데이터까지 롤백 
-    * commit을 한 적이 없는 변경사항은 모두 덮어써져 복구가 되지 않음에 주의.
+>* git reset --soft : 되돌아갈 commit의 hash값을 적으면 HEAD가 가리키는 branch가 가리키는 commit이 사용자가 되돌아가려고 하는 commit을 가리킴 (commit 취소)
+>* git reset --mixed : soft 작업에서 staging area까지 비우는 작업을 수행 (commit 취소, add 취소)
+>* git reset -- hard : mixed작업에서 이번엔 working directory에서 변경했던 데이터까지 되돌림 
+>    * 로컬에 저장된 데이터까지 롤백 
+>    * commit을 한 적이 없는 변경사항은 모두 덮어써져 복구가 되지 않음에 주의.
 
 [참고자료](https://git-scm.com/book/ko/v2/Git-%EB%8F%84%EA%B5%AC-Reset-%EB%AA%85%ED%99%95%ED%9E%88-%EC%95%8C%EA%B3%A0-%EA%B0%80%EA%B8%B0)
 
