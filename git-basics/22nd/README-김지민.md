@@ -13,27 +13,34 @@ Git은 버전관리 소프트웨어이다. 로컬 저장소의 모든 변겅사�
 위는 git이 어떻게 동작하는지 나타낸 다이어그램입니다.  
 
 - **Working Directory** 
+
     working directory 는 작업폴더로, 데이터를 불러오거나 외부로 저장하는 작업을 수행하는 기본 폴더이다. 실제 작업파일이 있는 곳이다.
 
-- **Staging Area** 
+- **Staging Area**
+
     스테이징 영역은 데이터가 변환되기 전에 윈시/처리되지 않은 데이터가 있는 영역을 말한다.
 
 - **Local Repo**
+
     내 컴퓨터에 저장된 Git 저장소. 변경사항을 내 컴퓨터에서만 관리 가능하다.
 
 - **Remote Repo**
+
     GitHub 등의 클라우드 서버에 있는 Git 저장소.
     여러명이 협업할 수 있도록 온라인에 저장된다.
 
 - **Git Add**
+
     git add 는 작업 디렉토리 상의 변경 내용을 스테이징 영역에 추가하기 위해 사용하는 명령어이다. 커밋을 하기 전에 어떤 변경사항을 저장할지 선택한다.
     git add 를 하면 변경된 파일이 스테이징 영역으로 올라간다(커밋 대기 상태)
 
 - **Git Commit**
+
     git commit 은 파일 및 폴더의 추가/변경 사항을 로컬 저장소에 기록하는 것이다.
     파일(폴더)의 버전에 변화가 발생했다는 것이고, 특정 작업이 완결된 상태로 바뀌었다는 것을 의미한다. 변경 내역에 대한 설명으로 커밋 메세지도 포함한다.
 
 - **Git Push**
+
     로컬 저장소에 저장된 커밋한 작업 내용을 원격 저장소에 업로드 하기 위한 명령어.
 
 
@@ -41,17 +48,18 @@ Git은 버전관리 소프트웨어이다. 로컬 저장소의 모든 변겅사�
 ## Branch, HEAD
 ![branch-and-head](https://ihatetomatoes.net/wp-content/uploads/2020/04/07-head-pointer.png)  
 git이 동작하는 기본 단위는 commit과 branch입니다.  
-branch와 HEAD, git checkout을 포함하여 작성 바랍니다.  
-branch 생성 및 삭제, 이동 커맨드 등 자유롭게 내용을 추가해주세요.
 
 - **Branch**
+
     Git 에서 독립적으로 개발을 진행할 수 있도록 만들어주는 분기 역할을 함. main 과 분리된 상태에서 새로운 작업을 할 수 있는 작업 공간이다. 커밋을 가리키는 포인터 역할을 한다.
     생성 및 삭제가 가능하다.
     
- ### 생성 : `git branch <브랜치이름>`
- ### 삭제 : `git branch -d <브랜치이름>`
+     생성 : `git branch <브랜치이름>`
+
+     삭제 : `git branch -d <브랜치이름>`
 
 - **Head**
+
     모든 브랜치에는 head 값이 존재하는데, 해당 브랜치의 마지막 커밋의 상태를 가리킨다.
     (특정 브랜치의 마지막 커밋에 대한 포인터)
 
@@ -76,16 +84,17 @@ Gir 저장소를 만드는 방법은 크게 두 가지가 존재한다.
 
 
 - **Origin**
+
     origin 은 대표적으로 사용되는 원격 저장소의 별칭을 의미함.
 
-1. 별칭 등록
-    `git remote add {별칭} {원격지 주소}`
+    1. 별칭 등록
+        `git remote add {별칭} {원격지 주소}`
 
-2. 별칭 변경
-    `git remote rename {변경전} {변경후}`
+    2. 별칭 변경
+        `git remote rename {변경전} {변경후}`
 
-3. 별칭 삭제
-    `git remote rm {별칭}`
+    3. 별칭 삭제
+        `git remote rm {별칭}`
 
 
 
@@ -111,17 +120,19 @@ reset에는 3가지 타입이 있습니다.
 ![pull-request-merge](https://atlassianblog.wpengine.com/wp-content/uploads/bitbucket411-blog-1200x-branches2.png)  
 
 - **Pull Request**
+
     pull request 란 다른 사용자가 작성한 저장소에서 변경사항을 병합(merge) 하기 위한 요청을 의미한다.
 
 - **Merge**
+
     Merge 는 합병이라는 뜻으로 서로다른 브랜치를 병합해서 작업한 내용을 합치는 것을 의미한다.
 
     1. Fast-Forward Merge
         현재 브랜치의 HEAD가 대상 브랜치의 HEAD 까지로 옮기는 merge
         `git switch <현재 브랜치>`
         `git merge <대상 브랜치>`
-
-    중간에 변경이 없을 때만 동작함.
+        
+        중간에 변경이 없을 때만 동작함.
 
     2. 3-Way Merge
         대부분의 협업에서 발생하게 되는 merge 방식
@@ -142,8 +153,8 @@ reset에는 3가지 타입이 있습니다.
 
 ## stash
 ![stash](https://d8it4huxumps7.cloudfront.net/bites/wp-content/banners/2023/4/642a663eaff96_git_stash.png)  
-git stash를 활용하는 방법에 대해 적어주세요.
-작업중에 갑작스럽게 다른 작업을 진행해야 할 때, 작업중인 사항을 잠시 치워둘 수 있다다.
+stash를 이용해 작업중에 갑작스럽게 다른 작업을 진행해야 할 때, 작업중인 사항을 잠시 치워둘 수 있다.
+
 코드를 다른곳에 보관한 후에 내가 원하는 branch 에 적용할 수 있다.
 
 - git stash 로 변경사항들을 stash 공간으로 이동.
