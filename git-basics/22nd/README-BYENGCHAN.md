@@ -110,9 +110,21 @@ git 저장소 생성 방법에는 `git init` 방식과 `git clone` 방식이 있
 
 ## reset
 
-![reset](https://user-images.githubusercontent.com/51331195/160235594-8836570b-e8bf-484a-bb92-b2bd6d873066.png)
-reset에는 3가지 타입이 있습니다.
-각 타입에 대해 작성 바랍니다.
+### 1. `--soft`
+
+- HEAD가 특정 커밋(과거 또는 미래)을 새롭게 가리킨다.
+- 현재 작업 중인 working directory, stagin area는 영향 받지 않음 X
+
+### 2. `--mixed`
+
+- HEAD가 특정 커밋(과거 또는 미래)을 새롭게 가리킨다.
+- staging area도 해당 커밋의 모습과 동일하게 변한다.
+- working directory는 영향 받지 않는다 X
+
+### 3. `--hard`
+
+- HEAD가 특정 커밋(과거 또는 미래)을 새롭게 가리킨다.
+- staging area , working directory 모두 해당 커밋의 모습과 동일하게 변함.
 
 ## Pull Request, Merge
 
