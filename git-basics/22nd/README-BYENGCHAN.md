@@ -128,19 +128,46 @@ git 저장소 생성 방법에는 `git init` 방식과 `git clone` 방식이 있
 
 ## Pull Request, Merge
 
-![pull-request-merge](https://atlassianblog.wpengine.com/wp-content/uploads/bitbucket411-blog-1200x-branches2.png)
-Pull Request와 Merge에 대한 내용을 적어주세요.
-특히 Merge의 두 타입인 Fast-Forward와 3-Way Merge를 포함해주세요.
+### Merge란?
+
+- 두 개의 브랜치를 합치는 과정
+  - `git merge <브랜치명>`
+  - Fast-Forward Merge & 3-Way Merge 두 가지 방식이 존재
+
+1. 3-way merge
+
+- 브랜치마다 신규 커밋이 하나 이상 있는 경우, 새로운 커밋을 생성하며 합쳐줌
+
+<img src="https://velog.velcdn.com/images/bcl0206/post/d54501b0-fd06-481f-856e-3731eb444193/image.png" width=50%>
+
+2. fast-forward merge
+
+- 메인브랜치에 신규 커밋이 없는 경우, 그냥 브랜치의 최신 커밋을 main브랜치에 하기로 한다.
+
+<img src="https://velog.velcdn.com/images/bcl0206/post/c7596b1d-f97a-4908-8ad7-e832e1d229d1/image.png" width=50%>
+
+### PR이란?
+
+- 코드 변경 사항을 병합(Merge) 하기 전 검토하는 과정
+- 병합 전 코드 리뷰 받을 수 있음
 
 ## rebase
 
-![rebase](https://user-images.githubusercontent.com/51331195/160234052-7fe70f85-5906-4474-b809-782adae92b3c.png)
-rebase란 무엇인지, 어떤 때에 유용한지 등에 대해 적어주세요.
+- Git에서 한 브랜치에서 다른 브랜치로 합치는 방법은 Merge와 Rebase 두 가지 있다.
+- 둘 다 실행 결과는 같지만 커밋 히스토리가 달라짐.
+- merge는 히스토리가 지저분함, But Rebase는 잘 모르고 사용하지만 않으면 히스토리를 깔끔하게 관리할 수 있다.
+- base를 새롭게 설정한다.
 
 ## stash
 
-![stash](https://d8it4huxumps7.cloudfront.net/bites/wp-content/banners/2023/4/642a663eaff96_git_stash.png)
-git stash를 활용하는 방법에 대해 적어주세요.
+- 작업중인 사항을 잠시 치워두는 방법
+- 잠시 코드를 보관한 후, 내가 원하는 branch에 적용할 수 있다
+
+### 사용하는 이유
+
+- 변경사항을 커밋하기엔 아직 이른 경우
+- 다른 브랜치로 체크아웃할 때 변경사항을 유지하고 싶은 경우
+- 변경사항을 일시적으로 저장하고 싶은 경우
 
 ## Advanced
 
