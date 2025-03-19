@@ -1,57 +1,58 @@
-# 1️⃣️ Git 기초
-![git-basics](https://digitalvarys.com/wp-content/uploads/2019/06/Git-Basics-and-Beginners-Guide-1.png)  
-Git과 Github 사용의 첫 단계입니다. 
+# Git 기초
+Git을 사용하려면 알아야 할 기본 지식을 학습합시다. 아래 항목 위주로 조사하여 나름 이해한대로 채워주시기 바랍니다. 이 템플릿을 이용해도 되고, 자유 형식으로 정리하셔도 됩니다. 블로그 등에 정리한 경우 링크를 첨부해주세요.
 
-## 🎯️ 목표
-- [ ] git의 동작 과정 이해
-- [ ] Github 저장소 clone 하기
-- [ ] 브랜치를 만들고 커밋 쌓기
-- [ ] Pull Request와 Merge
-- [ ] Markdown 문서 작성
+## Git != Github
+![git-is-not-github](https://user-images.githubusercontent.com/51331195/160232512-3d6686ca-4ae3-4f11-a8d7-c893c0a7526a.png)  
+git과 github는 같은 의미가 아닙니다.  
+local, remote와 연관지어 적어주세요.
 
-## 📜️ 진행
-1. 본 리포지토리를 로컬에 clone 합니다. 바탕화면 우클릭 후, 추가옵션 > Open Git bash here 선택 (Window 11 기준). bash 콘솔창에 아래 명령어 입력.
-```bash
-# 적당한 폴더 생성 및 이동 (linux의 경우 ~/repositories 추천)
-mkdir repositories
-cd repositories 
+## Git Workflow
+![git-workflow](https://cdn-media-1.freecodecamp.org/images/1*iL2J8k4ygQlg3xriKGimbQ.png)  
+위는 git이 어떻게 동작하는지 나타낸 다이어그램입니다.  
+Working Directory, Git Add, Git Commit, Git Push 등 각 항목에 대해 작성 바랍니다.  
+Git Merge, Git Fetch는 생략해도 됩니다.
 
-# 현재 리포의 우측 상단에서 git clone URL 복사 후 붙여넣기
-git clone https://github.com/ApptiveDev/workshop-git.git
+## Branch, HEAD
+![branch-and-head](https://ihatetomatoes.net/wp-content/uploads/2020/04/07-head-pointer.png)  
+git이 동작하는 기본 단위는 commit과 branch입니다.  
+branch와 HEAD, git checkout을 포함하여 작성 바랍니다.  
+branch 생성 및 삭제, 이동 커맨드 등 자유롭게 내용을 추가해주세요.
 
-# 클론된 폴더로 이동
-cd workshop-git
-```
-2. 이 브랜치(`step-1`)에서 본인의 브랜치를 만듭니다.
-    - 브랜치명은 `step-1-<이름>`으로 생성
-```bash
-# step-1 브랜치로 이동
-git checkout step-1
 
-# 본인 브랜치 생성 및 이동
-git checkout -b step-1-이름
-```
-3. `/git-basics/README.md`를 복사하고, 빈 항목들을 조사해 채워넣습니다.
-    - 복사한 파일명은 `REAMDE-이름.md`로 설정합니다.
-      - ex) README-kimgiyun.md
-```bash
-# /git-basics/README.md 복사
-cp git-basics/README.md git-basics/22nd/README-이름.md
-```
+## clone, init, origin
+리포지토리를 로컬에 생성하는 방법은 clone, init이 있습니다. 다음을 포함하여 작성 바랍니다.
+- git clone과 git init의 차이점, 이용방법
+- origin이란 키워드는 무엇인지, 어떻게 설정하는지
 
-4. git bash를 켜두고서 해당 파일을 메모장, VSCode 등으로 연 뒤 내용을 조사해 채우면서, 최소 3개의 commit을 쌓아봅시다.
-```bash
-# (README-<이름>.md를 꾸준히 채우면서)
-git add .
-git commit -m "<커밋 메시지>"
-```
+## reset
+![reset](https://user-images.githubusercontent.com/51331195/160235594-8836570b-e8bf-484a-bb92-b2bd6d873066.png)  
+reset에는 3가지 타입이 있습니다.  
+각 타입에 대해 작성 바랍니다.
 
-5. 본인 브랜치를 APPTIVE 원격 저장소로 push한 뒤, `step-1` 브랜치로 Pull Request를 올립니다.
-```bash
-# 브랜치를 처음 push하는 경우 원격 브랜치 등록
-# 현재 브랜치를 origin의 step-1-<이름> 브랜치와 연동한다.
-# step-1-<이름> 대신 다른 브랜치명을 사용하면 해당 원격 브랜치와 연결됨.
-git push --set-upstream origin step-1-이름
-# 첫 push 이후에는 git push만 사용하면 됨
-git push
-```
+## Pull Request, Merge
+![pull-request-merge](https://atlassianblog.wpengine.com/wp-content/uploads/bitbucket411-blog-1200x-branches2.png)  
+Pull Request와 Merge에 대한 내용을 적어주세요.  
+특히 Merge의 두 타입인 Fast-Forward와 3-Way Merge를 포함해주세요.
+
+## rebase
+![rebase](https://user-images.githubusercontent.com/51331195/160234052-7fe70f85-5906-4474-b809-782adae92b3c.png)  
+rebase란 무엇인지, 어떤 때에 유용한지 등에 대해 적어주세요.
+
+## stash
+![stash](https://d8it4huxumps7.cloudfront.net/bites/wp-content/banners/2023/4/642a663eaff96_git_stash.png)  
+git stash를 활용하는 방법에 대해 적어주세요.
+
+## Advanced
+다음 주제는 더 조사해볼만한, 생각해볼만한 것들입니다. 
+- 브랜치관리전략에 대표적으로 Github Flow, Git Flow가 있습니다. 두 방식에서는 리포지토리를 어떻게 관리할까요?
+- `git rebase --interactive`란?
+- branch의 upstream이란? (`git push --set-upstream`)
+- PR은 브랜치 뿐만 아니라 Fork한 리포지토리에서도 가능하다. fork은 언제 유용한지. 
+- `git fetch`와 `git pull`의 차이점, fetch는 언제 쓰는지
+- `reset --hard`와 `push --force`의 적절한 사용법
+- `.gitignore` 사용법
+- 브랜치 이름은 슬래시를 통해 계층적으로 가질 수 있다. 단, `parent/child-1`, `parent/child-2`는 동시에 가질 수 있지만 `parent/child/grandchild`, `parent/child`는 그러지 못한다. 무슨 이유 때문인지. 
+- detached HEAD란 어떤 상태인지, 이 상태에서 커밋을 하게 되면 어떻게 되는지, detached HEAD는 어떤 상황에서 발생할 수 있는지
+
+## Questions
+조사/실습하면서 생긴 궁금점이 있다면 여기에 적어서 공유해주세요.
