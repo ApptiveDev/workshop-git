@@ -56,10 +56,41 @@ Staging Area에 들어간 변경 내용을 `git commit`으로 로컬 저장소�
 
 ## Branch, HEAD
 
-![branch-and-head](https://ihatetomatoes.net/wp-content/uploads/2020/04/07-head-pointer.png)  
-git이 동작하는 기본 단위는 commit과 branch입니다.  
-branch와 HEAD, git checkout을 포함하여 작성 바랍니다.  
-branch 생성 및 삭제, 이동 커맨드 등 자유롭게 내용을 추가해주세요.
+- Branch: 특정 커밋을 가리키는 포인터
+- HEAD: 현재 작업 중인 브랜치를 가리키는 포인터
+  - 일반적으로 현재 체크아웃된 브랜치를 나타냄
+
+```cmd
+git branch <생성할 브랜치명>
+```
+
+- 브랜치 생성
+- 브랜치명에는 공백이 들어가면 안된다.
+
+- 브랜치 전환
+
+```cmd
+git switch <전환할 브랜치명>
+Git 2.23 이후 추천방식
+git checkout <전환할 브랜치명>
+```
+
+- 브랜치 전환
+
+```cmd
+git checkout -c <브랜치명>
+```
+
+- 브랜치 생성 후 바로 이동
+
+```cmd
+git branch -d <브랜치명>
+강제삭제
+git branch -D 브랜치이름
+```
+
+- 병합이 완료된 브랜치 삭제
+- 병합이 완료되지 않으면 -D 사용
 
 ## clone, init, origin
 
@@ -70,24 +101,24 @@ branch 생성 및 삭제, 이동 커맨드 등 자유롭게 내용을 추가해�
 
 ## reset
 
-![reset](https://user-images.githubusercontent.com/51331195/160235594-8836570b-e8bf-484a-bb92-b2bd6d873066.png)  
-reset에는 3가지 타입이 있습니다.  
+![reset](https://user-images.githubusercontent.com/51331195/160235594-8836570b-e8bf-484a-bb92-b2bd6d873066.png)
+reset에는 3가지 타입이 있습니다.
 각 타입에 대해 작성 바랍니다.
 
 ## Pull Request, Merge
 
-![pull-request-merge](https://atlassianblog.wpengine.com/wp-content/uploads/bitbucket411-blog-1200x-branches2.png)  
-Pull Request와 Merge에 대한 내용을 적어주세요.  
+![pull-request-merge](https://atlassianblog.wpengine.com/wp-content/uploads/bitbucket411-blog-1200x-branches2.png)
+Pull Request와 Merge에 대한 내용을 적어주세요.
 특히 Merge의 두 타입인 Fast-Forward와 3-Way Merge를 포함해주세요.
 
 ## rebase
 
-![rebase](https://user-images.githubusercontent.com/51331195/160234052-7fe70f85-5906-4474-b809-782adae92b3c.png)  
+![rebase](https://user-images.githubusercontent.com/51331195/160234052-7fe70f85-5906-4474-b809-782adae92b3c.png)
 rebase란 무엇인지, 어떤 때에 유용한지 등에 대해 적어주세요.
 
 ## stash
 
-![stash](https://d8it4huxumps7.cloudfront.net/bites/wp-content/banners/2023/4/642a663eaff96_git_stash.png)  
+![stash](https://d8it4huxumps7.cloudfront.net/bites/wp-content/banners/2023/4/642a663eaff96_git_stash.png)
 git stash를 활용하는 방법에 대해 적어주세요.
 
 ## Advanced
@@ -107,3 +138,7 @@ git stash를 활용하는 방법에 대해 적어주세요.
 ## Questions
 
 조사/실습하면서 생긴 궁금점이 있다면 여기에 적어서 공유해주세요.
+
+```
+
+```
