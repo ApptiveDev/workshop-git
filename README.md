@@ -14,24 +14,27 @@ Git과 Github 사용의 첫 단계입니다.
 1. 이 리포지토리를 로컬에 clone 합니다.
 ```bash
 # 적당한 폴더 생성 및 이동 (linux의 경우 ~/repositories 추천)
+# Window의 경우 아래 명령어 실행 시, 기본적으로 C:\Users\사용자 계정명\repositories로 생성됩니다.
 mkdir ~/repositories
 cd ~/repositories 
 
 # 현재 리포의 우측 상단에서 git clone URL 복사 후 붙여넣기
-git clone <workshop-git github URL>
+git clone https://github.com/ApptiveDev/workshop-git.git
 
 # 클론된 폴더로 이동
 cd workshop-git
 ```
+
 2. 이 브랜치(`step-1`)에서 본인의 브랜치를 만듭니다.
-   - 브랜치명은 `step-1-<이름>`으로 생성
+   - 브랜치명은 `step-1-이름`으로 생성
 ```bash
 # step-1 브랜치로 이동
 git checkout step-1
 
 # 본인 브랜치 생성 및 이동
-git checkout -b step-1-<이름> 
+git checkout -b step-1-이름
 ```
+
 3. `/git-basics/README.md`를 복사하고, 빈 항목들을 조사해 채워넣습니다.
    - 복사한 파일명은 `/git-basics/<기수>/REAMDE-<이름>.md`로 변경
         - ex) `git-basics/22rd/README-WONSEOK.md`
@@ -42,7 +45,7 @@ git checkout -b step-1-<이름>
 mkdir git-basics/<기수>
 
 # /git-basics/README.md 복사
-cp git-basics/README.md git-basics/<기수>/README-<이름>.md
+cp git-basics/<기수>/README.md git-basics/<기수>/README-<이름>.md
 
 # (README-<이름>.md를 채우면서)
 git add .
