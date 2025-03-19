@@ -20,10 +20,39 @@ Github은 웹 상에서 클라우드 서버(**원격(remote)** 서버)를 통해
 
 ## Git Workflow
 
-![git-workflow](https://cdn-media-1.freecodecamp.org/images/1*iL2J8k4ygQlg3xriKGimbQ.png)  
-위는 git이 어떻게 동작하는지 나타낸 다이어그램입니다.  
-Working Directory, Git Add, Git Commit, Git Push 등 각 항목에 대해 작성 바랍니다.  
-Git Merge, Git Fetch는 생략해도 됩니다.
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F7XB0f%2FbtsdlqFq3Il%2FVKOMdP7p5a1ziN9EhAFeE0%2Fimg.png" width= 50%>
+
+### Git 파일의 상태
+
+Git은 파일을 크게 `Commited`, `Modified`, `Staged`의 세 가지 상태로 관리함
+
+| 상태     | 설명                                                |
+| -------- | --------------------------------------------------- |
+| Commited | 데이터가 로컬 저장소에 안전하게 저장됨              |
+| Modified | 수정한 파일을 아직 로컬 저장소에 커밋하지 않은 상태 |
+| Staged   | 수정한 파일을 곧 commit 할 것이라고 표시한 상태     |
+
+Git Directory(Repostiry)는 현재 작업하는 디렉터리에서 파일을 가져와 **Working Directory**를 만듭니다.
+
+1. Working Directory에서 파일을 수정
+2. 수정한 파일을 git add 로 Staging Area에 올림
+3. Staging Area에 있는 파일들을 git commit으로 Repository에 영구적으로 저장
+
+### add / commit / push 의 차이
+
+| 명령어       | 설명                                                       |
+| ------------ | ---------------------------------------------------------- |
+| `git add`    | 다음 변경을 기록할 때 까지 변경 내용을 모아놓기 위해 사용  |
+| `git commit` | 변경 내용을 로컬 repositry에 기록(내 컴퓨터의 로컬 저장소) |
+| `git push`   | 변경 내용을 원격 repositry에 기록 (github)                 |
+
+`git add` 명령어를 통해 Staging Area로 변경 내용의 일부 혹은 전부를 이동시킨다.
+
+`git status` 명령어를 통해 현재 Working Directory와 Staging Area의 상태를 확인할 수 있다.
+
+Staging Area에 들어간 변경 내용을 `git commit`으로 로컬 저장소에 기록한다.
+
+`git push`로 원격 저장소에 업데이트 할 수 있다.
 
 ## Branch, HEAD
 
