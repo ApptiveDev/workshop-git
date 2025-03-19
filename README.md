@@ -21,7 +21,7 @@
 - 제목은 'Calculator - <함수> 꾸현'으로 적습니다.
 - Assignee에 자기 자신을 붙입니다.
 
-### 2. BRANCH & PUSh
+### 2. BRANCH & PUSH
 
 - 모든 참가자는 `step-2/이름/함수명`으로 브랜치를 생성합니다.
 - 로컬에서 구현 후 add, commit, push합니다.
