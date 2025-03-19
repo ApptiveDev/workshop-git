@@ -38,7 +38,7 @@ git checkout -b step-1-<이름>
    - 채우면서 최소 3개의 커밋 쌓기
 ```bash
 # <기수> 폴더 생성하기 (없다면)
-# 1은 뒤에 st, 2는 rd로 붙이기 (ex - 21st, 22rd, 23th, 24th, ...)
+# 1은 뒤에 st, 2는 nd, 3은 rd로 붙이기 (ex - 21st, 22nd, 23rd, 24th, ...)
 mkdir git-basics/<기수>
 
 # /git-basics/README.md 복사
