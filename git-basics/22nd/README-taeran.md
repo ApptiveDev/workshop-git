@@ -25,25 +25,57 @@ Working Directory : 내가 현재 작업하고 있는 디렉토리 (위치)
 
 ## Branch, HEAD
 ![branch-and-head](https://ihatetomatoes.net/wp-content/uploads/2020/04/07-head-pointer.png)  
-git이 동작하는 기본 단위는 commit과 branch입니다.  
-branch와 HEAD, git checkout을 포함하여 작성 바랍니다.  
-branch 생성 및 삭제, 이동 커맨드 등 자유롭게 내용을 추가해주세요.
+*"HEAD와 branch는 포인터이다"*   
+
+HEAD : 레포에서의 현재 사용자 위치(checkout을 하면 HEAD가 바뀜)      
+branch : 일종의 타임라인으로, 각 branch는 독립된 context를 가진다. (-> 다른 브랜치에 영향 x)   
+
+git branch {브랜치명} : 새로운 브랜치 생성 가능(HEAD가 이를 가리키게 됨)  
+git checkout {브랜치명} : HEAD를 움직여서 다른 브랜치로 전환 가능  
+
 
 
 ## clone, init, origin
-리포지토리를 로컬에 생성하는 방법은 clone, init이 있습니다. 다음을 포함하여 작성 바랍니다.
-- git clone과 git init의 차이점, 이용방법
-- origin이란 키워드는 무엇인지, 어떻게 설정하는지
+#### git clone과 git init의 차이점, 이용방법  
+git init : .git이라는 하위 폴더를 생성해 해당 폴더를 git으로 관리할 수 있게 해줌.   
+git clone : remote로부터 프로젝트를 local에 복제함.  
+ㄴ git clone {깃허브 코드 주소}.git  
+
+#### origin이란 키워드는 무엇인지, 어떻게 설정하는지  
+origin : 현재 git에서 작업하는 local과 연결된 **remote의 주소**를 가리킴.   
+git remote : origin 생성   
+git remote remove origin : origin 삭제 
 
 ## reset
 ![reset](https://user-images.githubusercontent.com/51331195/160235594-8836570b-e8bf-484a-bb92-b2bd6d873066.png)  
-reset에는 3가지 타입이 있습니다.  
-각 타입에 대해 작성 바랍니다.
+#### reset의 3가지 타입
+1. git reset --soft   
+ㄴ HEAD가 특정 커밋을 새롭게 가리킴 (working directory OR staging area 영향 x)
+2. git reset --mixed   
+ㄴ HEAD가 특정 커밋을 새롭게 가리킴 (staging area도 해당 커밋의 모습과 동일하게 변함)
+3. git reset --hard (주의 요망)   
+ㄴ HEAD가 특정 커밋을 새롭게 가리킴 (working directory & staging area 모두 변함)
 
 ## Pull Request, Merge
 ![pull-request-merge](https://atlassianblog.wpengine.com/wp-content/uploads/bitbucket411-blog-1200x-branches2.png)  
-Pull Request와 Merge에 대한 내용을 적어주세요.  
-특히 Merge의 두 타입인 Fast-Forward와 3-Way Merge를 포함해주세요.
+#### Pull Request
+협업을 할 때, push를 한 뒤에 변경사항을 기록하고 pull request를 요청한다.   
+
+#### Merge
+팀원의 PR(Pull Request) 내용을 확인한 후, 다른 코드에 영향을 미치지 않고 remote 저장소에 반영해도 된다면, 그때 merge를 진행한다. (-> 원본 저장소에 바뀐 내용이 반영되어 합쳐진다)   
+
+##### Merge_Fast-Forward
+현재 브랜치의 HEAD가 대상 브랜치의 HEAD로 옮겨지는 merge    
+```git switch [현재 브랜치]```    
+```git merge [대상 브랜치]```   
+But, 중간에 다른 커밋이 있다면 Conflict 발생 -> 동작 x   
+
+##### Merge_3-way Merge
+merge 할 때 두 브랜치가 동일 선상에 없을 때, **공통 조상**으로 merge 진행   
+```git checkout master```   
+```git merge {브랜치명}```   
+공통조상 (Base)를 기준으로, merge의 결과로 채택한 후   
+두 브랜치가 다른 변화를 발생시켰다면 이를 충돌로 판단하고 해결해야 merge 가능   
 
 ## rebase
 ![rebase](https://user-images.githubusercontent.com/51331195/160234052-7fe70f85-5906-4474-b809-782adae92b3c.png)  
