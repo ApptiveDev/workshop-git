@@ -1,16 +1,27 @@
 # Git 기초
-Git을 사용하려면 알아야 할 기본 지식을 학습합시다. 아래 항목 위주로 조사하여 나름 이해한대로 채워주시기 바랍니다. 이 템플릿을 이용해도 되고, 자유 형식으로 정리하셔도 됩니다. 블로그 등에 정리한 경우 링크를 첨부해주세요.
+Git 알아보기_김태란(개발)
 
 ## Git != Github
 ![git-is-not-github](https://user-images.githubusercontent.com/51331195/160232512-3d6686ca-4ae3-4f11-a8d7-c893c0a7526a.png)  
-git과 github는 같은 의미가 아닙니다.  
-local, remote와 연관지어 적어주세요.
+Git : **local** 에서의 모든 변경사항을 기록하는(버전관리를 하는) **소프트웨어**   
+Github : 클라우스 서버를 통해 **local의 코드 -> remote** 로 업로드하고 공유할 수 있도록 하는 **서비스**
 
 ## Git Workflow
 ![git-workflow](https://cdn-media-1.freecodecamp.org/images/1*iL2J8k4ygQlg3xriKGimbQ.png)  
-위는 git이 어떻게 동작하는지 나타낸 다이어그램입니다.  
-Working Directory, Git Add, Git Commit, Git Push 등 각 항목에 대해 작성 바랍니다.  
-Git Merge, Git Fetch는 생략해도 됩니다.
+Working Directory : 내가 현재 작업하고 있는 디렉토리 (위치)   
+
+**Git Add** : add를 해줘야만 **commit의 대상**으로 들어간다 (== Staging Area에 올라감)    
+ㄴ Git이 해당 파일의 버전관리를 시작함    
+ㄴ git restore --staged ${filename} 을 해주면 Staging Area에서 제거 가능     
+ㄴ add를 사용하면 어느 부분을 커밋할지 구체적으로 조정이 가능하다             
+
+**Git Commit** : commit을 해줘야만 **git에 저장**을 할 수 있다 (== Local Repo에 올라감)    
+ㄴ commit은 git log가 남음. add 한 것들에 스탬프를 찍는 과정.     
+
+**Git Push** : 내가 commit 한 것들을 원격 저장소에 저장함 (== Remote Repo에 올라감)   
+ㄴ 하기 전에 원격 저장소와 연결이 되어 있어야 함    
+
+**Git Pull** : remote -> local 로 코드를 가져옴 & 더 최신 코드라면 merge 까지 진행   
 
 ## Branch, HEAD
 ![branch-and-head](https://ihatetomatoes.net/wp-content/uploads/2020/04/07-head-pointer.png)  
