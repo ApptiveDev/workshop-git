@@ -95,17 +95,49 @@ branch 생성 및 삭제, 이동 커맨드 등 자유롭게 내용을 추가해�
     - 즉, 커밋, 스테이징, 작업 디렉토리의 모든 변경 사항이 삭제된다.
 ## Pull Request, Merge
 ![pull-request-merge](https://atlassianblog.wpengine.com/wp-content/uploads/bitbucket411-blog-1200x-branches2.png)  
-Pull Request와 Merge에 대한 내용을 적어주세요.  
-특히 Merge의 두 타입인 Fast-Forward와 3-Way Merge를 포함해주세요.
+<!-- Pull Request와 Merge에 대한 내용을 적어주세요.  
+특히 Merge의 두 타입인 Fast-Forward와 3-Way Merge를 포함해주세요. -->
+- Pull Request
+    - 한 브랜치의 변경 사항을 다른 브랜치에 병합하기 위해 요청하는 기능
+    - PR에서 병합하기 전에 코드리뷰, 테스트 등을 거치고 협업을 용이하게 한다.
+    - 원격 레포에서 브랜치 간의 변경 사항을 비교하고 병합하는 과정을 제공한다.
+- Merge
+    - 두 브랜치의 변경 사항을 하나로 통합한다.
+    > fast-forward Merge
+    - 새로운 브랜치에만 commit이 있고 기준 브랜치에는 신규 commit이 없을 때.
+    - 병합 커밋이 남지 않는다.
+    - 충돌 가능성 없다. 
+    ![fast-forward](https://codingapple-cdn.b-cdn.net/wp-content/uploads/2022/06/%EA%B7%B8%EB%A6%BC3-4.png)
+    > 3-way Merge
+    - 브랜치에 각각 신규 commit 이 1회 이상 존재하는 경우
+    - 두개의 브랜치 코드를 합쳐 새로운 commit이 생성된다.
+    ![3way](https://codingapple-cdn.b-cdn.net/wp-content/uploads/2022/06/merge1.png)
 
 ## rebase
 ![rebase](https://user-images.githubusercontent.com/51331195/160234052-7fe70f85-5906-4474-b809-782adae92b3c.png)  
-rebase란 무엇인지, 어떤 때에 유용한지 등에 대해 적어주세요.
+<!-- rebase란 무엇인지, 어떤 때에 유용한지 등에 대해 적어주세요. -->
+- `git rebase`는 현재 브랜치의 커밋을 떼어내어, 지정한 브랜치의 최신 커밋 위에 재적용한다.
+- rebase또한 병합 방법 중 하나이나, merge에 비해 커밋 기록을 한 줄로 깔끔하게 관리할 수 있다. 그러나 충돌 발생 가능성이 있다.
+- 병합 커밋이 생성되지 않는다. 
 
 ## stash
 ![stash](https://d8it4huxumps7.cloudfront.net/bites/wp-content/banners/2023/4/642a663eaff96_git_stash.png)  
-git stash를 활용하는 방법에 대해 적어주세요.
-
+<!-- git stash를 활용하는 방법에 대해 적어주세요.
+ -->
+- `git stash`는 작업 디렉토리와 스테이징 영역의 변경 사항을 임시로 저장하고, 작업 디렉토리를 깨끗한 상태로 되돌리는 명령어.
+- 변경 사항을 스택(stack)에 저장하고, 작업 디렉토리와 스테이징 영역을 마지막 커밋 상태로 되돌린다.
+> 활용 예시 
+- branch-a 에서 파일을 수정했지만, 커밋하지 않고 다른 브랜치로 전환하고자 할 때 
+```bash
+# 현재 작업 중인 변경 사항 저장 후 작업 디렉토리를 깨끗하게 한다
+git stash
+# 스택에 쌓인 가장 최근의 변경 사항을 불러와 작업 디렉토리에 적용하고 스택에서 제거된다.
+git stash pop
+# 변경사항을 불러와 적용하지만, 스택에서 제거는 하지 않는다
+git stash apply
+# stash 목록을 확인한다 
+git stash list
+```
 ## Advanced
 다음 주제는 더 조사해볼만한, 생각해볼만한 것들입니다. 
 - 브랜치관리전략에 대표적으로 Github Flow, Git Flow가 있습니다. 두 방식에서는 리포지토리를 어떻게 관리할까요?
