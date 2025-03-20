@@ -5,6 +5,8 @@ Git을 사용하려면 알아야 할 기본 지식을 학습합시다. 아래 �
 ![git-is-not-github](https://user-images.githubusercontent.com/51331195/160232512-3d6686ca-4ae3-4f11-a8d7-c893c0a7526a.png)  
 git과 github는 같은 의미가 아닙니다.  
 local, remote와 연관지어 적어주세요.
+git은 local에서 관리되는 버전 관리 시스템으로 local repository를 사용하기 때문에 다른 사람이 나의 작업 내용을 알 수 없습니다.
+github는 git을 기반으로 하는 remote repository으로 git 기반의 폴더에 대해서 github를 통해 여러 사람들이 공유하고 접근할 수 있습니다.
 
 ## Git Workflow
 ![git-workflow](https://cdn-media-1.freecodecamp.org/images/1*iL2J8k4ygQlg3xriKGimbQ.png)  
