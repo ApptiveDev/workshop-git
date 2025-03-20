@@ -69,13 +69,27 @@ Pull Request와 Merge에 대한 내용을 적어주세요.
 ![rebase](https://user-images.githubusercontent.com/51331195/160234052-7fe70f85-5906-4474-b809-782adae92b3c.png)  
 rebase란 무엇인지, 어떤 때에 유용한지 등에 대해 적어주세요.
 
+- rebase : 브랜치의 변경 사항을 다른 브랜치의 최신 상태 위로 이동시키는 명령어입니다. git merge와 달리 병합 커밋 없이 깔끔한 커밋 히스토리를 유지할 수 있습니다.
 
+<활용방법>
+1) 협업 중 최신 코드 반영
+2) 불필요한 Merge Commit 방지 : 병합 커밋 없이 정리된 커밋 히스토리를 유지할 수 있습니다.
+3) 커밋 순서 정리 및 수정 : git rebase -i HEAD~n을 사용하면 특정 개수의 커밋을 수정, 삭제, 합치기 할 수 있습니다.
 
 ## stash
 ![stash](https://d8it4huxumps7.cloudfront.net/bites/wp-content/banners/2023/4/642a663eaff96_git_stash.png)  
 git stash를 활용하는 방법에 대해 적어주세요.
 
+- git stash : 작업 중인 변경 사항을 임시로 저장하고, 작업 디렉토리를 깨끗한 상태로 되돌리는 기능입니다.
 
+<활용방법>
+1) 커밋하지 않고도 다른 브랜치로 이동하거나, 코드를 테스트할 때 유용합니다.
+2) 변경 사항 임시 저장 : Staging Area와 Working Directory의 변경 사항이 stash로 이동하고, 작업 디렉토리는 깨끗한 상태가 됩니다.
+3) 임시 저장한 변경 사항 적용 : 가장 최근에 저장한 변경 사항을 다시 적용하고, stash 목록에서 제거합니다.
+4) 저장된 목록 확인 : 여러 개의 stash를 저장할 수 있으며, 목록을 확인할 수 있습니다.
+5) 특정 stash 적용 : stash@{n}에 해당하는 특정 stash를 적용하지만 목록에서 제거하지 않습니다.
+6) 특정 stash 삭제
+7) 모든 stash 삭제
 
 ## Advanced
 다음 주제는 더 조사해볼만한, 생각해볼만한 것들입니다. 
