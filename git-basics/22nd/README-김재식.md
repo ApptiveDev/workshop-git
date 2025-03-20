@@ -17,11 +17,12 @@ Working Directory, Git Add, Git Commit, Git Push 등 각 항목에 대해 작성
 Git Merge, Git Fetch는 생략해도 됩니다.
 
 Working Directory : 일반적으로 local의 실제 파일을 작업, 수정하는 공간
+
 Git Add : 변경된 파일을 Staging Area에 올리기. git이 추적할 변경 사항을 지정
 
 Git Commit : Staging Area에 추가된 변경 사항을 Local Repo에 저장. 새로운 version 추가
 
-Git Push : local에 저장된 commit된 변경 사항을 github에 업로드드
+Git Push : local에 저장된 commit된 변경 사항을 github에 업로드
 
 ## Branch, HEAD
 ![branch-and-head](https://ihatetomatoes.net/wp-content/uploads/2020/04/07-head-pointer.png)  
@@ -30,8 +31,11 @@ branch와 HEAD, git checkout을 포함하여 작성 바랍니다.
 branch 생성 및 삭제, 이동 커맨드 등 자유롭게 내용을 추가해주세요.
 
 commit : 개발과정에서 변경된 내용을 기록하는 version의 단위
+
 branch : 파생된 독립적인 개발 라인
+
 head : 현재 위치한 commit 또는 branch를 가리키는 pointer
+
     # 새로운 브랜치 생성 (feature 브랜치)
     git branch feature-branch  
 
@@ -57,10 +61,12 @@ head : 현재 위치한 commit 또는 branch를 가리키는 pointer
 - origin이란 키워드는 무엇인지, 어떻게 설정하는지
 
 git clone : remote Repo에서 local로 복사
+
     #복사
     git clone <url>
 
-git init : 새로운 git 저정장소 생성성
+git init : 새로운 git 저정장소 생성
+
     # 현재 디렉토리를 Git 저장소로 만들기
     git init
 
@@ -71,6 +77,7 @@ git init : 새로운 git 저정장소 생성성
     git push -u origin main
 
 origin : remote Repo의 기본 이름
+
     # 확인
     git remote -v
 
@@ -104,11 +111,13 @@ PR : github에서 코드 리뷰, 병합을 요청하는 기능
 Merge : 한 branch의 변경 사항을 다른 branch에 반영하는 과정. PR 승인 후 진행행
 
 Fast-Forward : 새로운 branch에서 변경 사항만 추가된 경우, Git이 단순히 commit을 이동시키는 방식
+
     # Fast-Forward 병합 실행
     git merge feature
 
 3-Way Merge : Git이 각 branch의 변경 사항을 비교하여 새로운 Merge Commit을 생성.
 main과 feature가 서로 다른 변경 사항을 포함하고 있으면 3-Way Merge가 발생
+
     # 3-Way Merge 실행
     git merge --no-ff feature
 
@@ -116,8 +125,9 @@ main과 feature가 서로 다른 변경 사항을 포함하고 있으면 3-Way M
 ![rebase](https://user-images.githubusercontent.com/51331195/160234052-7fe70f85-5906-4474-b809-782adae92b3c.png)  
 rebase란 무엇인지, 어떤 때에 유용한지 등에 대해 적어주세요.
 
-한 브랜치의 변경 사항을 다른 branch의 최신 commit 위로 재배치
+한 브랜치의 변경 사항을 다른 branch의 최신 commit 위로 재배치.
 branch의 commit을 정리하고 히스토리를 깔끔하게 유지. 기존 commit 히스토리를 보존하고자 한다면 사용에 유의
+
     # feature 브랜치를 main 브랜치의 최신 상태로 업데이트
     git checkout feature  
     git rebase main  
@@ -128,6 +138,7 @@ branch의 commit을 정리하고 히스토리를 깔끔하게 유지. 기존 com
 git stash를 활용하는 방법에 대해 적어주세요.
 
 작업 변경 사항을 add, commit 없이 임시저장.
+
     # 임시 저장
     git stash
 
@@ -145,7 +156,7 @@ git stash를 활용하는 방법에 대해 적어주세요.
 
     # 전체 삭제
     git stash clear
-    
+
     # 메모 달아 저장하기
     git stash save "메모"
 
