@@ -79,11 +79,26 @@ merge 할 때 두 브랜치가 동일 선상에 없을 때, **공통 조상**으
 
 ## rebase
 ![rebase](https://user-images.githubusercontent.com/51331195/160234052-7fe70f85-5906-4474-b809-782adae92b3c.png)  
-rebase란 무엇인지, 어떤 때에 유용한지 등에 대해 적어주세요.
+rebase = base를 새롭게 설정한다   
+```git checkout experiment```   
+```git rebase main```   
+아예 다른 브랜치로 이동해 main(master)를 base 삼아 rebase 하게 됨.    
+최근 두 브랜치의 차이를 Patch 라는 곳에 임시 저장해 둔 후에,   
+base가 되는 master에 Patch가 적용된다.   
+```git checkout main```   
+```git merge experiment```   
+이후, main브랜치를 fast-forward merge 한다.   
+
+Fast-Forward merge를 하기 때문에 -> **깔끔한 커밋 히스토리를 유지**할 수 있다는 게 장점!!   
+But, 깃히스토리를 조작하고 강제 push가 동반되기 때문에 위험함!!!   
 
 ## stash
 ![stash](https://d8it4huxumps7.cloudfront.net/bites/wp-content/banners/2023/4/642a663eaff96_git_stash.png)  
-git stash를 활용하는 방법에 대해 적어주세요.
+git stash : 작업중인 것을 잠시 치워두다(->스택에)   
+```git stash``` : 현재 적용된 commit 이후로 변경된 모든 사항들이 stash 공간으로 이동   
+```git stash apply``` : 했던 작업 다시 가져오기   
+```git stash drop``` : 스택에 남아있는 stash 제거하기   
+```git stash list``` : stash 목록 보기
 
 ## Advanced
 다음 주제는 더 조사해볼만한, 생각해볼만한 것들입니다. 
