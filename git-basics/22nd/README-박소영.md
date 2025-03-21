@@ -6,8 +6,8 @@ Git을 사용하려면 알아야 할 기본 지식을 학습합시다. 아래 �
 git과 github는 같은 의미가 아닙니다.  
 local, remote와 연관지어 적어주세요.
 
-<span style = "color:gray">git은 local 저장소를 사용하기 때문에 다른 사람이 접근할 수 없다.<br>
-github는 git을 기반으로 하는 remote 저장소이므로 다른 사람들이 공유하고 접근할 수 있다.</span>
+git은 local 저장소를 사용하기 때문에 다른 사람이 접근할 수 없다.<br>
+github는 git을 기반으로 하는 remote 저장소이므로 다른 사람들이 공유하고 접근할 수 있다.
 
 ## Git Workflow
 ![git-workflow](https://cdn-media-1.freecodecamp.org/images/1*iL2J8k4ygQlg3xriKGimbQ.png)  
