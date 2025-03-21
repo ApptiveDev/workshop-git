@@ -3,44 +3,67 @@ Git을 사용하려면 알아야 할 기본 지식을 학습합시다. 아래 �
 
 ## Git != Github
 ![git-is-not-github](https://user-images.githubusercontent.com/51331195/160232512-3d6686ca-4ae3-4f11-a8d7-c893c0a7526a.png)  
-git과 github는 같은 의미가 아닙니다.  
-local, remote와 연관지어 적어주세요.
+
+- Git : 분산 버전 관리 시스템
+- Github : Git으로 관리하는 프로젝트의 공유 및 협업을 위한 플랫폼
+- 개인 컴퓨터의 저장소 : local / 서버의 원격 저장소 : remote
+- local에서 작업한 프로젝트를 remote에 업로드하는 방식으로 변경 사항 반영 및 협업을 진행함. 
 
 ## Git Workflow
 ![git-workflow](https://cdn-media-1.freecodecamp.org/images/1*iL2J8k4ygQlg3xriKGimbQ.png)  
-위는 git이 어떻게 동작하는지 나타낸 다이어그램입니다.  
-Working Directory, Git Add, Git Commit, Git Push 등 각 항목에 대해 작성 바랍니다.  
-Git Merge, Git Fetch는 생략해도 됩니다.
+
+- Working Directory : 사용자의 작업 공간. 
+- Git Add : 변경 사항을 임시 공간 stage에 올림. 
+- Git Commit : 변경 사항에 대해 저장 및 기록함. 
+- Git Push : 변경 사항을 remote로 업로드함. 
 
 ## Branch, HEAD
 ![branch-and-head](https://ihatetomatoes.net/wp-content/uploads/2020/04/07-head-pointer.png)  
-git이 동작하는 기본 단위는 commit과 branch입니다.  
-branch와 HEAD, git checkout을 포함하여 작성 바랍니다.  
-branch 생성 및 삭제, 이동 커맨드 등 자유롭게 내용을 추가해주세요.
+
+- Branch : Commit을 가리키는 포인터
+- HEAD : Branch를 가리키는 포인터
+- HEAD가 가리키는 Commit에 따라 Working Directory가 달라지며, checkout을 통해 HEAD가 가리키는 Branch를 변경할 수 있음.
+
+----
+**# Branch Command**
+- Branch 생성 : git branch [branch]
+- Branch 삭제 : git branch -D [branch]
+- Branch 이동 : git checkout [branch]
 
 
 ## clone, init, origin
-리포지토리를 로컬에 생성하는 방법은 clone, init이 있습니다. 다음을 포함하여 작성 바랍니다.
-- git clone과 git init의 차이점, 이용방법
-- origin이란 키워드는 무엇인지, 어떻게 설정하는지
+- clone, init은 모두 Git 저장소를 만드는 Command이나, 방법의 차이가 존재함. 
+- git clone : 기존의 다른 Git 저장소를 복사하는 방법. 
+- git init : 버전 관리를 하지 않던 프로젝트 파일을 Git 저장소에 추가하는 방법. 
+- origin : 작업중인 local과 연결된 remote의 주소를 가리키는 단축 키워드. 
+- 일반적으로 origin은 git clone 할 때 자동으로 생성되며, origin이 가리키는 주소를 통해 데이터 동기화 및 업데이트가 가능함. 
 
 ## reset
 ![reset](https://user-images.githubusercontent.com/51331195/160235594-8836570b-e8bf-484a-bb92-b2bd6d873066.png)  
-reset에는 3가지 타입이 있습니다.  
-각 타입에 대해 작성 바랍니다.
+- reset : HEAD의 위치를 과거 혹은 미래의 commit으로 이동시킬 수 있음. 
+- type1) --soft : HEAD가 특정 commit을 새롭게 가리키지만, 작업 중인 working directory와 staging area는 영향을 받지 않음. 
+- type2) --mixed : HEAD가 특정 commit을 새롭게 가리키며 staging area도 동일하게 변하나, working directory는 영향을 받지 않음. 
+- type3) --hard : HEAD가 새롭게 가리키는 commit과 동일하게 staging area와 working directory가 모두 변함. 
 
 ## Pull Request, Merge
 ![pull-request-merge](https://atlassianblog.wpengine.com/wp-content/uploads/bitbucket411-blog-1200x-branches2.png)  
-Pull Request와 Merge에 대한 내용을 적어주세요.  
-특히 Merge의 두 타입인 Fast-Forward와 3-Way Merge를 포함해주세요.
+- Fork : 다른 사용자의 저장소를 복사하는 것. 
+- Pull Request : Rork를 통해 복사한 내용을 개인 작업 공간에서 업데이트 후, 원본 저장소에 적용되도록 다른 사용자에게 pull 요청을 보내는 것.
+- --
+- Merge : 서로 다른 브랜치에서 작업한 내용을 합쳐야 하는 경우 사용. 
+- type1) Fast-Forward : merge commit이 생기지 않고, merge가 실행된 branch의 HEAD가 병합되는 branch의 HEAD commit으로 이동하는 방식. 
+- type2) 3-Way Merge : 두 branch가 commit history 상에서 분리된 2개의 선에 각각 존재할 때, merge commit을 새로 생성하는 방식. 
 
 ## rebase
 ![rebase](https://user-images.githubusercontent.com/51331195/160234052-7fe70f85-5906-4474-b809-782adae92b3c.png)  
-rebase란 무엇인지, 어떤 때에 유용한지 등에 대해 적어주세요.
+- rebase : 서로 다른 branch에서 작업한 내용을 합칠 때 사용하는 것으로, branch의 base commit을 재설정함. 
+- 깃 히스토리가 직렬로 정리되어 깔끔한 관리가 가능함. 
 
 ## stash
 ![stash](https://d8it4huxumps7.cloudfront.net/bites/wp-content/banners/2023/4/642a663eaff96_git_stash.png)  
-git stash를 활용하는 방법에 대해 적어주세요.
+- stash : 변경사항을 일시적으로 저장하는 기능. 
+- commit하기에 이르거나, 다른 branch로 checkout하면서 변경 사항을 유지하고 싶은 경우 사용함. 일시적 저장 후 나중에 다시 사용이 가능함.
+- 작업 중인 변경 사항을 stack에 저장하고, working directory를 깨끗한 상태로 만듦. 
 
 ## Advanced
 다음 주제는 더 조사해볼만한, 생각해볼만한 것들입니다. 
