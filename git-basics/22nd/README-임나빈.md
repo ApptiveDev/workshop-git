@@ -16,7 +16,7 @@ Git은 버전 관리 시스템이고 local에서 파일을 추적하고 관리�
 - **Remote Repo** : 원격 저장소이며 `git fetch`로 Remote Repo의 변경사항을 Local Repo로 가져옵니다(merge는 X), `git pull`은 변경사항을 가져온 후 자동 병합합니다 (merge + fetch)
 
 - **Git Commit** : `git commit` 명령어를 통해 Local Repo에 변경사항이 저장됩니다. 
-    - `git commit -m "commit message`
+    - `git commit -m "commit message"`
 - **Git Push** : `git push` 명령어를 통해 Local Repo의 변경사항을 Remote Repo로 업로드 합니다 
     - `git push origin [branch_name]`
 
@@ -44,7 +44,7 @@ branch 생성 및 삭제, 이동 커맨드 등 자유롭게 내용을 추가해�
     - `git clone [repository-url]`
 - **git init** : 새로운 로컬 저장소를 생성하는 명령어.
     - `git init`
-**origin** : 원격 저장소를 나타냅니다. origin은 URL을 가리키며 로컬 저장소와 원격 저장소를 연결할 수 있습니다
+- **origin** : 원격 저장소를 나타냅니다. origin은 URL을 가리키며 로컬 저장소와 원격 저장소를 연결할 수 있습니다
     - `git remote add origin [repository_url]` : 원격 저장소 설정
     - `git remote -v` : 원격 저장소 확인
 
