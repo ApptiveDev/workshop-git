@@ -32,7 +32,10 @@ branch 생성 및 삭제, 이동 커맨드 등 자유롭게 내용을 추가해�
     - `git checkout [branch-name]` : 브랜치 이동
 - **HEAD** : 현재 작업 중인 브랜치의 현재 위치를 가리킵니다. Head는 특정 커밋을 가리키고, 커밋을 업데이트 하거나 이동하면 움직입니다.
     - `git checkout [commit-id]` : HEAD 이동
-- **git checkout** : 
+- **git checkout** : 브랜치 변경, 파일 복원 등에 사용합니다
+    - `git checkout feature-branch`
+    - `git checkout [filename]`
+    - `git checkout [commit_id]`
 
 
 ## clone, init, origin
@@ -58,14 +61,48 @@ branch 생성 및 삭제, 이동 커맨드 등 자유롭게 내용을 추가해�
 ![pull-request-merge](https://atlassianblog.wpengine.com/wp-content/uploads/bitbucket411-blog-1200x-branches2.png)  
 Pull Request와 Merge에 대한 내용을 적어주세요.  
 특히 Merge의 두 타입인 Fast-Forward와 3-Way Merge를 포함해주세요.
+- **Pull Request** : 한 브랜치에서 다른 브랜치로 변경 사항을 병합하고자 할 때 리뷰를 요청하는 과정. PR을 통해 팀원들이 코드 변경을 리뷰하고 문제를 수정하거나 논의할 수 있습니다
+
+    1. 브랜치에서 작업을 완료하고 커밋 push
+    2. pr을 생성하여 리뷰 요청
+
+    3. 변경 사항을 리뷰하고 피드백 제공
+    4. 리뷰가 완료되면 변경사항 merge
+
+- **Merge** : 두 개의 브랜치를 하나로 합치는 기능. PR을 통해 이루어 지며 Git에서 자동으로 병합을 시도하고 충돌이 있을 경우 수동으로 해결해야합니다.
+
+    - Fast-Forward Merge : HEAD 포인터를 이동시켜 병합하는 방식으로 병합 커밋이 생성되지 않습니다
+        - `git checkout main`
+        - `git merge feature-branch`
+
+    - 3-Way Merge : 두 브랜치가 서로 다른 변경 사항을 포함하고 있을 때 발생합니다.
+
+        1. 두 브랜치가 갈라지기 전의 마지막 공통 커밋을 찾는다
+        2. 브랜치 A 변경사항 확인
+        3. 브랜치 B 변경사항 
+        4. 병합이 완료되면 Git이 병합 커밋 생성
 
 ## rebase
 ![rebase](https://user-images.githubusercontent.com/51331195/160234052-7fe70f85-5906-4474-b809-782adae92b3c.png)  
-rebase란 무엇인지, 어떤 때에 유용한지 등에 대해 적어주세요.
+한 브랜치의 변경 사항을 다른 브랜치의 맨 위로 적용하는 방법. 
+- `git checkout featchure-branch`
+- `git rebase main`
+
+    1. feature-branch에 있는 커밋들이 main 브랜치의 최신 커밋 뒤에 재적용됨 (병합 커밋 생성X)
+    2. 충돌이 발생할 경우 해결 후 `git rebase --coninue`를 실행하여 계속 진행
+- 병합 커밋 없이 커밋 히스토리를 관리할 때 유용합니다
 
 ## stash
 ![stash](https://d8it4huxumps7.cloudfront.net/bites/wp-content/banners/2023/4/642a663eaff96_git_stash.png)  
-git stash를 활용하는 방법에 대해 적어주세요.
+현재 작업 중인 변경 사항을 임시로 저장하고 Working Directory를 깨끗하게 되돌리는 기능. 다른 브랜치로 이동하거나 작업을 잠시 중단해야 할 때 사용됩니다.
+- `git stash`
+- `git stash list` : 저장한 목록 보기
+- `git stash pop` : 가장 최근 stash 복원
+
+- `git stash apply stash@{idx}` : 특정 stash 복원
+- `git stash drop stash@{idx}` : 특정 stash 삭제
+- `git stash clear` : 모든 stash 삭제
+
 
 ## Advanced
 다음 주제는 더 조사해볼만한, 생각해볼만한 것들입니다. 
@@ -77,6 +114,7 @@ git stash를 활용하는 방법에 대해 적어주세요.
 - `reset --hard`와 `push --force`의 적절한 사용법
 - `.gitignore` 사용법
 - 브랜치 이름은 슬래시를 통해 계층적으로 가질 수 있다. 단, `parent/child-1`, `parent/child-2`는 동시에 가질 수 있지만 `parent/child/grandchild`, `parent/child`는 그러지 못한다. 무슨 이유 때문인지. 
+
 - detached HEAD란 어떤 상태인지, 이 상태에서 커밋을 하게 되면 어떻게 되는지, detached HEAD는 어떤 상황에서 발생할 수 있는지
 
 ## Questions
