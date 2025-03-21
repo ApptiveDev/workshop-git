@@ -471,6 +471,11 @@ Git stash는 이러한 명령어와 활용 방법을 통해 작업 흐름을 유
 ## Advanced
 다음 주제는 더 조사해볼만한, 생각해볼만한 것들입니다. 
 - 브랜치관리전략에 대표적으로 Github Flow, Git Flow가 있습니다. 두 방식에서는 리포지토리를 어떻게 관리할까요?
+
+GitHub Flow는 빠른 개발 및 배포를 위해 단순한 브랜치 전략을 사용하여, 항상 프로덕션 배포 가능한 main 브랜치와 임시 feature 브랜치 중심으로 리포지토리를 관리합니다.
+
+Git Flow는 정교한 버전 관리를 위해 master, develop, feature, release, hotfix 등 여러 브랜치를 활용하며, 각 브랜치의 역할을 명확히 분리하여 대규모 프로젝트나 정해진 릴리즈 사이클에 적합한 전략입니다.
+
 - `git rebase --interactive`란?
 
 git rebase --interactive (또는 git rebase -i)는 Git에서 커밋 이력을 인터랙티브하게 수정할 수 있는 기능입니다. 이를 통해 다음과 같은 작업을 수행할 수 있습니다:
