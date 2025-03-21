@@ -28,8 +28,8 @@ git이 동작하는 기본 단위는 commit과 branch입니다.
 branch와 HEAD, git checkout을 포함하여 작성 바랍니다.  
 branch 생성 및 삭제, 이동 커맨드 등 자유롭게 내용을 추가해주세요.
 
-commit을 branch가 가르키고 HEAD는 branch를 가르킨다.
-commit을 하면 HEAD가 가르키는 branch가 최신 commit으로 이동한다.
+commit을 branch가 가리키고 HEAD는 branch를 가리킨다.
+commit을 하면 HEAD가 가리키는 branch가 최신 commit으로 이동한다.
 git checkout <브랜치명>을 하면 해당 branch로 HEAD가 이동한다.
 git branch -b <브랜치명>을 사용하면 branch가 생성되고 git branch -d <브랜치명>을 사용하면 해당 branch가 삭제된다.
 
