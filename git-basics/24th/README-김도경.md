@@ -30,18 +30,46 @@ Git Merge, Git Fetch는 생략해도 됩니다.
 4. Remote Repository
 GitHub 같은 온라인 저장소이다. git push를 통해 내 컴퓨터의 기록을 서버로 전송하여 공유한다.
 
+
+
 ## Branch, HEAD
 ![branch-and-head](https://ihatetomatoes.net/wp-content/uploads/2020/04/07-head-pointer.png)  
 git이 동작하는 기본 단위는 commit과 branch입니다.  
 branch와 HEAD, git checkout을 포함하여 작성 바랍니다.  
 branch 생성 및 삭제, 이동 커맨드 등 자유롭게 내용을 추가해주세요.
 
+1. Branch
+독립적인 작업을 위해 만든 코드의 가지이다. 메인 줄기에서 뻗어 나와 서로 영향을 주지 않고 안전하게 새로운 기능을 개발할 수 있다.
+2. HEAD
+현재 내가 작업 중인 브랜치나 커밋을 가리키는 포인터이다. 내 작업 위치가 어디인지 Git에게 알려주는 역할을 한다.
+3. Git Checkout
+다른 브랜치로 이동하거나 특정 커밋 시점으로 되돌아갈 때 사용한다. HEAD의 위치를 옮겨 작업 환경을 전환하는 명령어이다.
+생성: git branch [이름] - 새로운 가지를 만든다.
+이동: git switch [이름] (또는 checkout) - 해당 브랜치로 작업 위치를 옮긴다.
+목록 확인: git branch - 만들어진 브랜치 리스트를 확인한다.
+삭제: git branch -d [이름] - 사용이 끝난 브랜치를 지운다.
+
+
 
 ## clone, init, origin
 리포지토리를 로컬에 생성하는 방법은 clone, init이 있습니다. 다음을 포함하여 작성 바랍니다.
 - git clone과 git init의 차이점, 이용방법
 - origin이란 키워드는 무엇인지, 어떻게 설정하는지
+
+1. git init
+새로운 Git 저장소를 내 컴퓨터 로컬에서 직접 만드는 명령어이다. 빈 폴더에서 실행하면 .git 폴더가 생성되며 이때부터 해당 폴더의 모든 변경 사항을 Git이 관리하기 시작한다.
+2. git clone
+GitHub 같은 원격 저장소 Remote에 이미 존재하는 프로젝트를 내 컴퓨터로 통째로 내려받는 명령어이다. 기존의 모든 커밋 이력과 설정이 함께 복사되어 즉시 작업을 시작할 수 있다.
+3. origin
+내 로컬 저장소와 연결된 원격 저장소의 기본 이름이다. 긴 서버 주소 URL을 매번 입력하기 번거롭기 때문에 origin이라는 별칭을 붙여서 사용한다.
+연결: git remote add origin [URL]
+내 로컬 폴더에 원격 저장소 주소를 origin이라는 이름으로 등록한다.
+확인: git remote -v
+현재 연결된 원격 저장소의 이름과 주소를 확인한다.
+변경: git remote set-url origin [NEW_URL]
+연결된 원격 저장소의 주소를 수정한다.
   
+
 
 ## reset
 ![reset](https://user-images.githubusercontent.com/51331195/160235594-8836570b-e8bf-484a-bb92-b2bd6d873066.png)  
