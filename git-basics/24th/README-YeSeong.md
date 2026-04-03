@@ -15,6 +15,12 @@ git은 local에서 즉 내 컴퓨터 안에서 동작하며 소프트웨어의 �
 Working Directory, Git Add, Git Commit, Git Push 등 각 항목에 대해 작성 바랍니다.  
 Git Merge, Git Fetch는 생략해도 됩니다.
 
+Working Directory : 현재 내 컴퓨터 저장소(HDD or SSD)에 실제로 저장되어 있는 작업 폴더
+Git Add : working directory의 코드와 git의 코드의 차이점들 중에서 커밋할 코드를 선택하는 것
+Git Commit : add로 선택한 코드들을 내 local git에 코멘트와 함께 저장하는것
+Git Push : 내 local git에 저장된 것을 github와 같은 remote git 저장소에 업로드하는  것
+Git merge : 내 local git과 remote git의 차이점이 존재 할때 병합하는 과정
+Git fetch : remote git의 변경사항을 받아오는 것
 
 ## Branch, HEAD
 ![branch-and-head](https://ihatetomatoes.net/wp-content/uploads/2020/04/07-head-pointer.png)  
@@ -22,6 +28,10 @@ git이 동작하는 기본 단위는 commit과 branch입니다.
 branch와 HEAD, git checkout을 포함하여 작성 바랍니다.  
 branch 생성 및 삭제, 이동 커맨드 등 자유롭게 내용을 추가해주세요.
 
+commit은 사용자가 코드를 수정한 내용을 설명과 함께 기록한 것이고 branch는 이러한 commit들의 크게 보면 분기를 의미하고 처음 git을 만들면 main branch가 생성되고 여기서 따로 개발을 하기위해 새로운 branch를 생성하고 main과 따로 새로운 branch에 commit을 할 수 있게 되고 이것은 main에는 영향을 주지 않을 수 있게 된다. HEAD는 현재 내가 어떤 branch에 있는지 표시하는 것이고 git checkout을 통해 다른 branch로 이동하거나 새로운 브랜치를 만들거나 할 수 있다.
+
+git checkout -b [branch name] : [branch name] 브랜치를 생성하고 이동
+git checkout [branch name] : [branch name] 브랜치로 이동
 
 ## clone, init, origin
 리포지토리를 로컬에 생성하는 방법은 clone, init이 있습니다. 다음을 포함하여 작성 바랍니다.
