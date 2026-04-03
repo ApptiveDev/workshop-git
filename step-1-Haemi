@@ -1,0 +1,126 @@
+# Git 기초
+Git을 사용하려면 알아야 할 기본 지식을 학습합시다. 아래 항목 위주로 조사하여 나름 이해한대로 채워주시기 바랍니다. 이 템플릿을 이용해도 되고, 자유 형식으로 정리하셔도 됩니다. 블로그 등에 정리한 경우 링크를 첨부해주세요.
+
+## Git != Github
+![git-is-not-github](https://user-images.githubusercontent.com/51331195/160232512-3d6686ca-4ae3-4f11-a8d7-c893c0a7526a.png)  
+git과 github는 같은 의미가 아닙니다.  
+local, remote와 연관지어 적어주세요.
+
+Git은 버전 관리 시스템으로 파일의 변경 이력을 기록합니다.  
+Github는 Git 저장소를 인터넷에 올려 협업할 수 있게 해주는 서비스입니다.  
+
+local은 내 컴퓨터, remote는 Github 서버입니다.  
+local에서 작업 후 commit하고 remote로 push합니다.
+
+
+## Git Workflow
+![git-workflow](https://cdn-media-1.freecodecamp.org/images/1*iL2J8k4ygQlg3xriKGimbQ.png)  
+위는 git이 어떻게 동작하는지 나타낸 다이어그램입니다.  
+Working Directory, Git Add, Git Commit, Git Push 등 각 항목에 대해 작성 바랍니다.  
+
+Working Directory는 파일을 수정하는 공간입니다.  
+Git Add는 수정한 파일을 staging area에 올리는 과정입니다.  
+Git Commit은 변경사항을 기록으로 저장하는 단계입니다.  
+Git Push는 commit을 원격 저장소로 보내는 단계입니다.  
+
+기본 흐름은 수정 → add → commit → push 입니다.
+
+
+## Branch, HEAD
+![branch-and-head](https://ihatetomatoes.net/wp-content/uploads/2020/04/07-head-pointer.png)  
+git이 동작하는 기본 단위는 commit과 branch입니다.  
+
+branch는 작업을 나누는 기능으로, main과 별도로 작업할 수 있습니다.  
+HEAD는 현재 작업 위치를 가리키는 포인터입니다.  
+
+git checkout을 사용하면 브랜치를 이동할 수 있습니다.  
+
+- git checkout 브랜치이름  
+- git checkout -b 새브랜치  
+- git branch  
+- git branch -d 브랜치이름  
+
+
+## clone, init, origin
+리포지토리를 로컬에 생성하는 방법은 clone, init이 있습니다. 다음을 포함하여 작성 바랍니다.
+
+- git clone과 git init의 차이점, 이용방법  
+
+git clone은 원격 저장소를 복사해오는 것이고,  
+git init은 새 저장소를 만드는 것입니다.  
+
+- origin이란 키워드는 무엇인지, 어떻게 설정하는지  
+
+origin은 원격 저장소의 기본 이름입니다.  
+
+git remote add origin 저장소주소
+
+
+## reset
+![reset](https://user-images.githubusercontent.com/51331195/160235594-8836570b-e8bf-484a-bb92-b2bd6d873066.png)  
+reset에는 3가지 타입이 있습니다.  
+
+soft: commit만 취소  
+mixed: staging area 초기화  
+hard: 모든 변경 삭제  
+
+
+## Pull Request, Merge
+![pull-request-merge](https://atlassianblog.wpengine.com/wp-content/uploads/bitbucket411-blog-1200x-branches2.png)  
+Pull Request와 Merge에 대한 내용을 적어주세요.  
+
+Pull Request는 내가 작업한 브랜치를 합쳐달라고 요청하는 것입니다.  
+Merge는 브랜치를 합치는 작업입니다.  
+
+Fast-Forward는 단순 이동 방식이고  
+3-Way Merge는 새로운 commit을 만들어 합치는 방식입니다.  
+
+
+## rebase
+![rebase](https://user-images.githubusercontent.com/51331195/160234052-7fe70f85-5906-4474-b809-782adae92b3c.png)  
+rebase란 무엇인지, 어떤 때에 유용한지 등에 대해 적어주세요.  
+
+rebase는 commit을 다른 브랜치 위로 옮기는 기능입니다.  
+히스토리를 깔끔하게 정리할 때 사용합니다.  
+
+
+## stash
+![stash](https://d8it4huxumps7.cloudfront.net/bites/wp-content/banners/2023/4/642a663eaff96_git_stash.png)  
+git stash를 활용하는 방법에 대해 적어주세요.  
+
+git stash는 작업 중인 내용을 임시 저장하는 기능입니다.  
+
+git stash: 저장  
+git stash pop: 다시 적용  
+
+
+## Advanced
+다음 주제는 더 조사해볼만한, 생각해볼만한 것들입니다. 
+
+- Github Flow: main 브랜치를 중심으로 간단하게 운영하는 방식  
+- Git Flow: develop, feature, release 등 여러 브랜치를 사용하는 복잡한 방식  
+
+- git rebase --interactive: commit을 수정하거나 합칠 수 있는 기능  
+
+- upstream: 원격 브랜치와 연결하는 개념  
+  git push --set-upstream origin 브랜치이름  
+
+- fork: 다른 사람의 저장소를 복사해서 사용하는 것 (오픈소스 기여할 때 유용)  
+
+- fetch vs pull:  
+  fetch는 가져오기만 하고, pull은 가져와서 merge까지 함  
+
+- reset --hard / push --force: 강제로 되돌리는 명령어 (협업 시 주의)  
+
+- .gitignore: 특정 파일을 git 관리에서 제외  
+
+- 브랜치 이름 구조 제한: 내부적으로 파일처럼 관리되기 때문에 충돌 발생  
+
+- detached HEAD: 브랜치가 아닌 특정 commit을 가리키는 상태  
+
+
+## Questions
+조사/실습하면서 생긴 궁금점이 있다면 여기에 적어서 공유해주세요.
+
+- rebase와 merge의 차이가 아직 헷갈립니다.  
+- 협업할 때 branch를 어떻게 나누는 것이 좋은지 궁금합니다.
