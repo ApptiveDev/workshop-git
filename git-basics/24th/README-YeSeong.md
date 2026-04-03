@@ -37,7 +37,9 @@ git checkout [branch name] : [branch name] 브랜치로 이동
 리포지토리를 로컬에 생성하는 방법은 clone, init이 있습니다. 다음을 포함하여 작성 바랍니다.
 - git clone과 git init의 차이점, 이용방법
 - origin이란 키워드는 무엇인지, 어떻게 설정하는지
-  
+
+git clone은 이미 존재하는 git 저장소를 로컬로 복제해오는 것이고 git init은 처음 git 저장소를 만들때 사용하는 명령어이다.
+origin은 로컬 git과 연결되어 있는 원격 git 저장소의 url을 뜻하는 단어이다.
 
 ## reset
 ![reset](https://user-images.githubusercontent.com/51331195/160235594-8836570b-e8bf-484a-bb92-b2bd6d873066.png)  
