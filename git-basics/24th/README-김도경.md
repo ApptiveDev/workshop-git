@@ -76,21 +76,52 @@ GitHub 같은 원격 저장소 Remote에 이미 존재하는 프로젝트를 내
 reset에는 3가지 타입이 있습니다.  
 각 타입에 대해 작성 바랍니다.
 
+1. git reset --soft
+커밋 내역만 취소하고 수정 파일과 add 상태는 유지한다.
+커맨드: git reset --soft [COMMIT_ID]
+2. git reset --mixed
+커밋과 add 상태를 취소하고 수정 파일만 남겨둔다. 기본 설정값이다.
+커맨드: git reset --mixed [COMMIT_ID]
+3. git reset --hard
+커밋, add 상태, 파일 수정 내역을 모두 지우고 특정 시점으로 복구한다.
+커맨드: git reset --hard [COMMIT_ID]
+
+
 
 ## Pull Request, Merge
 ![pull-request-merge](https://atlassianblog.wpengine.com/wp-content/uploads/bitbucket411-blog-1200x-branches2.png)  
 Pull Request와 Merge에 대한 내용을 적어주세요.  
 특히 Merge의 두 타입인 Fast-Forward와 3-Way Merge를 포함해주세요.
 
+1. Pull Request
+내가 작업한 브랜치의 변경 사항을 다른 사람들에게 검토받고 메인 코드에 합쳐달라고 요청하는 기능이다. 코드 리뷰를 통해 오류를 방지하고 협업의 품질을 높이는 단계이다.
+2. Merge
+서로 다른 브랜치에서 작업한 내용을 하나로 합치는 과정이다. 주로 기능 개발이 완료된 브랜치를 메인 브랜치에 통합할 때 사용한다.
+3. Fast-Forward Merge
+메인 브랜치에 새로운 커밋이 없어 단순히 HEAD 포인터를 최신 커밋으로 이동시키는 방식이다. 별도의 Merge 커밋이 생성되지 않고 기록이 일직선으로 남는다.
+4. 3-Way Merge
+두 브랜치가 공통 조상 이후 각자 다른 커밋을 가졌을 때 사용한다. 양쪽의 변경 사항과 공통 조상을 비교하여 합치며 새로운 Merge 커밋을 생성한다.
+
+
 
 ## rebase
 ![rebase](https://user-images.githubusercontent.com/51331195/160234052-7fe70f85-5906-4474-b809-782adae92b3c.png)  
 rebase란 무엇인지, 어떤 때에 유용한지 등에 대해 적어주세요.
 
+1. git rebase
+브랜치의 공통 조상이 되는 베이스 지점을 최신 커밋으로 변경하는 작업이다. 내 작업 내역을 대상 브랜치의 최신 커밋 뒤로 옮겨 붙여서 마치 한 줄로 작업한 것처럼 만든다.
+복잡하게 갈라진 브랜치 기록을 깔끔한 일직선으로 정렬할 수 있다. 불필요한 머지 커밋을 줄여서 프로젝트의 히스토리를 파악하기 쉽게 만든다.
+
+
 
 ## stash
 ![stash](https://d8it4huxumps7.cloudfront.net/bites/wp-content/banners/2023/4/642a663eaff96_git_stash.png)  
 git stash를 활용하는 방법에 대해 적어주세요.
+
+1. git stash
+현재 작업 중인 변경 사항을 잠시 "보관함"에 저장하고, 워킹 디렉토리를 최근 커밋 상태로 되돌릴 때 사용한다.
+git stash 로 임시저장, git stash pop 로 실행하면 보관했던 변경 사항을 다시 불러와 작업을 이어할 수 있다.
+
 
 
 ## Advanced
