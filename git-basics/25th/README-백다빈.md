@@ -781,3 +781,10 @@ git switch -c new-branch
 
 Detached HEAD는 과거 commit의 코드를 잠시 확인하거나 특정 버전에서 테스트할 때 사용할 수 있다.
 
+## Questions
+
+1. `git clone`과 Github의 `Fork`는 둘 다 Repository를 복사하는 것처럼 보이는데, 정확히 어떤 차이가 있는지 궁금했다.
+
+2. `merge`와 `rebase`는 모두 서로 다른 브랜치의 작업 내용을 합칠 때 사용하는데, 두 방식의 차이와 각각 어떤 상황에서 사용하는지 궁금했다.
+
+3. Github의 비공개(Private) Repository도 Fork할 수 있는지, 가능하다면 어떤 조건에서 가능한지 궁금했다.
